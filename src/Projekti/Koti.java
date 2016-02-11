@@ -2,9 +2,9 @@ package Projekti;
 
 public class Koti {
    private double saastot;
-   private int juomat;
+   private double juomat;
     
-    public Koti(int saastot, int juomat){
+    public Koti(double saastot, double juomat){
         this.saastot = saastot;
         this.juomat = juomat;
     }
@@ -13,7 +13,7 @@ public class Koti {
         this.saastot = saastot;
     }
 
-    public void setJuomat(int juomat) {
+    public void setJuomat(double juomat) {
         this.juomat = juomat;
     }
 
@@ -21,7 +21,7 @@ public class Koti {
         return saastot;
     }
 
-    public int getJuomat() {
+    public double getJuomat() {
         return juomat;
     }
     void juodaan(){
@@ -30,7 +30,7 @@ public class Koti {
     void juotu(){
         System.out.println("no niin juotu: "+juomat+" Rahan edestä");
     }
-    void otaRahaa(int summa){
+    void otaRahaa(double summa){
         //säästoiltä otetaan rahaa
         if(saastot > summa){
         saastot = saastot - summa;
