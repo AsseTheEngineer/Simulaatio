@@ -1,8 +1,11 @@
 package Projekti;
 
 public class Poliisi {
-    double rahaTililla;//Olio rahan määrällee tilillä 
+   private Henkilo henk;
+    
+  private double rahaTililla = henk.getRaha();
     int huomautukset = 2;
+ 
     
    public Poliisi(){
        

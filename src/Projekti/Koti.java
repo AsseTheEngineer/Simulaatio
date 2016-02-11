@@ -3,6 +3,8 @@ package Projekti;
 public class Koti {
    private double saastot;
    private int juomat;
+   
+  private Henkilo henk;
     
     public Koti(int saastot, int juomat){
         this.saastot = saastot;
