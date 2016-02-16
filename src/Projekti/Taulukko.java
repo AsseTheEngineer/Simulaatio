@@ -1,31 +1,38 @@
 package Projekti;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Taulukko {
-    String[] logBook;
+    ArrayList logBook;
     Date time = new Date(20,00,00);
-    
     int minutes = 20;
-    final long minute = 60000;//millisecs
-
+    final long minute = 60000;//millisec
     long curTimeInMs = time.getTime();
     
     //
     //
     
-    public Taulukko(int aikavali){
-        this.logBook = new String[aikavali];
+    public Taulukko(){
+        this.logBook = new ArrayList();
         for (int i = 0; i > logBook.length; i++) {
-            logBook[i] = "[" + time + "] ";
-            Date time = new Date(curTimeInMs + (minutes * minute));
+            logBook(i) = "[" + time + "] ";
+            time = new Date(curTimeInMs + (minutes * minute));
         }
     }
     
+    public void taytaTaulukko() {
+        for (int i = 0; i > logBook.length; i++) {
+            logBook[i] = "[" + time + "] ";
+            time = new Date(curTimeInMs + (minutes * minute));
+        }
+    }
+    
+    @Override
     public String toString() {
         String tulostus = "";
-        for (int i = 0; i <= logBook.length; i++){
-            tulostus += logBook[i] + "\n";
+        for (String logBook1 : logBook) {
+            tulostus += logBook1 + "\n";
         }
         return tulostus;
     }
