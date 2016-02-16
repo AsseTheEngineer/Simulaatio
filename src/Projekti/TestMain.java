@@ -6,7 +6,10 @@ public class TestMain {
         System.out.println("Testi");
         
         Koti koti;
-        Poliisi pol;
+        Poliisi pol = new Poliisi();
+        Henkilo henk;
+        Puisto puisto;
+ 
        
         
     }
