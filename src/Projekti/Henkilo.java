@@ -60,8 +60,19 @@ public class Henkilo {
             success = true;
         }else if (lompakko < maksu) {
             success = false;
-        }
+        }   
         return success;
+    }
+    
+    public String juoOmaJuoma() {
+        String kommentti;
+        if (this.juomat > 0) {
+            this.juomat--;
+            kommentti = "Kyllähän se kalja on hyvää";
+        }else {
+            kommentti = "Juomat on loppu";
+        }
+        return kommentti;
     }
 
     @Override

@@ -20,15 +20,21 @@ public class Poliisi {
            kommentti = "sakkojen maksu epäonnistui";
        return kommentti;
    }
-   String joudutPutkaan(){
+   
+    String joudutPutkaan(){
             return "Mitä tuli tehtyä jouduit putkaan";
    }
-    void huomautus(){
+   
+    String huomautus(){
+       
+       String kommentti;
+       
         if(huomautukset > 0){
-            System.out.println("Sait huomautuksen, huomautuksia jäljellä: "+ huomautukset--);
-            
-        }else joudutPutkaan();
-        
-        
+            kommentti = "Sait huomautuksen, huomautuksia jäljellä: "+ huomautukset--;
+   
+    }else{
+            kommentti = joudutPutkaan();
+        }
+        return kommentti;
     }
 }
