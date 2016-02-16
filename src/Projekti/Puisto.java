@@ -24,7 +24,7 @@ public class Puisto {
         return "";
     }
     String KoiraHyökkäs(){
-        return "koira hyökkäs kimpuusi omiastja syyttää sua";
+        return "koira hyökkäs kimpuusi omistaja syyttää sua";
     }
 
     
