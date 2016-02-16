@@ -2,7 +2,7 @@ package Projekti;
 
 public class Koti {
    private double saastot;
-   private int juomat;
+   private double juomat;
    
   private Henkilo henk;
     
@@ -19,7 +19,7 @@ public class Koti {
     public double getSaastot() {
         return saastot;
     }
-    public int getJuomat() {
+    public double getJuomat() {
         return juomat;
     }
     String juodaan(){
