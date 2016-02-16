@@ -21,16 +21,15 @@ public class Koti {
     public int getJuomat() {
         return juomat;
     }
-    String juodaan(Henkilo henkilo){
-        double humalaTila = henkilo.getHumalatila();
+    String juodaan(Henkilo henkilo){     
         String kommentti;
+        
         if(juomat > 0 ){
             kommentti = "Ai ai maistuu hyvältä";
-            henkilo.setHumalatila(humalaTila + 0.3);
+           henkilo.humalatilaPlus(0.3);
             juomat--;
         }else kommentti = " juomat lopppu";
             
-        
        return kommentti;
     }
   
@@ -40,12 +39,18 @@ public class Koti {
             saastot = saastot - summa;
             kommentti = "saastoja jäljellä: "+ saastot;} 
         else kommentti = "Ei ole rahaa!!";
+        
         return kommentti;
     }
-    String lahdetaanKotoa(){
-        String kommentti = "";
-        if(juomat == 0)
-            kommentti = "juomat loppu lähdetään muualla";
+    String lahdetaanKotoa(Henkilo henkilo){
+        String kommentti;
+        double random = Math.random();
+        if(random > 0 && random <= 0.4){
+            henkilo.lisaaJuomaa(juomat);
+            kommentti = "Lähden muualle juomaan ja otan loput juomat mukaan";
+        }
+        else
+            kommentti = "juomia on jäjljellä, lähetään joka jonnekin joka tapauksessa";
         
         return kommentti;
     }
