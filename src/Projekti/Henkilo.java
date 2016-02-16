@@ -15,8 +15,7 @@ public class Henkilo {
         this.sukunimi = sukuNimi;
         this.humalatila = humalaTila;
         this.juomat = juomat;
-    }
-    
+    }   
     int getIka() {
         return ika;
     }

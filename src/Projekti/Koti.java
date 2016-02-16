@@ -10,19 +10,15 @@ public class Koti {
         this.saastot = saastot;
         this.juomat = juomat;
     }
-
     public void setSaastot(double saastot) {
         this.saastot = saastot;
     }
-
     public void setJuomat(int juomat) {
         this.juomat = juomat;
     }
-
     public double getSaastot() {
         return saastot;
     }
-
     public int getJuomat() {
         return juomat;
     }
@@ -35,9 +31,8 @@ public class Koti {
     String otaSaastoja(int summa){
         String kommentti;
         if(saastot > summa){
-        saastot = saastot - summa;
-        kommentti = "saastoja jäljellä: "+ saastot;
-        } 
+            saastot = saastot - summa;
+            kommentti = "saastoja jäljellä: "+ saastot;} 
         else kommentti = "Ei ole rahaa!!";
         return kommentti;
     }
