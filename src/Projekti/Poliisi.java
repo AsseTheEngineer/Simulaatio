@@ -20,8 +20,8 @@ public class Poliisi {
            kommentti = "sakkojen maksu epäonnistui";
        return kommentti;
    }
-   void joudutPutkaan(){
-            System.out.println("Mitä tuli tehtyä jouduit putkaan");
+   String joudutPutkaan(){
+            return "Mitä tuli tehtyä jouduit putkaan";
    }
     void huomautus(){
         if(huomautukset > 0){
