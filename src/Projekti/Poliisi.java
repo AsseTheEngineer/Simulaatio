@@ -11,7 +11,7 @@ public class Poliisi {
        
    }
    void maksaSakot(double sakot){
-       if(sakot < rahaTililla){
+       if(sakot <= rahaTililla){
        rahaTililla = rahaTililla - sakot;
        System.out.println("Rahaa jäljellä: "+ rahaTililla);}
        else joudutPutkaan();

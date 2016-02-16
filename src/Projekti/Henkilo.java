@@ -58,7 +58,7 @@ public class Henkilo {
         if (lompakko >= maksu) {
             lompakko -= maksu;
             success = true;
-        }else if (lompakko > maksu) {
+        }else if (lompakko < maksu) {
             success = false;
         }
         return success;
