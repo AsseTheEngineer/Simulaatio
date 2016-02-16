@@ -4,7 +4,6 @@ public class Koti {
    private double saastot;
    private int juomat;
    
-  private Henkilo henk;
     
     public Koti(int saastot, int juomat){
         this.saastot = saastot;
@@ -22,12 +21,19 @@ public class Koti {
     public int getJuomat() {
         return juomat;
     }
-    String juodaan(){
-       return "Ei jaksa, juodaan kotona";
+    String juodaan(Henkilo henkilo){
+        double humalaTila = henkilo.getHumalatila();
+        String kommentti;
+        if(juomat > 0 ){
+            kommentti = "Ai ai maistuu hyvältä";
+            henkilo.setHumalatila(humalaTila + 0.3);
+            juomat--;
+        }else kommentti = " juomat lopppu";
+            
+        
+       return kommentti;
     }
-    String juotu(){
-        return "no niin juotu: "+juomat+" juomaa";
-    }
+  
     String otaSaastoja(int summa){
         String kommentti;
         if(saastot > summa){
@@ -36,7 +42,13 @@ public class Koti {
         else kommentti = "Ei ole rahaa!!";
         return kommentti;
     }
-    
+    String lahdetaanKotoa(){
+        String kommentti = "";
+        if(juomat == 0)
+            kommentti = "juomat loppu lähdetään muualla";
+        
+        return kommentti;
+    }
 
     
 }
