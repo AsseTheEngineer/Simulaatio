@@ -2,7 +2,7 @@ package Projekti;
 
 public class Koti {
    private double saastot;
-   private double juomat;
+   private int juomat;
    
   private Henkilo henk;
     
@@ -19,14 +19,14 @@ public class Koti {
     public double getSaastot() {
         return saastot;
     }
-    public double getJuomat() {
+    public int getJuomat() {
         return juomat;
     }
     String juodaan(){
        return "Ei jaksa, juodaan kotona";
     }
     String juotu(){
-        return "no niin juotu: "+juomat+" Rahan edestä";
+        return "no niin juotu: "+juomat+" juomaa";
     }
     String otaSaastoja(int summa){
         String kommentti;
