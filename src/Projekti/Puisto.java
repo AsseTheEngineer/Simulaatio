@@ -12,8 +12,8 @@ public class Puisto {
     juttelee naisille
     koira hyökkäs
     
-    
     */
+    
     
     String loysitRahaa(){
         int random = (int)(Math.random()*20);
@@ -28,6 +28,7 @@ public class Puisto {
     String koiraHyökkäs(){
         return "koira hyökkäs kimpuusi omistaja syyttää sua";
     }
+
 
     
 }
