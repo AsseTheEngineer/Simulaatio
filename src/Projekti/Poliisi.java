@@ -25,7 +25,7 @@ public class Poliisi {
        String kommentti;
       
         if(huomautukset < 2){
-            kommentti = "Sait huomautuksen, huomautuksia jäljellä: ";
+            kommentti = "Sait huomautuksen, huomautuksia jäljellä: "+huomautukset;
         huomautukset++;}
         else
             kommentti = "Ei huomautuksia jäljellä vietät illan putkassa";
