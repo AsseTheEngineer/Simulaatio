@@ -47,6 +47,14 @@ public class Henkilo {
     public void setHumalatila(double humalatila) {
         this.humalatila = humalatila;
     }
+    
+    public void humalatilaPlus(double maara) {
+        this.humalatila += maara;
+    }
+    
+    public void humalatilaMiinus(double maara) {
+        this.humalatila -= maara;
+    }
 
     public void setJuomat(int juomat) {
         this.juomat = juomat;
