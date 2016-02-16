@@ -15,17 +15,17 @@ public class Puisto {
     
     */
     
-    int LoysitRahaa(){
+    String loysitRahaa(){
         int random = (int)(Math.random()*20);
-        return random;
+        return random+" Rahaa";
     }  
-    String LöysitViinaa(){
+    String löysitViinaa(){
        return "löysit vanhentunutta viinaa puistosta"; 
     }
-    String JutteleNaiselle(){
+    String jutteleNaiselle(){
         return "";
     }
-    String KoiraHyökkäs(){
+    String koiraHyökkäs(){
         return "koira hyökkäs kimpuusi omistaja syyttää sua";
     }
 

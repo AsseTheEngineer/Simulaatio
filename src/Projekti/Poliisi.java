@@ -29,12 +29,10 @@ public class Poliisi {
        
        String kommentti;
        
-        if(huomautukset > 0){
-            kommentti = "Sait huomautuksen, huomautuksia jäljellä: "+ huomautukset--;
-   
-    }else{
+        if(huomautukset > 0)
+            kommentti = "Sait huomautuksen, huomautuksia jäljellä: "+ huomautukset--; 
+        else
             kommentti = joudutPutkaan();
-        }
         return kommentti;
     }
 }
