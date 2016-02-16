@@ -55,6 +55,9 @@ public class Henkilo {
     public void lisaaRahaa(double summa) {
         this.lompakko += summa;
     }
+    public void lisaaJuomaa(int juomat){
+        this.juomat += juomat;
+    }
     
     public boolean uusiMaksu(double maksu) {
         boolean success = false;
