@@ -5,6 +5,8 @@ package Projekti;
 public class Puisto {
     
     /*
+    lisätkää tomintoja:
+    
     löytää rahaa
     löydät vinaa
     juttelee naisille
