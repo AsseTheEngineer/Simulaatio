@@ -17,7 +17,7 @@ public class Puisto {
     
     String loysitRahaa(){
         int random = (int)(Math.random()*20);
-        return random+" Rahaa";
+        return "löysit: "+random+" Rahaa";
     }  
     String löysitViinaa(){
        return "löysit vanhentunutta viinaa puistosta"; 
