@@ -2,7 +2,7 @@ package Projekti;
 
 public class Poliisi {
   private final int sakot;
-  private int huomautukset = 2;
+  private int huomautukset = 0;
  
     public Poliisi(int sakot){
      this.sakot = sakot;   
@@ -24,8 +24,9 @@ public class Poliisi {
     String huomautus(){ 
        String kommentti;
       
-        if(huomautukset > 0)
-            kommentti = "Sait huomautuksen, huomautuksia jäljellä: "+ huomautukset--; 
+        if(huomautukset < 2){
+            kommentti = "Sait huomautuksen, huomautuksia jäljellä: ";
+        huomautukset++;}
         else
             kommentti = "Ei huomautuksia jäljellä vietät illan putkassa";
         return kommentti;
