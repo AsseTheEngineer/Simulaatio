@@ -25,10 +25,9 @@ public class Poliisi {
             return "Mitä tuli tehtyä jouduit putkaan";
    }
    
-    String huomautus(){
-       
+    String huomautus(){ 
        String kommentti;
-       
+      
         if(huomautukset > 0)
             kommentti = "Sait huomautuksen, huomautuksia jäljellä: "+ huomautukset--; 
         else

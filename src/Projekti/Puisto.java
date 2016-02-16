@@ -12,9 +12,7 @@ public class Puisto {
     juttelee naisille
     koira hyökkäs
     
-    */
-    
-    
+    */  
     String loysitRahaa(Henkilo henk){
         int random = (int)(Math.random()*20);
         henk.lisaaRahaa(random);
@@ -24,7 +22,7 @@ public class Puisto {
        return "löysit vanhentunutta viinaa puistosta"; 
     }
     String jutteleNaiselle(){
-        return "";
+        return "tyhjää";
     }
     String koiraHyökkäs(){
         return "koira hyökkäs kimpuusi omistaja syyttää sua";

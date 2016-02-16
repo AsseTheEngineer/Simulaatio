@@ -32,13 +32,12 @@ public class Koti {
     String juotu(){
         return "no niin juotu: "+juomat+" Rahan edestä";
     }
-    String otaRahaa(int summa){
+    String otaSaastoja(int summa){
         String kommentti;
         if(saastot > summa){
         saastot = saastot - summa;
         kommentti = "saastoja jäljellä: "+ saastot;
-        }
-        
+        } 
         else kommentti = "Ei ole rahaa!!";
         return kommentti;
     }
