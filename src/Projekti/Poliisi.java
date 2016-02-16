@@ -1,18 +1,24 @@
 package Projekti;
 
 public class Poliisi {
-    double rahaTililla;//Olio rahan määrällee tilillä 
+  Henkilo henk;
+    final int sakot;
     int huomautukset = 2;
-    
-   public Poliisi(){
+ 
+    public Poliisi(int sakot){
+     this.sakot = sakot;   
+    }
+ 
+   String maksaSakot(Henkilo henkilo){
+       boolean onnistuiko;
+       onnistuiko = henkilo.uusiMaksu(sakot);
+       String kommentti;
        
-   }
-   void maksaSakot(double sakot){
-       if(sakot < rahaTililla){
-       rahaTililla = rahaTililla - sakot;
-       System.out.println("Rahaa jäljellä: "+ rahaTililla);}
-       else joudutPutkaan();
-       
+       if(onnistuiko == true)
+           kommentti = "sakkojen maksu onnistui";
+       else
+           kommentti = "sakkojen maksu epäonnistui";
+       return kommentti;
    }
    void joudutPutkaan(){
             System.out.println("Mitä tuli tehtyä jouduit putkaan");
