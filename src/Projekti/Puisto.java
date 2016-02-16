@@ -6,6 +6,10 @@ public class Puisto {
     
     /*
     löytää rahaa
+    löydät vinaa
+    juttelee naisille
+    koira hyökkäs
+    
     
     */
     
@@ -13,8 +17,15 @@ public class Puisto {
         int random = (int)(Math.random()*20);
         return random;
     }  
-    
-    //tehkää jotain
-    
+    String LöysitViinaa(){
+       return "löysit vanhentunutta viinaa puistosta"; 
+    }
+    String JutteleNaiselle(){
+        return "";
+    }
+    String KoiraHyökkäs(){
+        return "koira hyökkäs kimpuusi omiastja syyttää sua";
+    }
+
     
 }

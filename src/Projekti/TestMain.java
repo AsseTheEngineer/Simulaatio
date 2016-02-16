@@ -8,12 +8,10 @@ public class TestMain {
         Koti koti;
         Poliisi pol = new Poliisi(50);
         Henkilo henk = new Henkilo(12,100,"kalle","kaapo",1.3,13); //int age, double money, String etuNimi, String sukuNimi, double humalaTila, int juomat
-        Puisto puisto;
+        Puisto puisto = new Puisto();
  
-        /*
-        System.out.println(pol.maksaSakot(henk));
-        System.out.println(henk.getRaha());
-        */
+        System.out.println(puisto.LoysitRahaa());
+        
     }
     
 }
