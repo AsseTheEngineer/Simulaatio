@@ -15,8 +15,9 @@ public class Puisto {
     */
     
     
-    String loysitRahaa(){
+    String loysitRahaa(Henkilo henk){
         int random = (int)(Math.random()*20);
+        henk.lisaaRahaa(random);
         return "löysit: "+random+" Rahaa";
     }  
     String löysitViinaa(){
