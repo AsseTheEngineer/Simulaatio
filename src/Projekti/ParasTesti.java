@@ -12,5 +12,6 @@ package Projekti;
 public class ParasTesti {
     public void peruna() {
         System.out.println("nom nom");
+        System.out.println("hyi hyi");
     }
 }
