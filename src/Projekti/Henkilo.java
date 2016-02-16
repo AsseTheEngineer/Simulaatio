@@ -53,6 +53,10 @@ public class Henkilo {
         this.juomat = juomat;
     }
     
+    public void lisaaRahaa(double summa) {
+        this.lompakko += summa;
+    }
+    
     public boolean uusiMaksu(double maksu) {
         boolean success = false;
         if (lompakko >= maksu) {
