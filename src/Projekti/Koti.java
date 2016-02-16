@@ -26,19 +26,21 @@ public class Koti {
     public int getJuomat() {
         return juomat;
     }
-    void juodaan(){
-        System.out.println("Ei jaksa, juodaan kotona");
+    String juodaan(){
+       return "Ei jaksa, juodaan kotona";
     }
-    void juotu(){
-        System.out.println("no niin juotu: "+juomat+" Rahan edestä");
+    String juotu(){
+        return "no niin juotu: "+juomat+" Rahan edestä";
     }
-    void otaRahaa(int summa){
-        //säästoiltä otetaan rahaa
+    String otaRahaa(int summa){
+        String kommentti;
         if(saastot > summa){
         saastot = saastot - summa;
-        System.out.println("saastoja jäljellä: "+ saastot);}
+        kommentti = "saastoja jäljellä: "+ saastot;
+        }
         
-        else System.out.println("Ei ole rahaa!!");
+        else kommentti = "Ei ole rahaa!!";
+        return kommentti;
     }
     
 
