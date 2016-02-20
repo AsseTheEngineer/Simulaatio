@@ -1,25 +1,43 @@
 package Projekti;
 
 public class Henkilo {
-    private final int ika;
+    //private final int ika;
     private double lompakko;
     private final String etunimi;
     private final String sukunimi;
     private double humalatila;
     private int juomat;
+    private int huomautukset;
+    private int gameOver;
     
-    public Henkilo(int age, double money, String etuNimi, String sukuNimi, double humalaTila, int juomat) {
-        this.ika = age;
+    public Henkilo(double money, String etuNimi, String sukuNimi, double humalaTila, int juomat) {
+        //this.ika = age;
         this.lompakko = money;
         this.etunimi = etuNimi;
         this.sukunimi = sukuNimi;
         this.humalatila = humalaTila;
         this.juomat = juomat;
+        this.huomautukset = 0;
+        this.gameOver = 0;
     }
     
-    int getIka() {
-        return ika;
+    int gameOver(){
+        gameOver = 1;
+        return gameOver;
     }
+    
+    int getHuomautukset() {
+        return huomautukset;
+    }
+    
+    int lisaaHuomautus(){
+        huomautukset++;
+        return huomautukset;
+    }
+    
+    /*int getIka() {
+        return ika;
+    }*/
     
     double getRaha() {
         return lompakko;
@@ -85,14 +103,14 @@ public class Henkilo {
             this.juomat--;
             kommentti = "Kyllähän se kalja on hyvää";
         }else {
-            kommentti = "Juomat on loppu";
+            kommentti = "Nytkö ne juomat on jo loppu";
         }
         return kommentti;
     }
 
     @Override
     public String toString() {
-        return "Henkilo{" + "ika=" + ika + ", lompakko=" + lompakko + ", etunimi=" + etunimi + ", sukunimi=" + sukunimi + ", humalatila=" + humalatila + ", juomat=" + juomat + '}';
+        return "Henkilo{" + /*"ika=" + ika +*/ "lompakko=" + lompakko + ", etunimi=" + etunimi + ", sukunimi=" + sukunimi + ", humalatila=" + humalatila + ", juomat=" + juomat + '}';
     }
     
     

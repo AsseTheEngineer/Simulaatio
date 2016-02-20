@@ -3,15 +3,16 @@ package Projekti;
 public class TestMain {
 
     public static void main(String[] args) {
-        //System.out.println("Testi");
         
-        Koti koti;
-        Poliisi pol = new Poliisi(50);
-        Henkilo henk = new Henkilo(12,100,"kalle","kaapo",1.3,13); //int age, double money, String etuNimi, String sukuNimi, double humalaTila, int juomat
-        Puisto puisto = new Puisto();
-        Taulukko logBook = new Taulukko(24);
-        logBook.taytaTaulukko();
-        logBook.toString();
+        
+        
+        //Alla esimerkki miten koko paskaa pyöritetää sit lopuks
+        Henkilo jarno = new Henkilo(100, "Jarno", "Penttilä", 3, 5);
+        int kello = 0;
+        
+        do {
+            
+        }while (jarno.gameOver() < 1 || kello >= 4);
         
         
     }

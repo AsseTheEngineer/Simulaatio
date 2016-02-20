@@ -3,8 +3,11 @@ package Projekti;
 public class Poliisi {
   Henkilo henk;
     final int sakot;
-    int huomautukset = 2;
- 
+    /*Otin huomautukset pois ja siirsin ne "henkilölle" 
+    koska henkilö on olio ja jos huomautukset olisi ollut poliisi oliolla ei usesalle henkilölle pystyisi antaa huomautuksia
+    koska huomautukset on poliisilla
+    */
+    
     public Poliisi(int sakot){
      this.sakot = sakot;   
     }
@@ -21,20 +24,27 @@ public class Poliisi {
        return kommentti;
    }
    
+   
+    /* Toi metodi on periaattees turha koska ton kommentoi voi laittaa huomautus metodiin
     String joudutPutkaan(){
             return "Mitä tuli tehtyä jouduit putkaan";
-   }
+   }*/
    
-    String huomautus(){
-       
+   
+    //Tohon lisäsin henkilön mikä annetaa kun kutsutaan tota metodia
+    //(Auttaa siinä että voidaan antaa se huomautus sille henkilölle ei poliisille)
+    String huomautus(Henkilo henkilo){
+       int huomautukset = henkilo.getHuomautukset();
        String kommentti;
        
-        if(huomautukset > 0){
-            kommentti = "Sait huomautuksen, huomautuksia jäljellä: "+ huomautukset--;
-   
-    }else{
-            kommentti = joudutPutkaan();
-        }
-        return kommentti;
-    }
+       if(huomautukset < 2){
+            henkilo.lisaaHuomautus();
+            kommentti = "Pääsit tällä kertaa huomautuksella, ens kerralla se on sit putka reissu";
+       }else{
+            kommentti = "Illan jatkot taitaaki olla sit tuolla putkan puolella";
+            henkilo.gameOver();
+       }
+       
+       return kommentti;
+       }
 }

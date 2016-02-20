@@ -71,7 +71,7 @@ public class Baari {
 
     public String tanssi() {
         double random = Math.random();
-        String kommentti = "";
+        String kommentti;
         if (random >= 0 && random <= 0.33) {
             kommentti = "Tanssit kuin Michael Jackson! Ainakin omasta mielestäsi.";
         } else if (random > 0.33 && random <= 0.66) {
