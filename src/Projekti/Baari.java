@@ -15,7 +15,7 @@ public class Baari {
     final int siideri;
     final int jallu;
     final int jekku;
-    Henkilo henkilo;
+    //Henkilo henkilo;
 
     public Baari(int kalja, int siideri, int jallu, int jekku) {
         this.kalja = kalja;
@@ -24,7 +24,7 @@ public class Baari {
         this.jekku = jekku;
     }
 
-    public String ostaJuoma(int juoma) {
+    public String ostaJuoma(int juoma, Henkilo henkilo) {
         boolean maksuLapi;
         String kommentti = "";
         double humalaTila = henkilo.getHumalatila();
