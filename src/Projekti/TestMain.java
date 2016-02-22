@@ -17,8 +17,8 @@ public class TestMain {
         Poliisi poliisi = new Poliisi(40);
         Koti jarnonKoti = new Koti(jarno);
         Kaverinkamppa makenKoti = new Kaverinkamppa(5, 50);
-        Puisto kaivopuisto = new Puisto();
-        Paikka paikka = new Paikka(jarno, poliisi, jarnonKoti, makenKoti);
+        Puisto kaivopuisto = new Puisto(poliisi);
+        Paikka paikka = new Paikka(jarno, poliisi, jarnonKoti, makenKoti, kaivopuisto);
         
         int gameOver = 0;
         String tarina;
@@ -34,7 +34,7 @@ public class TestMain {
                 gameOver = 1;
             }else if (kello == 4) {
                 gameOver = 1;
-            }else if (jarno.getHuomautukset() >= 2) {
+            }else if (jarno.getHuomautukset() >= 3) {
                 gameOver = 1;
             }
             paikka.simulointi();

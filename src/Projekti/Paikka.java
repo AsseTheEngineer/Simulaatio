@@ -11,14 +11,16 @@ public class Paikka {
     Poliisi poliisi;
     Koti koti;
     Kaverinkamppa kaveri;
+    Puisto puisto;
     double random;
     int apu = 0;
 
-    public Paikka(Henkilo henkilo, Poliisi poliisi, Koti koti, Kaverinkamppa kaveri) {
+    public Paikka(Henkilo henkilo, Poliisi poliisi, Koti koti, Kaverinkamppa kaveri, Puisto puisto) {
         this.henkilo = henkilo;
         this.poliisi = poliisi;
         this.koti = koti;
         this.kaveri = kaveri;
+        this.puisto = puisto;
     }
 
     public void addBaari(Baari baari) {
@@ -50,7 +52,7 @@ public class Paikka {
 
         } else if (random >= 0.8 && random <= 1) { //puisto
             tapahtumat += "[kello, puisto]";
-
+            puisto();
         }
     }
 
@@ -105,7 +107,12 @@ public class Paikka {
     }
 
     public void puisto() {
-
+        random = Math.random();
+        if (random > 0 && random < 0.5) {
+            tapahtumat += puisto.juoOmajuoma(henkilo) + "\n";
+        }else {
+            tapahtumat += puisto.pummiJuoma(henkilo) + "\n";
+        }
     }
 
     public String getTarina() {
