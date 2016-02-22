@@ -32,37 +32,37 @@ public class Baari {
             case 1:
                 maksuLapi = henkilo.uusiMaksu((double) kalja);
                 if (maksuLapi == true) {
-                    kommentti = "Tässä kaljasi.";
+                    kommentti = "Menet baaritiskille ja kaikkien hämmästykseksi sinua palvellaan hyvinkin nopeasti oluen muodossa.";
                     henkilo.setHumalatila(humalaTila + 0.5);
                 } else {
-                    kommentti = "Sulla ei ole tarpeeksi rahaa.";
+                    kommentti = "Menet tiskille ja tilaat oluen. Valitettavasti et saa kuin haukut, koska rahasi ovat loppu.";
                 }
                 break;
             case 2:
                 maksuLapi = henkilo.uusiMaksu((double) siideri);
                 if (maksuLapi == true) {
-                    kommentti = "Tässä siiderisi.";
+                    kommentti = "Tunnet itsesi pissaliisaksi ja menet tiskille tilaamaan siiderin.";
                     henkilo.setHumalatila(humalaTila + 0.5);
                 } else {
-                    kommentti = "Sulla ei ole tarpeeksi rahaa.";
+                    kommentti = "Menet tiskille ja tilaat siiderin. Valitettavasti et saa kuin haukut, koska rahasi ovat loppu.";
                 }
                 break;
             case 3:
                 maksuLapi = henkilo.uusiMaksu((double) jallu);
                 if (maksuLapi == true) {
-                    kommentti = "Tässä jallusi.";
+                    kommentti = "Tunnet itsesi lähestulkoon Ron Jeremyksi, joten tilaat jaloviinashotin.";
                     henkilo.setHumalatila(humalaTila + 0.7);
                 } else {
-                    kommentti = "Sulla ei ole tarpeeksi rahaa.";
+                    kommentti = "Menet tiskille ja tilaat jallushotin. Valitettavasti et saa muuta kuin haukut, koska rahasi ovat loppu.";
                 }
                 break;
             case 4:
                 maksuLapi = henkilo.uusiMaksu((double) jekku);
                 if (maksuLapi == true) {
-                    kommentti = "Tässä jekkusi";
+                    kommentti = "Sinulla on vahva tunne, että tänään lykästää. Menet tilaamaan Jägermeisterin, koska olet kuullut sen mieskuntoa kohottavista ominaisuuksista";
                     henkilo.setHumalatila(humalaTila + 0.7);
                 } else {
-                    kommentti = "Sulla ei ole tarpeeksi rahaa.";
+                    kommentti = "Menet tiskille ja tilaat jekkushotin. Valitettavasti et saa muuta kuin haukut, koska rahasi ovat loppu.";
                 }
                 break;
         }
@@ -73,11 +73,11 @@ public class Baari {
         double random = Math.random();
         String kommentti;
         if (random >= 0 && random <= 0.33) {
-            kommentti = "Tanssit kuin Michael Jackson! Ainakin omasta mielestäsi.";
+            kommentti = "Tunnet itsesi John Travoltaksi Saturday night feverissä ja menet tanssimaan. Valitettavasti totuus on eri.";
         } else if (random > 0.33 && random <= 0.66) {
-            kommentti = "Vedät päin helvettiä, mutta et anna sen häiritä.";
+            kommentti = "Menet tanssimaan ja hyvin tanssitkin. Omasta mielestäsi.";
         } else {
-            kommentti = "Kaaduit ja nolasit itsesi täysin.";
+            kommentti = "Menet tanssilattialle näyttämään kireimmät liikkeesi. Yleisö ei pidä sinusta ja saat kaljat päällesi.";
         }
         return kommentti;
     }

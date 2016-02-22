@@ -27,12 +27,12 @@ public class Koti {
 
         if (henkilo.getJuomat() < 5 && juomat > 0) {
             henkilo.lisaaJuomaa(random);
-            kommentti = "Otit " + random + " juomaa reppuun.";
+            kommentti = "Käyt jääkaapilla lataamassa panokset. Otit " + random + " juomaa reppuun.";
             juomat -= random;
         } else if (juomat == 0) {
-            kommentti = "Jääkaapissa ei ole kuin valo.";
+            kommentti = "Ajattelit käydä hakemassa matkajuomaa jääkaapista, mutta valitettavasti siellä ei ole kuin valo.";
         } else {
-            kommentti = "Et tarvitse enempää juomaa, koska sinulla on " + henkilo.getJuomat() + "juomaa jo repussa.";
+            kommentti = "Ajattelit käydä hakemassa matkajuomaa jääkaapista, mutta muistitkin, että sinulla on " + henkilo.getJuomat() + "juomaa jo repussa.";
         }
         return kommentti;
 
@@ -59,13 +59,15 @@ public class Koti {
     }
 
     String otaRahaa(int summa, Henkilo henkilo) {
-        String kommentti;
+        String kommentti="";
         if (henkilo.getRaha() < 50) {
             henkilo.lisaaRahaa(saastot);
-            kommentti = "Lompakko reloaded.";
+            kommentti = "Käyt kaivamassa patjojen välistä lisää rahaa illan koitoksia varten.";
 
         } else if(saastot==0){
-            kommentti = "Olit menossa.";
+            kommentti = "Menit pöyhimään tyynyliinaa rahan toivossa vain todetaksesi, että rahat on loppu.";
+        }else{
+            kommentti= "Meinasit mennä hakemaan lisää rahaa, mutta muistit olevasi pihi. Joten päätät pärjätä lompakossa olevalla summalla.";
         }
 
         return kommentti;
