@@ -23,9 +23,9 @@ public class Kaverinkamppa {
         String kommentti = "";
         if (henkilo.getRaha() > 20) {
             henkilo.lisaaRahaa(20);
-            kommentti = "Lainasit kaverilta 20€.";
+            kommentti = "Rahatilanteesi on heikko. Pyydät kaveriltasi parikymppiä lainaa, jonka hän yllätyksesesi lainaa.";
         } else {
-            kommentti = "Mitä helvettiä, sullahan on rahaa!";
+            kommentti = "Yrität vedättää kaveriasi valehtelemalla, että sinulla ei ole rahaa ja tarvitset lainaa. Kaverisi lukee sinua kuin avointa kirjaa ja lyö sinua.";
         }
         return kommentti;
 
@@ -34,9 +34,9 @@ public class Kaverinkamppa {
     public String juoJuoma(Henkilo henkilo) {
         String kommentti = "";
         henkilo.humalatilaPlus(0.5);
-            kommentti = "Otit yhden juoman jääkaapista.";
-        
-      return kommentti;
+        kommentti = "Otat yhden juoman kaverisi jääkaapista ja huitaiset sen ykkösellä nieluusi. Kaverisi katsoo sinua pahasti, mutta et anna sen häiritä.";
+
+        return kommentti;
     }
 
     public String puhuPaskaa(Henkilo henkilo) {
@@ -51,15 +51,16 @@ public class Kaverinkamppa {
         return kommentti;
 
     }
-    public String lahdeKaverilta(Henkilo henkilo){
+
+    public String lahdeKaverilta(Henkilo henkilo) {
         String kommentti = "";
         if (henkilo.getJuomat() < 3) {
             henkilo.lisaaJuomaa(4);
-            kommentti = "Otit neljä juomaa jääkaapista.";
+            kommentti = "Olette lähdössä kaveriltasi ja tarkistat matkajuomatilanteen, mikä ei ole hyvä. Vain " + henkilo.getJuomat() + " juomaa. Nussit kaverisi jääkaapista 4 juomaa.";
         } else {
-            kommentti = "Mitä vittua! Sullahan on omia juomia!";
+            kommentti = "Juuri kun olette tekemässä lähtöä, yrität käydä varastamassa kaveriltasi lisää matkajuomaa, vaikka sinulla on jo tarpeeksi sitä. Kaverisi huomaa välittömästi aikeesi ja antaa sinulle litsarin otsaan.";
         }
         return kommentti;
-        
+
     }
 }

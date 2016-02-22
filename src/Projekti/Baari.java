@@ -39,7 +39,7 @@ public class Baari {
                 maksuLapi = henkilo.uusiMaksu((double) kalja);
                 if (maksuLapi == true) {
                     kommentti = "Menet baaritiskille ja kaikkien hämmästykseksi sinua palvellaan hyvinkin nopeasti oluen muodossa.";
-                    henkilo.setHumalatila(humalaTila + 0.5);
+                    henkilo.humalatilaPlus(0.5);
                 } else {
                     kommentti = "Menet tiskille ja tilaat oluen. Valitettavasti et saa kuin haukut, koska rahasi ovat loppu.";
                 }
@@ -48,7 +48,7 @@ public class Baari {
                 maksuLapi = henkilo.uusiMaksu((double) siideri);
                 if (maksuLapi == true) {
                     kommentti = "Tunnet itsesi pissaliisaksi ja menet tiskille tilaamaan siiderin.";
-                    henkilo.setHumalatila(humalaTila + 0.5);
+                    henkilo.humalatilaPlus(0.5);
                 } else {
                     kommentti = "Menet tiskille ja tilaat siiderin. Valitettavasti et saa kuin haukut, koska rahasi ovat loppu.";
                 }
@@ -57,7 +57,7 @@ public class Baari {
                 maksuLapi = henkilo.uusiMaksu((double) jallu);
                 if (maksuLapi == true) {
                     kommentti = "Tunnet itsesi lähestulkoon Ron Jeremyksi, joten tilaat jaloviinashotin.";
-                    henkilo.setHumalatila(humalaTila + 0.7);
+                    henkilo.humalatilaPlus(0.7);
                 } else {
                     kommentti = "Menet tiskille ja tilaat jallushotin. Valitettavasti et saa muuta kuin haukut, koska rahasi ovat loppu.";
                 }
@@ -66,7 +66,7 @@ public class Baari {
                 maksuLapi = henkilo.uusiMaksu((double) jekku);
                 if (maksuLapi == true) {
                     kommentti = "Sinulla on vahva tunne, että tänään lykästää. Menet tilaamaan Jägermeisterin, koska olet kuullut sen mieskuntoa kohottavista ominaisuuksista";
-                    henkilo.setHumalatila(humalaTila + 0.7);
+                    henkilo.humalatilaPlus(0.7);
                 } else {
                     kommentti = "Menet tiskille ja tilaat jekkushotin. Valitettavasti et saa muuta kuin haukut, koska rahasi ovat loppu.";
                 }
