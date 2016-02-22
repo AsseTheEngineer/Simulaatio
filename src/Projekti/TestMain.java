@@ -18,7 +18,7 @@ public class TestMain {
         Koti jarnonKoti = new Koti(jarno);
         Kaverinkamppa makenKoti = new Kaverinkamppa(5, 50);
         Puisto kaivopuisto = new Puisto();
-        Paikka paikka = new Paikka(jarno, poliisi);
+        Paikka paikka = new Paikka(jarno, poliisi, jarnonKoti);
         
         int gameOver = 0;
         String tarina;

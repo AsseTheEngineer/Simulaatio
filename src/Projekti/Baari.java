@@ -33,7 +33,6 @@ public class Baari {
     public String ostaJuoma(int juoma, Henkilo henkilo) {
         boolean maksuLapi;
         String kommentti = "";
-        double humalaTila = henkilo.getHumalatila();
         switch (juoma) {
             case 1:
                 maksuLapi = henkilo.uusiMaksu((double) kalja);

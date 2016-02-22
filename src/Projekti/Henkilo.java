@@ -18,7 +18,9 @@ public class Henkilo {
         this.humalatila = humalaTila;
         this.juomat = juomat;
         this.huomautukset = 0;
+
     }
+
 
     int getHuomautukset() {
         return huomautukset;

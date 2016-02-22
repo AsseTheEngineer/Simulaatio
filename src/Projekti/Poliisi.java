@@ -1,15 +1,16 @@
 package Projekti;
 
 public class Poliisi {
-  Henkilo henk;
+  Henkilo henkilo;
     final int sakot;
     /*Otin huomautukset pois ja siirsin ne "henkilölle" 
     koska henkilö on olio ja jos huomautukset olisi ollut poliisi oliolla ei usesalle henkilölle pystyisi antaa huomautuksia
     koska huomautukset on poliisilla
     */
     
-    public Poliisi(int sakot){
-     this.sakot = sakot;   
+    public Poliisi(int sakot, Henkilo henkilo){
+     this.sakot = sakot;
+     this.henkilo = henkilo;
     }
  
    String maksaSakot(Henkilo henkilo){
@@ -33,15 +34,15 @@ public class Poliisi {
    
     //Tohon lisäsin henkilön mikä annetaa kun kutsutaan tota metodia
     //(Auttaa siinä että voidaan antaa se huomautus sille henkilölle ei poliisille)
-    String huomautus(Henkilo henkilo){
+    String huomautus(){
        int huomautukset = henkilo.getHuomautukset();
        String kommentti;
        
        if(huomautukset < 2){
             henkilo.lisaaHuomautus();
-            kommentti = "Pääsit tällä kertaa huomautuksella, ens kerralla se on sit putka reissu";
+            kommentti = "Korkkaan juoman repustasi huomaamatta, että herra konstaapeli on selkäsi takana. Pääset kuitenkin pälkähästä pelkällä huomautuksella.";
        }else{
-            kommentti = "Illan jatkot taitaaki olla sit tuolla putkan puolella";
+            kommentti = "Samainen konstaapeli, joka on sinulle jo aikaisemmin antanut huomautuksen sattuu jälleen kerran paikalle. Tällä kertaa hän ei ole yhtä suvaitsevainen. Pääset maijan kyydillä putkaan.";
        }
        
        return kommentti;

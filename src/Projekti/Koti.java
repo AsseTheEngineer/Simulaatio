@@ -20,6 +20,10 @@ public class Koti {
     public void setJuomat(int juomat) {
         this.juomat = juomat;
     }
+    
+    public double getSaastot() {
+        return saastot;
+    }
 
     public String otaJuomia() {
         int random = (int) (Math.random() * juomat);
@@ -58,7 +62,7 @@ public class Koti {
 
     }
 
-    String otaRahaa(int summa, Henkilo henkilo) {
+    String otaRahaa(int summa) {
         String kommentti="";
         if (henkilo.getRaha() < 50) {
             henkilo.lisaaRahaa(saastot);

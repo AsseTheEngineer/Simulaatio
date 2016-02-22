@@ -15,7 +15,7 @@ public class Puisto {
     
     */
     
-    int LoysitRahaa(){
+    /* int LoysitRahaa(){
         int random = (int)(Math.random()*20);
         return random;
     }  
@@ -28,6 +28,7 @@ public class Puisto {
     String KoiraHyökkäs(){
         return "koira hyökkäs kimpuusi omistaja syyttää sua";
     }
+*/
 
     
 }
