@@ -33,6 +33,7 @@ public class TestMain {
         int kello = 0;
         
         while (jarno.getHuomautukset() < 2 || jarno.getHumalatila() < 10 || kello != 4) {
+            
             paikka.simulointi();
         }
     }
