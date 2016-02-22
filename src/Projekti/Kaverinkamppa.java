@@ -30,32 +30,36 @@ public class Kaverinkamppa {
         return kommentti;
 
     }
-    public String otaJuomia(Henkilo henkilo){
+
+    public String juoJuoma(Henkilo henkilo) {
         String kommentti = "";
-        if (henkilo.getJuomat()<3){
-            henkilo.lisaaJuomaa(1);
-            kommentti="Otit yhden juoman jääkaapista.";
-        }else{
-            kommentti="Mitä vittua! Sullahan on omia juomia!";
-        }
-        return kommentti;}
-    
-    public String puhuPaskaa(Henkilo henkilo){
+        henkilo.humalatilaPlus(0.5);
+            kommentti = "Otit yhden juoman jääkaapista.";
         
-        String kommentti="";
-        
-        if (henkilo.getHumalatila()<5) {
-            kommentti="Kerrot kaverillesi gravitaatioaaltoteoriasta.";}
-        else if(henkilo.getHumalatila()>=5 && henkilo.getHumalatila()<10){
-            kommentti="Alat olemaan sen verran humalassa, ettei kaverisi saa oikein selvää mistä puhut.";}
-        return kommentti;
-        
-            
-                    
-            
-        
-    }   
+      return kommentti;
     }
 
+    public String puhuPaskaa(Henkilo henkilo) {
 
+        String kommentti = "";
 
+        if (henkilo.getHumalatila() < 5) {
+            kommentti = "Kerrot kaverillesi gravitaatioaaltoteoriasta.";
+        } else if (henkilo.getHumalatila() >= 5 && henkilo.getHumalatila() < 10) {
+            kommentti = "Alat olemaan sen verran humalassa, ettei kaverisi saa oikein selvää mistä puhut.";
+        }
+        return kommentti;
+
+    }
+    public String lahdeKaverilta(Henkilo henkilo){
+        String kommentti = "";
+        if (henkilo.getJuomat() < 3) {
+            henkilo.lisaaJuomaa(4);
+            kommentti = "Otit neljä juomaa jääkaapista.";
+        } else {
+            kommentti = "Mitä vittua! Sullahan on omia juomia!";
+        }
+        return kommentti;
+        
+    }
+}

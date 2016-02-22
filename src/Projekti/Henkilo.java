@@ -107,6 +107,9 @@ public class Henkilo {
         }
         return kommentti;
     }
+    public void juomaMiinus(){
+        juomat--;
+    }
 
     @Override
     public String toString() {
