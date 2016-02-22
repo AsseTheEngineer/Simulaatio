@@ -30,14 +30,16 @@ public class TestMain {
         int kello = 0;
         
         while (gameOver != 1) {
-            if (jarno.getHumalatila() > 10) {
+            paikka.simulointi();
+            //System.out.println("\n" + jarno.getHumalatila() + "\n");
+            if (jarno.getHumalatila() >= 10) {
                 gameOver = 1;
             }else if (kello == 4) {
                 gameOver = 1;
             }else if (jarno.getHuomautukset() >= 3) {
                 gameOver = 1;
             }
-            paikka.simulointi();
+            
         }
         
         System.out.println(paikka.getTarina());
