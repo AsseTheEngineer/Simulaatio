@@ -30,7 +30,7 @@ public class TestMain {
         int kello = 0;
         
         while (gameOver != 1) {
-            if (jarno.getHumalatila() > 10) {
+            if (jarno.getHumalatila() >= 10) {
                 gameOver = 1;
             }else if (kello == 4) {
                 gameOver = 1;

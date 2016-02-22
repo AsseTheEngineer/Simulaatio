@@ -36,7 +36,7 @@ public class Koti {
         } else if (juomat == 0) {
             kommentti = "Ajattelit käydä hakemassa matkajuomaa jääkaapista, mutta valitettavasti siellä ei ole kuin valo.";
         } else {
-            kommentti = "Ajattelit käydä hakemassa matkajuomaa jääkaapista, mutta muistitkin, että sinulla on " + henkilo.getJuomat() + "juomaa jo repussa.";
+            kommentti = "Ajattelit käydä hakemassa matkajuomaa jääkaapista, mutta muistitkin, että sinulla on " + henkilo.getJuomat() + " juomaa jo repussa.";
         }
         return kommentti;
 
