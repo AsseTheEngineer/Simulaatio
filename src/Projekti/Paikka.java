@@ -82,13 +82,13 @@ public class Paikka {
 
     public void koti() {
         random = Math.random();
-        int sum = (int)(Math.random() *)
+        int sum = (int)(Math.random() * koti.getSaastot());
         if (random > 0 && random < 0.4) {
             tapahtumat += koti.otaJuomia() + "\n";
         }else if (random >= 0.4 && random < 0.7) {
             tapahtumat += koti.omaJuoma() + "\n";
         }else if (random >= 0.7 && random >= 1) {
-            tapahtumat += koti.otaRahaa(10);
+            tapahtumat += koti.otaRahaa(sum);
         }
 
     }

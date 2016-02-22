@@ -8,7 +8,7 @@ public class Poliisi {
     koska huomautukset on poliisilla
     */
     
-    public Poliisi(int sakot, Henkilo henkilo){
+    public Poliisi(int sakot){
      this.sakot = sakot;
      this.henkilo = henkilo;
     }
@@ -34,7 +34,7 @@ public class Poliisi {
    
     //Tohon lisäsin henkilön mikä annetaa kun kutsutaan tota metodia
     //(Auttaa siinä että voidaan antaa se huomautus sille henkilölle ei poliisille)
-    String huomautus(){
+    String huomautus(Henkilo henkilo){
        int huomautukset = henkilo.getHuomautukset();
        String kommentti;
        
