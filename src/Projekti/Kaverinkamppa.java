@@ -52,13 +52,13 @@ public class Kaverinkamppa {
 
     }
 
-    public String lahdeKaverilta(Henkilo henkilo) {
+    public String otaKaverinJuoma(Henkilo henkilo) {
         String kommentti = "";
         if (henkilo.getJuomat() < 3) {
             henkilo.lisaaJuomaa(4);
-            kommentti = "Olette lähdössä kaveriltasi ja tarkistat matkajuomatilanteen, mikä ei ole hyvä. Vain " + henkilo.getJuomat() + " juomaa. Nussit kaverisi jääkaapista 4 juomaa.";
+            kommentti = "Tarkistat matkajuomatilanteen, mikä ei ole hyvä. Vain " + henkilo.getJuomat() + " juomaa. Nussit kaverisi jääkaapista 4 juomaa.";
         } else {
-            kommentti = "Juuri kun olette tekemässä lähtöä, yrität käydä varastamassa kaveriltasi lisää matkajuomaa, vaikka sinulla on jo tarpeeksi sitä. Kaverisi huomaa välittömästi aikeesi ja antaa sinulle litsarin otsaan.";
+            kommentti = "Yrität käydä varastamassa kaveriltasi lisää juomaa, vaikka sinulla on jo tarpeeksi sitä. Kaverisi huomaa välittömästi aikeesi ja antaa sinulle litsarin otsaan.";
         }
         return kommentti;
 

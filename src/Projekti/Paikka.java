@@ -4,19 +4,21 @@ import java.util.Date;
 
 public class Paikka {
 
-    String tapahtumat;
+    String tapahtumat = "";
     Date date = new Date();
     Baari[] baarit = new Baari[2];
     Henkilo henkilo;
     Poliisi poliisi;
     Koti koti;
+    Kaverinkamppa kaveri;
     double random;
     int apu = 0;
 
-    public Paikka(Henkilo henkilo, Poliisi poliisi, Koti koti) {
+    public Paikka(Henkilo henkilo, Poliisi poliisi, Koti koti, Kaverinkamppa kaveri) {
         this.henkilo = henkilo;
         this.poliisi = poliisi;
         this.koti = koti;
+        this.kaveri = kaveri;
     }
 
     public void addBaari(Baari baari) {
@@ -44,6 +46,7 @@ public class Paikka {
 
         } else if (random >= 0.6 && random < 0.8) { // kaverin kämppä
             tapahtumat += "[kello, Kaverin kämppä]";
+            kaverinKoti();
 
         } else if (random >= 0.8 && random <= 1) { //puisto
             tapahtumat += "[kello, puisto]";
@@ -74,10 +77,18 @@ public class Paikka {
             }
         }
     }
-    
 
     public void kaverinKoti() {
-
+        double random = Math.random();
+        if (random >= 0 && random < 0.25) {
+            tapahtumat += kaveri.juoJuoma(henkilo) + "\n";
+        }else if (random >= 0.25 && random < 0.5) {
+            tapahtumat += kaveri.otaKaverinJuoma(henkilo) + "\n";
+        }else if (random >= 0.5 && random < 0.75) {
+            tapahtumat += kaveri.otaRahaa(henkilo) + "\n";
+        }else if (random >= 0.75 && random <= 1) {
+            tapahtumat += kaveri.puhuPaskaa(henkilo) + "\n";
+        }
     }
 
     public void koti() {
@@ -88,7 +99,7 @@ public class Paikka {
         }else if (random >= 0.4 && random < 0.7) {
             tapahtumat += koti.omaJuoma() + "\n";
         }else if (random >= 0.7 && random >= 1) {
-            tapahtumat += koti.otaRahaa(sum);
+            tapahtumat += koti.otaRahaa(sum) + "\n";
         }
 
     }

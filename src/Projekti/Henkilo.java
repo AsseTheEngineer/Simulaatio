@@ -96,7 +96,7 @@ public class Henkilo {
             this.juomat--;
             kommentti = "Janontunne yllättää sinut. Korkkaat repustasi mukavan lämpimän oluen.";
             humalatilaPlus(0.5);
-            System.out.println(getHumalatila());
+            //System.out.println(getHumalatila());
         } else {
             kommentti = "Avaat reppusi. Siellä ei ole yhtään juomaa. Harkitset soittavasi hätänumeroon.";
         }

@@ -10,7 +10,7 @@ public class Koti {
     public Koti(Henkilo henkilo) {
         this.saastot = 0;
         this.juomat = 0;
-        henkilo = henkilo;
+        this.henkilo = henkilo;
     }
 
     public void setSaastot(double saastot) {
@@ -27,7 +27,7 @@ public class Koti {
 
     public String otaJuomia() {
         int random = (int) (Math.random() * juomat);
-        String kommentti = "";
+        String kommentti;
 
         if (henkilo.getJuomat() < 5 && juomat > 0) {
             henkilo.lisaaJuomaa(random);
