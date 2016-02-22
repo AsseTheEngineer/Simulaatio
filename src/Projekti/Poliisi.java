@@ -39,9 +39,9 @@ public class Poliisi {
        
        if(huomautukset < 2){
             henkilo.lisaaHuomautus();
-            kommentti = "Pääsit tällä kertaa huomautuksella, ens kerralla se on sit putka reissu";
+            kommentti = "Korkkaan juoman repustasi huomaamatta, että herra konstaapeli on selkäsi takana. Pääset kuitenkin pälkähästä pelkällä huomautuksella.";
        }else{
-            kommentti = "Illan jatkot taitaaki olla sit tuolla putkan puolella";
+            kommentti = "Samainen konstaapeli, joka on sinulle jo aikaisemmin antanut huomautuksen sattuu jälleen kerran paikalle. Tällä kertaa hän ei ole yhtä suvaitsevainen. Pääset maijan kyydillä putkaan.";
        }
        
        return kommentti;
