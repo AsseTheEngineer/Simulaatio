@@ -15,13 +15,19 @@ public class Baari {
     final int siideri;
     final int jallu;
     final int jekku;
+    final String nimi;
     //Henkilo henkilo;
 
-    public Baari(int kalja, int siideri, int jallu, int jekku) {
+    public Baari(int kalja, int siideri, int jallu, int jekku, String nimi) {
         this.kalja = kalja;
         this.siideri = siideri;
         this.jallu = jallu;
         this.jekku = jekku;
+        this.nimi = nimi;
+    }
+    
+    public String getNimi() {
+        return nimi;
     }
 
     public String ostaJuoma(int juoma, Henkilo henkilo) {

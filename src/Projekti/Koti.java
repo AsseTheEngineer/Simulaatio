@@ -59,7 +59,7 @@ public class Koti {
     }
 
     String otaRahaa(int summa, Henkilo henkilo) {
-        String kommentti;
+        String kommentti = "";
         if (henkilo.getRaha() < 50) {
             henkilo.lisaaRahaa(saastot);
             kommentti = "Lompakko reloaded.";

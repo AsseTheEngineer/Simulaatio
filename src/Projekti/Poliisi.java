@@ -42,7 +42,6 @@ public class Poliisi {
             kommentti = "Pääsit tällä kertaa huomautuksella, ens kerralla se on sit putka reissu";
        }else{
             kommentti = "Illan jatkot taitaaki olla sit tuolla putkan puolella";
-            henkilo.gameOver();
        }
        
        return kommentti;
