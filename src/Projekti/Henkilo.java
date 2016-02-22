@@ -9,8 +9,7 @@ public class Henkilo {
     private double humalatila;
     private int juomat;
     private int huomautukset;
-    private int gameOver;
-
+    
     public Henkilo(double money, String etuNimi, String sukuNimi, double humalaTila, int juomat) {
         //this.ika = age;
         this.lompakko = money;
@@ -19,13 +18,9 @@ public class Henkilo {
         this.humalatila = humalaTila;
         this.juomat = juomat;
         this.huomautukset = 0;
-        this.gameOver = 0;
+
     }
 
-    int gameOver() {
-        gameOver = 1;
-        return gameOver;
-    }
 
     int getHuomautukset() {
         return huomautukset;

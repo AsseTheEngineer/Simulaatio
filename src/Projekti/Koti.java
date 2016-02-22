@@ -59,7 +59,9 @@ public class Koti {
     }
 
     String otaRahaa(int summa, Henkilo henkilo) {
-        String kommentti="";
+
+        String kommentti = "";
+
         if (henkilo.getRaha() < 50) {
             henkilo.lisaaRahaa(saastot);
             kommentti = "Käyt kaivamassa patjojen välistä lisää rahaa illan koitoksia varten.";
