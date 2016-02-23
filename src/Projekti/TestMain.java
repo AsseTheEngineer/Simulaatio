@@ -19,20 +19,16 @@ public class TestMain {
         Paikka paikka = new Paikka(jarno, poliisi, jarnonKoti, makenKoti, kaivopuisto);
         
         int gameOver = 0;
-        String tarina;
-        double humalatila = jarno.getHumalatila();
         
         paikka.addBaari(prkl);
         paikka.addBaari(boothill);
-        
-        int kello = 0;
-        
+
         while (gameOver != 1) {
             paikka.simulointi();
             //System.out.println("\n" + jarno.getHumalatila() + "\n");
             if (jarno.getHumalatila() >= 10) {
                 gameOver = 1;
-            }else if (kello == 4) {
+            }else if (paikka.kello().equals("04:20")) {
                 gameOver = 1;
             }else if (jarno.getHuomautukset() >= 2) {
                 gameOver = 1;
