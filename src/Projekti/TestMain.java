@@ -36,13 +36,16 @@ public class TestMain {
                 gameOver = 1;
             }else if (kello == 4) {
                 gameOver = 1;
-            }else if (jarno.getHuomautukset() >= 3) {
+            }else if (jarno.getHuomautukset() >= 2) {
                 gameOver = 1;
             }
             
         }
         
         System.out.println(paikka.getTarina());
+        System.out.println("Huomautukset: " + jarno.getHuomautukset());
+        System.out.println("Humalatila: " + jarno.getHumalatila());
+        System.out.println("Kakke");
     }
     
 }

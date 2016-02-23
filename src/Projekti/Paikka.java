@@ -37,8 +37,8 @@ public class Paikka {
             katu();
 
         } else if (random >= 0.2 && random < 0.4) { //baari
-            //random = (int) (Math.random() * 2);
-            tapahtumat += "[kello, " + baarit[1].getNimi() + "]";
+            random = (int) (Math.random() * 2);
+            tapahtumat += "[kello, " + baarit[(int)random].getNimi() + "]";
             baari(baarit[1]);
 
         } else if (random >= 0.4 && random < 0.6) { //koti
@@ -58,12 +58,12 @@ public class Paikka {
 
     public void baari(Baari baari) {
         random = Math.random();
-        if (random >= 0 && random < 0.33) {
+        if (random < 0.33) {
             random = (int) (Math.random() * 5);
             tapahtumat += baari.ostaJuoma((int) random, henkilo) + "\n";
         } else if (random >= 0.33 && random < 0.66) {
             tapahtumat += baari.tanssi() + "\n";
-        } else if (random >= 0.66 && random < 1) {
+        } else if (random >= 0.66) {
             tapahtumat += baari.puhuPaskaa() + "\n";
         }
     }
@@ -96,11 +96,11 @@ public class Paikka {
     public void koti() {
         random = Math.random();
         int sum = (int)(Math.random() * koti.getSaastot());
-        if (random > 0 && random < 0.4) {
+        if (random < 0.4) {
             tapahtumat += koti.otaJuomia() + "\n";
         }else if (random >= 0.4 && random < 0.7) {
             tapahtumat += koti.omaJuoma() + "\n";
-        }else if (random >= 0.7 && random >= 1) {
+        }else if (random >= 0.7) {
             tapahtumat += koti.otaRahaa(sum) + "\n";
         }
 
