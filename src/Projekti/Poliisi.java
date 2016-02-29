@@ -36,9 +36,9 @@ public class Poliisi {
     //(Auttaa siinä että voidaan antaa se huomautus sille henkilölle ei poliisille)
     String huomautus(Henkilo henkilo){
        int huomautukset = henkilo.getHuomautukset();
-       String kommentti;
+       String kommentti = "";
        
-       if(huomautukset < 2){
+       if(huomautukset < 1){
             henkilo.lisaaHuomautus();
             kommentti = "Korkkaat juoman repustasi huomaamatta, että herra konstaapeli on selkäsi takana. Pääset kuitenkin pälkähästä pelkällä huomautuksella.";
        }else{

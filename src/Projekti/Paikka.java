@@ -14,8 +14,11 @@ public class Paikka {
     Puisto puisto;
     double random;
     int apu = 0;
+    int tunnit, minuutit;
 
     public Paikka(Henkilo henkilo, Poliisi poliisi, Koti koti, Kaverinkamppa kaveri, Puisto puisto) {
+        this.tunnit = 20;
+        this.minuutit = 0;
         this.henkilo = henkilo;
         this.poliisi = poliisi;
         this.koti = koti;
@@ -29,41 +32,68 @@ public class Paikka {
         apu++;
     }
 
+    public String kello(){
+        String aika = "";
+        if (minuutit > 59) {
+            if (tunnit < 23) {
+                tunnit++;
+            }else {
+                tunnit = 0;
+            }
+            minuutit = 0;
+        }
+        
+        if (tunnit < 10) {
+            aika = "0" + tunnit;
+        }else {
+            aika = "" + tunnit;
+        }
+        
+        if (minuutit == 0){
+            aika += ":0" + minuutit;
+        }else {
+            aika += ":" + minuutit;
+        }
+        return aika;
+    }
+    
     public void simulointi() {
+        
         this.random = Math.random();
         //System.out.println(tapahtumat);
         if (random >= 0 && random < 0.2) { // katu
-            tapahtumat += "[kello, katu]";
+            tapahtumat += "[" + kello() + ", katu]";
             katu();
 
         } else if (random >= 0.2 && random < 0.4) { //baari
-            //random = (int) (Math.random() * 2);
-            tapahtumat += "[kello, " + baarit[1].getNimi() + "]";
+            random = (int) (Math.random() * 2);
+            tapahtumat += "[" + kello() + ", " + baarit[(int)random].getNimi() + "]";
             baari(baarit[1]);
 
         } else if (random >= 0.4 && random < 0.6) { //koti
-            tapahtumat += "[kello, Koti]";
+            tapahtumat += "[" + kello() + ", Koti]";
             koti();
             //tohon viel loput paikat   
 
         } else if (random >= 0.6 && random < 0.8) { // kaverin kämppä
-            tapahtumat += "[kello, Kaverin kämppä]";
+            tapahtumat += "[" + kello() + ", Kaverin kämppä]";
             kaverinKoti();
 
         } else if (random >= 0.8 && random <= 1) { //puisto
-            tapahtumat += "[kello, puisto]";
+            tapahtumat += "[" + kello() + ", puisto]";
             puisto();
         }
+        minuutit += 20;
     }
 
     public void baari(Baari baari) {
         random = Math.random();
-        if (random >= 0 && random < 0.33) {
+        if (random < 0.33) {
             random = (int) (Math.random() * 5);
             tapahtumat += baari.ostaJuoma((int) random, henkilo) + "\n";
         } else if (random >= 0.33 && random < 0.66) {
             tapahtumat += baari.tanssi() + "\n";
-        } else if (random >= 0.66 && random < 1) {
+        } else if (random >= 0.66) {
             tapahtumat += baari.puhuPaskaa() + "\n";
         }
     }
@@ -96,11 +126,11 @@ public class Paikka {
     public void koti() {
         random = Math.random();
         int sum = (int)(Math.random() * koti.getSaastot());
-        if (random > 0 && random < 0.4) {
+        if (random < 0.4) {
             tapahtumat += koti.otaJuomia() + "\n";
         }else if (random >= 0.4 && random < 0.7) {
             tapahtumat += koti.omaJuoma() + "\n";
-        }else if (random >= 0.7 && random >= 1) {
+        }else if (random >= 0.7) {
             tapahtumat += koti.otaRahaa(sum) + "\n";
         }
 

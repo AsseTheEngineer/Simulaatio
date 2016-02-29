@@ -42,7 +42,7 @@ public class Puisto {
             henkilo.juomaMiinus();
             henkilo.humalatilaPlus(0.5);
         } else {
-            poliisi.huomautus(henkilo);
+            kommentti = poliisi.huomautus(henkilo);
 
         }
         return kommentti;
