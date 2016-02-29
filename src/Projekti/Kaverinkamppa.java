@@ -14,6 +14,11 @@ public class Kaverinkamppa {
     final int kaverinJuoma;
     final double kaveriRahat;
 
+    public Kaverinkamppa() {
+        this.kaverinJuoma = 5;
+        this.kaveriRahat = 50;
+    }
+    
     public Kaverinkamppa(int kaverinJuoma, double kaveriRahat) {
         this.kaverinJuoma = kaverinJuoma;
         this.kaveriRahat = kaveriRahat;
