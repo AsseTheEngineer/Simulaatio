@@ -7,7 +7,6 @@ package Projekti;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -20,7 +19,7 @@ import javafx.scene.control.TextField;
  */
 public class IkkunaController implements Initializable {
     
-    @FXML
+    /*@FXML
     private TextField etunimi;
     @FXML
     private TextField sukunimi;
@@ -30,15 +29,6 @@ public class IkkunaController implements Initializable {
     private TextField humalatila;
     @FXML
     private TextField juomat;
-
-    @FXML
-    private Label tarina;
-    
-    @FXML
-    private void simuloi(ActionEvent event) {
-        System.out.println("Simuloitu!!");
-        tarina.setText("No voi vittu");
-    }
     /**
      * Initializes the controller class.
      */

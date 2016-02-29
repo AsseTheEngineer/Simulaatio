@@ -19,7 +19,7 @@
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Button id="tarina" fx:id="tarina" layoutX="36.0" layoutY="473.0" mnemonicParsing="false" text="Simuloi" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+                  <Button layoutX="36.0" layoutY="473.0" mnemonicParsing="false" text="Simuloi" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -36,7 +36,7 @@
                   <AnchorPane id="AnchorPane" layoutX="14.0" layoutY="43.0" prefHeight="598.0" prefWidth="564.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                   <TabPane prefHeight="598.0" prefWidth="564.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <tabs>
-                      <Tab text="Simulointi">
+                      <Tab closable="false" text="Simulointi">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -53,7 +53,7 @@
                               </AnchorPane>
                         </content>
                       </Tab>
-                      <Tab text="Asetukset">
+                      <Tab closable="false" text="Asetukset">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -70,11 +70,11 @@
                                                             <Label text="Rahat" GridPane.rowIndex="2" />
                                                             <Label text="Humalatila" GridPane.rowIndex="3" />
                                                             <Label text="Juomat" GridPane.rowIndex="4" />
-                                                            <TextField id="etunimi" fx:id="etunimi" promptText="etunimi" GridPane.columnIndex="1" />
-                                                            <TextField id="sukunimi" fx:id="sukunimi" promptText="sukunimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                            <TextField id="rahat" fx:id="rahat" promptText="rahat €" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                            <TextField id="humalatila" fx:id="humalatila" promptText="1-10" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                            <TextField id="juomat" fx:id="juomat" promptText="juomat" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                            <TextField promptText="etunimi" GridPane.columnIndex="1" />
+                                                            <TextField promptText="sukunimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <TextField promptText="rahat €" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                            <TextField promptText="1-10" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                            <TextField promptText="juomat" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                          </children>
                                                          <columnConstraints>
                                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -158,11 +158,11 @@
                                                             <Label text="Siideri" GridPane.columnIndex="4" />
                                                             <Label text="Jallu" GridPane.columnIndex="5" />
                                                             <Label text="Jekku" GridPane.columnIndex="6" />
-                                                            <TextField id="baari1" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                            <TextField id="baari2" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                            <TextField id="baari3" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                                            <TextField id="baari4" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                                                            <TextField id="baari5" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                                            <TextField promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <TextField promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                            <TextField promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                            <TextField promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                            <TextField promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                                                          </children>
                                                          <columnConstraints>
                                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -186,7 +186,7 @@
                                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                          </rowConstraints>
                                                       </GridPane>
-                                                      <Button id="tallenna" layoutX="371.0" layoutY="401.0" mnemonicParsing="false" text="Tallenna" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="45.0">
+                                                      <Button layoutX="371.0" layoutY="401.0" mnemonicParsing="false" text="Tallenna" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="45.0">
                                                          <font>
                                                             <Font size="18.0" />
                                                          </font>
@@ -213,9 +213,9 @@
                                                                   <Font name="System Bold" size="12.0" />
                                                                </font>
                                                             </Label>
-                                                            <TextField id="kJuomat" promptText="juomat" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                                            <TextField id="kRahat" promptText="rahat €" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                                            <TextField id="aikavali" promptText="min(0-60)" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                            <TextField promptText="juomat" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                            <TextField promptText="rahat €" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                            <TextField promptText="min(0-60)" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                          </children>
                                                          <columnConstraints>
                                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
