@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekti.IkkunaController">
+   <children>
+      <SplitPane dividerPositions="0.29" layoutX="36.0" layoutY="20.0" prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="240.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <Label layoutX="61.0" layoutY="47.0" rotate="-0.0" text="Perjantai" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Button id="tarina" fx:id="tarina" layoutX="36.0" layoutY="473.0" mnemonicParsing="false" text="Simuloi" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="54.0" layoutY="86.0" text="Simulaattori">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane id="AnchorPane" layoutX="14.0" layoutY="43.0" prefHeight="598.0" prefWidth="564.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <TabPane prefHeight="598.0" prefWidth="564.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="Simulointi">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane layoutX="106.0" layoutY="185.0" prefHeight="569.0" prefWidth="564.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <content>
+                                          <Label>
+                                             <padding>
+                                                <Insets left="5.0" top="10.0" />
+                                             </padding>
+                                          </Label>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Asetukset">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TabPane layoutX="147.0" layoutY="51.0" prefHeight="569.0" prefWidth="564.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <tabs>
+                                          <Tab text="Henkilö">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <GridPane layoutX="150.0" layoutY="80.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="80.0">
+                                                         <children>
+                                                            <Label text="Etunimi" />
+                                                            <Label text="Sukunimi" GridPane.rowIndex="1" />
+                                                            <Label text="Rahat" GridPane.rowIndex="2" />
+                                                            <Label text="Humalatila" GridPane.rowIndex="3" />
+                                                            <Label text="Juomat" GridPane.rowIndex="4" />
+                                                            <TextField id="etunimi" fx:id="etunimi" promptText="etunimi" GridPane.columnIndex="1" />
+                                                            <TextField id="sukunimi" fx:id="sukunimi" promptText="sukunimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <TextField id="rahat" fx:id="rahat" promptText="rahat €" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                            <TextField id="humalatila" fx:id="humalatila" promptText="1-10" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                            <TextField id="juomat" fx:id="juomat" promptText="juomat" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                      <Button id="tallenna" layoutX="465.0" layoutY="477.0" mnemonicParsing="false" text="Tallenna" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="45.0">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Baarit">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <GridPane layoutX="50.0" layoutY="26.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                                         <children>
+                                                            <Label text="Baari 1" GridPane.rowIndex="1">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Baari 2" GridPane.rowIndex="3">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Baari 3" GridPane.rowIndex="5">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Baari 4" GridPane.rowIndex="7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Baari 5" GridPane.rowIndex="9">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Hinnat" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                            <Label text="Hinnat" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                            <Label text="Hinnat" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                                            <Label text="Hinnat" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                                            <Label text="Hinnat" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                                            <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                            <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                            <TextField GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                                            <TextField GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                                            <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                            <TextField GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                                            <TextField GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                                                            <TextField GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                                            <TextField GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                                            <TextField GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                                            <TextField GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                                                            <TextField GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                                                            <TextField GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                                            <TextField GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                                            <TextField GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                                                            <TextField GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                                                            <TextField GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                                                            <TextField GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                                                            <TextField GridPane.columnIndex="5" GridPane.rowIndex="9" />
+                                                            <TextField GridPane.columnIndex="6" GridPane.rowIndex="9" />
+                                                            <Label text="Kalja" GridPane.columnIndex="3" />
+                                                            <Label text="Siideri" GridPane.columnIndex="4" />
+                                                            <Label text="Jallu" GridPane.columnIndex="5" />
+                                                            <Label text="Jekku" GridPane.columnIndex="6" />
+                                                            <TextField id="baari1" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <TextField id="baari2" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                            <TextField id="baari3" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                            <TextField id="baari4" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                            <TextField id="baari5" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                      <Button id="tallenna" layoutX="371.0" layoutY="401.0" mnemonicParsing="false" text="Tallenna" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="45.0">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Muut Asetukset">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <GridPane layoutX="150.0" layoutY="161.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                                                         <children>
+                                                            <Label text="Kaverin kämppä">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label text="Juomat" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <Label text="Rahat" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                            <Label text="Aikaväli" GridPane.rowIndex="4">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField id="kJuomat" promptText="juomat" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                            <TextField id="kRahat" promptText="rahat €" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                            <TextField id="aikavali" promptText="min(0-60)" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                         </children>
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                      </GridPane>
+                                                      <Button id="tallenna" layoutX="398.0" layoutY="384.0" mnemonicParsing="false" text="Tallenna" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="45.0">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children></AnchorPane>
+        </items>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </SplitPane>
+   </children>
+</AnchorPane>
