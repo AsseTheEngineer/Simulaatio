@@ -1,12 +1,16 @@
 package Projekti;
 
 import java.util.Date;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class Paikka {
-
+    
     String tapahtumat = "";
     Date date = new Date();
-    Baari[] baarit = new Baari[2];
+    
+    ArrayList<Baari> baarit = new ArrayList<>();
+    
     Henkilo henkilo;
     Poliisi poliisi;
     Koti koti;
@@ -14,7 +18,7 @@ public class Paikka {
     Puisto puisto;
     double random;
     int apu = 0;
-    int tunnit, minuutit;
+    int tunnit, minuutit, aikavali;
 
     public Paikka(Henkilo henkilo, Poliisi poliisi, Koti koti, Kaverinkamppa kaveri, Puisto puisto) {
         this.tunnit = 20;
@@ -24,12 +28,15 @@ public class Paikka {
         this.koti = koti;
         this.kaveri = kaveri;
         this.puisto = puisto;
+        this.aikavali = 20;
+    }
+    
+    public void setAikavali(int vali) {
+        this.aikavali = vali;
     }
 
     public void addBaari(Baari baari) {
-        baarit[apu] = baari;
-        baari.toString();
-        apu++;
+        baarit.add(baari);
     }
 
     public String kello(){
@@ -66,9 +73,9 @@ public class Paikka {
             katu();
 
         } else if (random >= 0.2 && random < 0.4) { //baari
-            random = (int) (Math.random() * 2);
-            tapahtumat += "[" + kello() + ", " + baarit[(int)random].getNimi() + "]";
-            baari(baarit[1]);
+            random = (int) (Math.random() * baarit.size());
+            tapahtumat += "[" + kello() + ", " + baarit.get((int)random).getNimi() + "]";
+            baari(baarit.get((int)random));
 
         } else if (random >= 0.4 && random < 0.6) { //koti
             tapahtumat += "[" + kello() + ", Koti]";
@@ -83,7 +90,7 @@ public class Paikka {
             tapahtumat += "[" + kello() + ", puisto]";
             puisto();
         }
-        minuutit += 20;
+        minuutit += aikavali;
     }
 
     public void baari(Baari baari) {
@@ -101,7 +108,6 @@ public class Paikka {
     public void katu() {
         //Muokkaa uusiks
         random = Math.random();
-
         tapahtumat += henkilo.juoOmaJuoma() + "\n";
         {
             if (random >= 0 && random <= 0.33) {
