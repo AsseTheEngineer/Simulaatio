@@ -3,7 +3,7 @@ package Projekti;
 public class TestMain {
 
     public static void main(String[] args) {
-        System.out.println("Testi");
+        //System.out.println("Testi");
         
         Koti koti = new Koti(500, 15);
         Poliisi pol = new Poliisi(50);
