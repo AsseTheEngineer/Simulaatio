@@ -7,6 +7,7 @@ package Projekti;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -19,17 +20,14 @@ import javafx.scene.control.TextField;
  */
 public class IkkunaController implements Initializable {
     
-    /*@FXML
-    private TextField etunimi;
+    //@FXML
+
+    
     @FXML
-    private TextField sukunimi;
-    @FXML
-    private TextField rahat;
-    @FXML
-    private TextField humalatila;
-    @FXML
-    private TextField juomat;
-    /**
+    public void simuloiButton(ActionEvent event) {
+        
+    }
+    /*
      * Initializes the controller class.
      */
     @Override
