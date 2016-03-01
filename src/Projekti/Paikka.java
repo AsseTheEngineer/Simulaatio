@@ -96,7 +96,7 @@ public class Paikka {
     public void baari(Baari baari) {
         random = Math.random();
         if (random <= 0.33) {
-            random = (int) (Math.random() * 5);
+            random = (int) (Math.random() * 4);
             tapahtumat += baari.ostaJuoma((int) random, henkilo) + "\n";
         } else if (random > 0.33 && random <= 0.66) {
             tapahtumat += baari.tanssi() + "\n";
