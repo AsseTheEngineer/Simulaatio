@@ -76,12 +76,16 @@ public class Baari {
 
     public String tanssi() {
         double random = Math.random();
-        String kommentti;
-        if (random >= 0 && random <= 0.33) {
+        String kommentti = "";
+        if (random <= 0.2) {
             kommentti = "Tunnet itsesi John Travoltaksi Saturday night feverissä ja menet tanssimaan. Valitettavasti totuus on eri.";
-        } else if (random > 0.33 && random <= 0.66) {
+        } else if (random > 0.2 && random <= 0.4) {
             kommentti = "Menet tanssimaan ja hyvin tanssitkin. Omasta mielestäsi.";
-        } else {
+        } else if(random > 0.4 && random <= 0.6){
+            kommentti = "tanssi kommentti 3";
+        }else if(random > 0.6 && random <= 0.8){
+            kommentti = "tanssi kommentti 4";
+        }else {
             kommentti = "Menet tanssilattialle näyttämään kireimmät liikkeesi. Yleisö ei pidä sinusta ja saat kaljat päällesi.";
         }
         return kommentti;
@@ -90,10 +94,16 @@ public class Baari {
     public String puhuPaskaa() {
         double random = Math.random();
         String kommentti = "";
-        if (random >= 0 && random <= 0.49) {
+        if (random < 0.2) {
             kommentti = "Puhuit tuntemattomalle ja sait melkein turpaasi.";
-        } else if (random >= 0.5) {
+        } else if (random > 0.2 && random <= 0.4) {
             kommentti = "Puhuit tuntemattomalle naiselle ja sait vihreää valoa.";
+        }else if(random > 0.4 && random <= 0.6){
+            kommentti = "puhu kommentti 3";
+        }else if(random > 0.6 && random <= 0.8){
+            kommentti = "puhu komentti 4";
+        }else{
+            kommentti = "puhu kommentti 5";
         }
         return kommentti;
 
