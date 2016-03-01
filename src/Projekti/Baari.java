@@ -84,7 +84,7 @@ public class Baari {
 
     public String tanssi() {
         double random = Math.random();
-        String kommentti = "";
+        String kommentti;
         if (random <= 0.2) {
             kommentti = "Tunnet itsesi John Travoltaksi Saturday night feverissä ja menet tanssimaan. Valitettavasti totuus on eri.";
         } else if (random > 0.2 && random <= 0.4) {
@@ -102,6 +102,7 @@ public class Baari {
     public String puhuPaskaa() {
         double random = Math.random();
         String kommentti;
+        
         if (random <= 0.2) {
             kommentti = "Puhuit tuntemattomalle ja sait melkein turpaasi.";
         } else if (random > 0.2 && random <= 0.4) {
