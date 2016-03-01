@@ -15,54 +15,59 @@ public class Baari {
     final int siideri;
     final int jallu;
     final int jekku;
-    Henkilo henkilo;
+    final String nimi;
+    //Henkilo henkilo;
 
-    public Baari(int kalja, int siideri, int jallu, int jekku) {
+    public Baari(int kalja, int siideri, int jallu, int jekku, String nimi) {
         this.kalja = kalja;
         this.siideri = siideri;
         this.jallu = jallu;
         this.jekku = jekku;
+        this.nimi = nimi;
+    }
+    
+    public String getNimi() {
+        return nimi;
     }
 
-    public String ostaJuoma(int juoma) {
+    public String ostaJuoma(int juoma, Henkilo henkilo) {
         boolean maksuLapi;
         String kommentti = "";
-        double humalaTila = henkilo.getHumalatila();
         switch (juoma) {
             case 1:
                 maksuLapi = henkilo.uusiMaksu((double) kalja);
                 if (maksuLapi == true) {
-                    kommentti = "Tässä kaljasi.";
-                    henkilo.setHumalatila(humalaTila + 0.5);
+                    kommentti = "Menet baaritiskille ja kaikkien hämmästykseksi sinua palvellaan hyvinkin nopeasti oluen muodossa.";
+                    henkilo.humalatilaPlus(0.5);
                 } else {
-                    kommentti = "Sulla ei ole tarpeeksi rahaa.";
+                    kommentti = "Menet tiskille ja tilaat oluen. Valitettavasti et saa kuin haukut, koska rahasi ovat loppu.";
                 }
                 break;
             case 2:
                 maksuLapi = henkilo.uusiMaksu((double) siideri);
                 if (maksuLapi == true) {
-                    kommentti = "Tässä siiderisi.";
-                    henkilo.setHumalatila(humalaTila + 0.5);
+                    kommentti = "Tunnet itsesi pissaliisaksi ja menet tiskille tilaamaan siiderin.";
+                    henkilo.humalatilaPlus(0.5);
                 } else {
-                    kommentti = "Sulla ei ole tarpeeksi rahaa.";
+                    kommentti = "Menet tiskille ja tilaat siiderin. Valitettavasti et saa kuin haukut, koska rahasi ovat loppu.";
                 }
                 break;
             case 3:
                 maksuLapi = henkilo.uusiMaksu((double) jallu);
                 if (maksuLapi == true) {
-                    kommentti = "Tässä jallusi.";
-                    henkilo.setHumalatila(humalaTila + 0.7);
+                    kommentti = "Tunnet itsesi lähestulkoon Ron Jeremyksi, joten tilaat jaloviinashotin.";
+                    henkilo.humalatilaPlus(0.7);
                 } else {
-                    kommentti = "Sulla ei ole tarpeeksi rahaa.";
+                    kommentti = "Menet tiskille ja tilaat jallushotin. Valitettavasti et saa muuta kuin haukut, koska rahasi ovat loppu.";
                 }
                 break;
             case 4:
                 maksuLapi = henkilo.uusiMaksu((double) jekku);
                 if (maksuLapi == true) {
-                    kommentti = "Tässä jekkusi";
-                    henkilo.setHumalatila(humalaTila + 0.7);
+                    kommentti = "Sinulla on vahva tunne, että tänään lykästää. Menet tilaamaan Jägermeisterin, koska olet kuullut sen mieskuntoa kohottavista ominaisuuksista";
+                    henkilo.humalatilaPlus(0.7);
                 } else {
-                    kommentti = "Sulla ei ole tarpeeksi rahaa.";
+                    kommentti = "Menet tiskille ja tilaat jekkushotin. Valitettavasti et saa muuta kuin haukut, koska rahasi ovat loppu.";
                 }
                 break;
         }
@@ -71,13 +76,13 @@ public class Baari {
 
     public String tanssi() {
         double random = Math.random();
-        String kommentti = "";
+        String kommentti;
         if (random >= 0 && random <= 0.33) {
-            kommentti = "Tanssit kuin Michael Jackson! Ainakin omasta mielestäsi.";
+            kommentti = "Tunnet itsesi John Travoltaksi Saturday night feverissä ja menet tanssimaan. Valitettavasti totuus on eri.";
         } else if (random > 0.33 && random <= 0.66) {
-            kommentti = "Vedät päin helvettiä, mutta et anna sen häiritä.";
+            kommentti = "Menet tanssimaan ja hyvin tanssitkin. Omasta mielestäsi.";
         } else {
-            kommentti = "Kaaduit ja nolasit itsesi täysin.";
+            kommentti = "Menet tanssilattialle näyttämään kireimmät liikkeesi. Yleisö ei pidä sinusta ja saat kaljat päällesi.";
         }
         return kommentti;
     }

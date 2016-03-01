@@ -23,39 +23,44 @@ public class Kaverinkamppa {
         String kommentti = "";
         if (henkilo.getRaha() > 20) {
             henkilo.lisaaRahaa(20);
-            kommentti = "Lainasit kaverilta 20€.";
+            kommentti = "Rahatilanteesi on heikko. Pyydät kaveriltasi parikymppiä lainaa, jonka hän yllätyksesesi lainaa.";
         } else {
-            kommentti = "Mitä helvettiä, sullahan on rahaa!";
+            kommentti = "Yrität vedättää kaveriasi valehtelemalla, että sinulla ei ole rahaa ja tarvitset lainaa. Kaverisi lukee sinua kuin avointa kirjaa ja lyö sinua.";
         }
         return kommentti;
 
     }
-    public String otaJuomia(Henkilo henkilo){
+
+    public String juoJuoma(Henkilo henkilo) {
         String kommentti = "";
-        if (henkilo.getJuomat()<3){
-            henkilo.lisaaJuomaa(1);
-            kommentti="Otit yhden juoman jääkaapista.";
-        }else{
-            kommentti="Mitä vittua! Sullahan on omia juomia!";
-        }
-        return kommentti;}
-    
-    public String puhuPaskaa(Henkilo henkilo){
-        
-        String kommentti="";
-        
-        if (henkilo.getHumalatila()<5) {
-            kommentti="Kerrot kaverillesi gravitaatioaaltoteoriasta.";}
-        else if(henkilo.getHumalatila()>=5 && henkilo.getHumalatila()<10){
-            kommentti="Alat olemaan sen verran humalassa, ettei kaverisi saa oikein selvää mistä puhut.";}
+        henkilo.humalatilaPlus(0.5);
+        kommentti = "Otat yhden juoman kaverisi jääkaapista ja huitaiset sen ykkösellä nieluusi. Kaverisi katsoo sinua pahasti, mutta et anna sen häiritä.";
+
         return kommentti;
-        
-            
-                    
-            
-        
-    }   
     }
 
+    public String puhuPaskaa(Henkilo henkilo) {
 
+        String kommentti = "";
 
+        if (henkilo.getHumalatila() < 5) {
+            kommentti = "Olet vielä sen verran selvin päin, että pystyt kertomaan kaverillesi gravitaatioaaltoteoriasta.";
+        } else if (henkilo.getHumalatila() >= 5 && henkilo.getHumalatila() < 10) {
+            kommentti = "Alat olemaan sen verran humalassa, ettei kaverisi saa oikein selvää mistä puhut.";
+        }
+        return kommentti;
+
+    }
+
+    public String otaKaverinJuoma(Henkilo henkilo) {
+        String kommentti = "";
+        if (henkilo.getJuomat() < 3) {
+            henkilo.lisaaJuomaa(4);
+            kommentti = "Tarkistat matkajuomatilanteen, mikä ei ole hyvä. Vain " + henkilo.getJuomat() + " juomaa. Nussit kaverisi jääkaapista 4 juomaa.";
+        } else {
+            kommentti = "Yrität käydä varastamassa kaveriltasi lisää juomaa, vaikka sinulla on jo tarpeeksi sitä. Kaverisi huomaa välittömästi aikeesi ja antaa sinulle litsarin otsaan.";
+        }
+        return kommentti;
+
+    }
+}

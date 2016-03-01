@@ -1,13 +1,16 @@
 package Projekti;
 
 public class Koti {
-   private double saastot;
-   private int juomat;
-   
-    
-    public Koti(int saastot, int juomat){
-        this.saastot = saastot;
-        this.juomat = juomat;
+
+    private double saastot;
+    private int juomat;
+
+    private Henkilo henkilo;
+
+    public Koti(Henkilo henkilo) {
+        this.saastot = 0;
+        this.juomat = 0;
+        this.henkilo = henkilo;
     }
     public void setSaastot(double saastot) {
         this.saastot = saastot;
@@ -15,45 +18,61 @@ public class Koti {
     public void setJuomat(int juomat) {
         this.juomat = juomat;
     }
+    
     public double getSaastot() {
         return saastot;
     }
-    public int getJuomat() {
-        return juomat;
-    }
-    String juodaan(Henkilo henkilo){     
+
+    public String otaJuomia() {
+        int random = (int) (Math.random() * juomat);
         String kommentti;
-        
-        if(juomat > 0 ){
-            kommentti = "Ai ai maistuu hyvältä";
-           henkilo.humalatilaPlus(0.3);
-            juomat--;
-        }else kommentti = " juomat lopppu";
-            
-       return kommentti;
-    }
-  
-    String otaSaastoja(int summa){
-        String kommentti;
-        if(saastot > summa){
-            saastot = saastot - summa;
-            kommentti = "saastoja jäljellä: "+ saastot;} 
-        else kommentti = "Ei ole rahaa!!";
-        
-        return kommentti;
-    }
-    String lahdetaanKotoa(Henkilo henkilo){
-        String kommentti;
-        double random = Math.random();
-        if(random > 0 && random <= 0.4){
-            henkilo.lisaaJuomaa(juomat);
-            kommentti = "Lähden muualle juomaan ja otan loput juomat mukaan";
+
+        if (henkilo.getJuomat() < 5 && juomat > 0) {
+            henkilo.lisaaJuomaa(random);
+            kommentti = "Käyt jääkaapilla lataamassa panokset. Otit " + random + " juomaa reppuun.";
+            juomat -= random;
+        } else if (juomat == 0) {
+            kommentti = "Ajattelit käydä hakemassa matkajuomaa jääkaapista, mutta valitettavasti siellä ei ole kuin valo.";
+        } else {
+            kommentti = "Ajattelit käydä hakemassa matkajuomaa jääkaapista, mutta muistitkin, että sinulla on " + henkilo.getJuomat() + " juomaa jo repussa.";
         }
-        else
-            kommentti = "juomia on jäjljellä, lähetään joka jonnekin joka tapauksessa";
-        
+        return kommentti;
+
+    }
+
+    public String omaJuoma() {
+        String kommentti = "";
+        if (juomat > 0) {
+            kommentti = "Kaivat jääkaapista kylmän huurteisen ja imaiset sen ykkösellä kitusiisi.";
+            juomat--;
+            henkilo.humalatilaPlus(0.5);
+        } else if (juomat == 0) {
+            if (henkilo.getJuomat() > 0) {
+                kommentti = " Jääkaappisi ammottaa tyhjyyttään, mutta onneksi sinulla oli repussa vielä " + henkilo.getJuomat() + "juomaa, joista korkkaat yhen.";
+                henkilo.humalatilaPlus(0.5);
+                henkilo.juomaMiinus();
+            } else if (henkilo.getJuomat() == 0) {
+                kommentti = "Kaivat asuntosi joka nurkan, mutta valitettavasti et löydä yhtään juomaa.";
+            }
+
+        }
+        return kommentti;
+
+    }
+
+    String otaRahaa(int summa) {
+        String kommentti="";
+        if (henkilo.getRaha() < 50) {
+            henkilo.lisaaRahaa(saastot);
+            kommentti = "Käyt kaivamassa patjojen välistä lisää rahaa illan koitoksia varten.";
+
+        } else if(saastot==0){
+            kommentti = "Menit pöyhimään tyynyliinaa rahan toivossa vain todetaksesi, että rahat on loppu.";
+        }else{
+            kommentti= "Meinasit mennä hakemaan lisää rahaa, mutta muistit olevasi pihi. Joten päätät pärjätä lompakossa olevalla summalla.";
+        }
+
         return kommentti;
     }
 
-    
 }
