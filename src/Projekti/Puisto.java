@@ -43,10 +43,13 @@ public class Puisto {
             henkilo.humalatilaPlus(0.5);
         } else if (random > 0.2 && random <= 0.4) {
             kommentti = "juo kommentti 2";
+            henkilo.humalatilaPlus(0.5);
         } else if (random > 0.4 && random <= 0.6) {
             kommentti = "juo kommentti 3";
+            henkilo.humalatilaPlus(0.5);
         } else if (random > 0.6 && random <= 0.8) {
             kommentti = "juo kommentti 4";
+            henkilo.humalatilaPlus(0.5);
         } else {
             kommentti = poliisi.huomautus(henkilo);
 
@@ -65,8 +68,10 @@ public class Puisto {
             henkilo.humalatilaPlus(11);
         } else if (random > 0.4 && random <= 0.6) {
             kommentti = "pummi kommentti 3";
+            henkilo.humalatilaPlus(0.5);
         } else if (random > 06 && random <= 0.8) {
             kommentti = "pummi komentti 4";
+            henkilo.humalatilaPlus(0.5);
         } else {
             kommentti = "Menet pummimaan naapuriseurueelta juomaa. Saat palkkioksi haistattelua ja lähdet häntä koipien välissä karkuun.";
         }

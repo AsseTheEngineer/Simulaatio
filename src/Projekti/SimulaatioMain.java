@@ -40,7 +40,7 @@ public class SimulaatioMain extends Application {
                 gameOver = 1;
             }else if (paikka.kello().equals("04:20")) { //#sweg
                 gameOver = 1;
-            }else if (jarno.getHuomautukset() >= 2) {
+            }else if (jarno.getHuomautukset() >= 3) {
                 gameOver = 1;
             }  
         }

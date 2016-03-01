@@ -52,6 +52,8 @@ public class Kaverinkamppa {
             kommentti = "Olet vielä sen verran selvin päin, että pystyt kertomaan kaverillesi gravitaatioaaltoteoriasta.";
         } else if (henkilo.getHumalatila() >= 5 && henkilo.getHumalatila() < 10) {
             kommentti = "Alat olemaan sen verran humalassa, ettei kaverisi saa oikein selvää mistä puhut.";
+        }else{
+            kommentti = "puhu kommentti 3";
         }
         return kommentti;
 
