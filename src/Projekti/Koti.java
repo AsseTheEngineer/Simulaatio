@@ -16,7 +16,6 @@ public class Koti {
     public void setSaastot(double saastot) {
         this.saastot = saastot;
     }
-
     public void setJuomat(int juomat) {
         this.juomat = juomat;
     }

@@ -32,8 +32,6 @@ public class TestMain {
     
     
     public static void main(String[] args) {
-        paikka.addBaari(prkl);
-        paikka.addBaari(boothill);
         
         
         //Alla esimerkki miten koko paskaa pyöritetää sit lopuks

@@ -1,17 +1,15 @@
 package Projekti;
 
+import java.util.Date;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class Paikka {
-
+    
     String tapahtumat = "";
     Date date = new Date();
-    //Baari[] baarit = new Baari[2];
-    
     
     ArrayList<Baari> baarit = new ArrayList<>();
-    
     
     Henkilo henkilo;
     Poliisi poliisi;
@@ -40,12 +38,6 @@ public class Paikka {
     public void addBaari(Baari baari) {
         baarit.add(baari);
     }
-    
-    /*public void addBaari(Baari baari) {
-        baarit[apu] = baari;
-        baari.toString();
-        apu++;
-    }*/
 
     public String kello(){
         String aika = "";
@@ -116,7 +108,6 @@ public class Paikka {
     public void katu() {
         //Muokkaa uusiks
         random = Math.random();
-
         tapahtumat += henkilo.juoOmaJuoma() + "\n";
         {
             if (random >= 0 && random <= 0.33) {
