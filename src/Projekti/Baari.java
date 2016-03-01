@@ -18,15 +18,6 @@ public class Baari {
     final String nimi;
     //Henkilo henkilo;
 
-    
-    public Baari() {
-        this.kalja = 5;
-        this.siideri = 6;
-        this.jallu = 5;
-        this.jekku = 5;
-        this.nimi = "Nimetön baari";
-    }
-    
     public Baari(int kalja, int siideri, int jallu, int jekku, String nimi) {
         this.kalja = kalja;
         this.siideri = siideri;

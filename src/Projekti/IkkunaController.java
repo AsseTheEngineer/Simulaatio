@@ -27,6 +27,19 @@ public class IkkunaController implements Initializable {
         simuloi();
         label.setText(paikka.getTarina() + "\nHuomautukset: " + jarno.getHuomautukset() + "\nHumalatila: " + jarno.getHumalatila());
     }
+    
+    @FXML
+    public void tallennaButtonHenk(ActionEvent event) {
+        //toho kaikki ku painaa tallenna nabbulaa
+    }
+    @FXML
+    public void tallennaButtonBar(ActionEvent event) {
+        //toho kaikki ku painaa tallenna nabbulaa
+    }
+    @FXML
+    public void tallennaButtonMuut(ActionEvent event) {
+        //toho kaikki ku painaa tallenna nabbulaa
+    }
     /*
      * Initializes the controller class.
      */

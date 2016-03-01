@@ -8,9 +8,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekti.IkkunaController">
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projekti.IkkunaController">
    <children>
-      <SplitPane dividerPositions="0.29" layoutX="36.0" layoutY="20.0" prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.25" layoutX="36.0" layoutY="20.0" prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="240.0" SplitPane.resizableWithParent="false">
                <children>
@@ -19,7 +19,7 @@
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Button id="button" layoutX="36.0" layoutY="473.0" mnemonicParsing="false" onAction="#simuloiButton" text="Simuloi" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+                  <Button id="button" layoutX="36.0" layoutY="473.0" mnemonicParsing="false" onAction="#simuloiButton" text="Simuloi" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
                      <font>
                         <Font size="18.0" />
                      </font>

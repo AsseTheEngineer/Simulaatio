@@ -10,15 +10,6 @@ public class Henkilo {
     private int juomat;
     private int huomautukset;
     
-    public Henkilo() {
-        this.lompakko = 100;
-        this.etunimi = "Etunimi";
-        this.sukunimi = "Sukunimi";
-        this.humalatila = 0;
-        this.juomat = 5;
-        this.huomautukset = 0;
-    }
-    
     public Henkilo(double money, String etuNimi, String sukuNimi, double humalaTila, int juomat) {
         //this.ika = age;
         this.lompakko = money;
