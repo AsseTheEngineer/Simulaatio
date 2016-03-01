@@ -108,7 +108,6 @@ public class Paikka {
     public void katu() {
         //Muokkaa uusiks
         random = Math.random();
-
         
             if (random <= 0.33) {
                 tapahtumat += poliisi.huomautus(henkilo) + "\n"; //"[" + date + "] " +
