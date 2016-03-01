@@ -43,12 +43,15 @@ public class Puisto {
             henkilo.humalatilaPlus(0.5);
         } else if (random > 0.2 && random <= 0.4) {
             kommentti = "juo kommentti 2";
+            henkilo.juomaMiinus();
             henkilo.humalatilaPlus(0.5);
         } else if (random > 0.4 && random <= 0.6) {
             kommentti = "juo kommentti 3";
+            henkilo.juomaMiinus();
             henkilo.humalatilaPlus(0.5);
         } else if (random > 0.6 && random <= 0.8) {
             kommentti = "juo kommentti 4";
+            henkilo.juomaMiinus();
             henkilo.humalatilaPlus(0.5);
         } else {
             kommentti = poliisi.huomautus(henkilo);

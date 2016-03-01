@@ -66,7 +66,7 @@ public class Paikka {
     
     public void simulointi() {
         
-        this.random = Math.random();
+       double random = Math.random();
         //System.out.println(tapahtumat);
         if (random <= 0.2) { // katu
             tapahtumat += "[" + kello() + ", katu]";
