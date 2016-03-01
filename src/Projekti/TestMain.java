@@ -23,7 +23,7 @@ public class TestMain {
                 gameOver = 1;
             }else if (paikka.kello().equals("04:20")) {
                 gameOver = 1;
-            }else if (jarno.getHuomautukset() >= 2) {
+            }else if (jarno.getHuomautukset() >= 3) {
                 gameOver = 1;
             }  
         }

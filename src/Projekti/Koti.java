@@ -12,6 +12,8 @@ public class Koti {
         this.juomat = 0;
         this.henkilo = henkilo;
     }
+
+  
     public void setSaastot(double saastot) {
         this.saastot = saastot;
     }

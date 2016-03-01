@@ -2,18 +2,26 @@ package Projekti;
 
 public class Poliisi {
   Henkilo henkilo;
-    final int sakot;
+    public int sakot;
     /*Otin huomautukset pois ja siirsin ne "henkilölle" 
     koska henkilö on olio ja jos huomautukset olisi ollut poliisi oliolla ei usesalle henkilölle pystyisi antaa huomautuksia
     koska huomautukset on poliisilla
     */
+    public Poliisi() {
+        this.sakot = 50;
+    }
+    
     
     public Poliisi(int sakot){
      this.sakot = sakot;
-     this.henkilo = henkilo;
+     //this.henkilo = henkilo; <-- mitäköhä toiki tekee
     }
  
-   String maksaSakot(Henkilo henkilo){
+    public void setSakot(int sakko) {
+        this.sakot = sakko;
+    }
+    
+    public String maksaSakot(Henkilo henkilo){
        boolean onnistuiko;
        onnistuiko = henkilo.uusiMaksu(sakot);
        String kommentti;
@@ -38,10 +46,13 @@ public class Poliisi {
        int huomautukset = henkilo.getHuomautukset();
        String kommentti = "";
        
-       if(huomautukset < 1){
+       if(huomautukset <= 1){
             henkilo.lisaaHuomautus();
             kommentti = "Korkkaat juoman repustasi huomaamatta, että herra konstaapeli on selkäsi takana. Pääset kuitenkin pälkähästä pelkällä huomautuksella.";
-       }else{
+       }else if(huomautukset == 2){
+           kommentti ="sakot kommentti 2";
+           maksaSakot(henkilo);
+       } else if(huomautukset > 2){
             kommentti = "Samainen konstaapeli, joka on sinulle jo aikaisemmin antanut huomautuksen sattuu jälleen kerran paikalle. Tällä kertaa hän ei ole yhtä suvaitsevainen. Pääset maijan kyydillä putkaan.";
        }
        
