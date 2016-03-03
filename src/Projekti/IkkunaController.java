@@ -21,6 +21,8 @@ import javafx.scene.control.TextField;
  */
 public class IkkunaController implements Initializable {
     
+    private int onkoSimuloitu = 0;
+    
     @FXML
     private Label label;
     
@@ -83,8 +85,13 @@ public class IkkunaController implements Initializable {
     
     @FXML
     public void simuloiButton(ActionEvent event) {
-        simuloi();
-        label.setText(paikka.getTarina() + "\nHuomautukset: " + jarno.getHuomautukset() + "\nHumalatila: " + jarno.getHumalatila());
+        if (onkoSimuloitu <= 0) {
+            simuloi();
+            label.setText(paikka.getTarina() + "\nHuomautukset: " + jarno.getHuomautukset() + "\nHumalatila: " + jarno.getHumalatila());
+            onkoSimuloitu = 1;
+        }else {
+            label.setText("RESETTAA");
+        }
     }
     
     @FXML
@@ -94,6 +101,7 @@ public class IkkunaController implements Initializable {
         kaverinKoti = new Kaverinkamppa();
         paikka.reset();
         label.setText("");
+        onkoSimuloitu = 0;
     }
     
     @FXML
