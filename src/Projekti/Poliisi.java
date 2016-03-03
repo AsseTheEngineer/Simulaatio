@@ -48,13 +48,13 @@ public class Poliisi {
        if(huomautukset < 1){
             henkilo.lisaaHuomautus();
             henkilo.juoOmaJuoma();
-            kommentti = "Korkkaat juoman repustasi huomaamatta, että herra konstaapeli on selkäsi takana. Pääset kuitenkin pälkähästä pelkällä huomautuksella.";
+            kommentti = "Korkkaat juoman repustasi huomaamatta, että herra konstaapeli on selkäsi takana. Pääset kuitenkin pälkähästä pelkällä huomautuksella. \n";
        }else if(huomautukset > 1 && huomautukset < 2){
            henkilo.lisaaHuomautus();
-           kommentti ="Samainen konstaapeli kävelee kulman takaa vastaan ja ojentaa " + sakot + "€ sakkolapun";
+           kommentti ="Samainen konstaapeli kävelee kulman takaa vastaan ja ojentaa " + sakot + "€ sakkolapun \n";
            maksaSakot(henkilo);
        } else if(huomautukset > 2){
-            kommentti = "Samainen konstaapeli, joka on sinulle jo aikaisemmin antanut huomautuksen sattuu jälleen kerran paikalle. Tällä kertaa hän ei ole yhtä suvaitsevainen. Pääset maijan kyydillä putkaan.";
+            kommentti = "Samainen konstaapeli, joka on sinulle jo aikaisemmin antanut huomautuksen sattuu jälleen kerran paikalle. Tällä kertaa hän ei ole yhtä suvaitsevainen. Pääset maijan kyydillä putkaan.\n";
         }
 
         return kommentti;

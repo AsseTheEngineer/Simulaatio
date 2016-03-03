@@ -35,8 +35,9 @@ public class Puisto {
     }
      */
     public String juoOmajuoma(Henkilo henkilo) {
-        String kommentti;
+        String kommentti = "";
         double random = Math.random();
+        if(henkilo.getJuomat()>0){
         if (random <= 0.2) {
             kommentti = "Mitäpä puistossa olo olisi ilman pussikaljaa? Ei mitään, joten avaat yhden taskulämpimän.";
             henkilo.juomaMiinus();
@@ -56,6 +57,7 @@ public class Puisto {
         } else {
             kommentti = poliisi.huomautus(henkilo);
 
+        }
         }
         return kommentti;
     }
