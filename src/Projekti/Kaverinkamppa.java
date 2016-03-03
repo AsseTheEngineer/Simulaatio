@@ -26,7 +26,7 @@ public class Kaverinkamppa {
 
     public String otaRahaa(Henkilo henkilo) {
         String kommentti = "";
-        if (henkilo.getRaha() > 20) {
+        if (henkilo.getRaha() < 20) {
             henkilo.lisaaRahaa(20);
             kommentti = "Rahatilanteesi on heikko. Pyydät kaveriltasi parikymppiä lainaa, jonka hän yllätyksesesi lainaa.";
         } else {

@@ -16,7 +16,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class SimulaatioMain extends Application {
-    
+
     public static Henkilo jarno = new Henkilo(100, "Jarno", "Penttilä", 0, 5);
         
     public static Baari baari1 = new Baari(4,4,5,5, "prkl");
@@ -34,24 +34,25 @@ public class SimulaatioMain extends Application {
     public static void simuloi() {
         int gameOver = 0;
         while (gameOver != 1) {
+            
             paikka.simulointi();
             //System.out.println("\n" + jarno.getHumalatila() + "\n");
             if (jarno.getHumalatila() >= 10) {
                 gameOver = 1;
-            }else if (paikka.kello().equals("04:20")) { //#sweg
+            } else if (paikka.kello().equals("04:20")) { //#sweg
                 gameOver = 1;
-            }else if (jarno.getHuomautukset() >= 3) {
+            } else if (jarno.getHuomautukset() >= 3) {
                 gameOver = 1;
-            }  
+            }
         }
     }
-    
+
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Ikkuna.fxml"));
-        
+
         Scene scene = new Scene(root);
-        
+
         stage.setScene(scene);
         stage.show();
     }
@@ -68,5 +69,5 @@ public class SimulaatioMain extends Application {
         paikka.addBaari(baari5);
         launch(args);
     }
-    
+
 }

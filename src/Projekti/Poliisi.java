@@ -1,44 +1,44 @@
 package Projekti;
 
 public class Poliisi {
-  Henkilo henkilo;
+
+    Henkilo henkilo;
     public int sakot;
+
     /*Otin huomautukset pois ja siirsin ne "henkilölle" 
     koska henkilö on olio ja jos huomautukset olisi ollut poliisi oliolla ei usesalle henkilölle pystyisi antaa huomautuksia
     koska huomautukset on poliisilla
-    */
+     */
     public Poliisi() {
         this.sakot = 50;
     }
-    
-    public Poliisi(int sakot){
-     this.sakot = sakot;
-     //this.henkilo = henkilo; <-- mitäköhä toiki tekee
+
+    public Poliisi(int sakot) {
+        this.sakot = sakot;
+        //this.henkilo = henkilo; <-- mitäköhä toiki tekee
     }
- 
+
     public void setSakot(int sakko) {
         this.sakot = sakko;
     }
-    
-    public String maksaSakot(Henkilo henkilo){
-       boolean onnistuiko;
-       onnistuiko = henkilo.uusiMaksu(sakot);
-       String kommentti;
-       
-       if(onnistuiko == true)
-           kommentti = "sakkojen maksu onnistui";
-       else
-           kommentti = "sakkojen maksu epäonnistui";
-       return kommentti;
-   }
-   
-   
+
+    public String maksaSakot(Henkilo henkilo) {
+        boolean onnistuiko;
+        onnistuiko = henkilo.uusiMaksu(sakot);
+        String kommentti;
+
+        if (onnistuiko == true) {
+            kommentti = "sakkojen maksu onnistui";
+        } else {
+            kommentti = "sakkojen maksu epäonnistui";
+        }
+        return kommentti;
+    }
+
     /* Toi metodi on periaattees turha koska ton kommentoi voi laittaa huomautus metodiin
     String joudutPutkaan(){
             return "Mitä tuli tehtyä jouduit putkaan";
    }*/
-   
-   
     //Tohon lisäsin henkilön mikä annetaa kun kutsutaan tota metodia
     //(Auttaa siinä että voidaan antaa se huomautus sille henkilölle ei poliisille)
     String huomautus(Henkilo henkilo){
@@ -54,8 +54,8 @@ public class Poliisi {
            maksaSakot(henkilo);
        } else if(huomautukset > 2){
             kommentti = "Samainen konstaapeli, joka on sinulle jo aikaisemmin antanut huomautuksen sattuu jälleen kerran paikalle. Tällä kertaa hän ei ole yhtä suvaitsevainen. Pääset maijan kyydillä putkaan.";
-       }
-       
-       return kommentti;
-       }
+        }
+
+        return kommentti;
+    }
 }
