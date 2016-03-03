@@ -119,7 +119,7 @@ public class Paikka {
         //Muokkaa uusiks
         random = Math.random();
         tapahtumat += henkilo.juoOmaJuoma() + "\n";
-            if (random >= 0 && random <= 0.33) {
+            if (random <= 0.33) {
                 tapahtumat += poliisi.huomautus(henkilo) + "\n"; //"[" + date + "] " +
             }
     }
