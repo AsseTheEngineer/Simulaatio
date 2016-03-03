@@ -45,7 +45,7 @@ public class Poliisi {
        int huomautukset = henkilo.getHuomautukset();
        String kommentti = "";
        
-       if(huomautukset < 1){
+       if(huomautukset < 1 && henkilo.getJuomat() > 0){
             henkilo.lisaaHuomautus();
             henkilo.juoOmaJuoma();
             kommentti = "Korkkaat juoman repustasi huomaamatta, että herra konstaapeli on selkäsi takana. Pääset kuitenkin pälkähästä pelkällä huomautuksella. \n";

@@ -63,15 +63,15 @@ public class Koti {
     }
 
     String otaRahaa(int summa) {
-        String kommentti;
+        String kommentti = "";
         if (henkilo.getRaha() < 20) {
 
             kommentti = "Käyt kaivamassa patjojen välistä lisää rahaa illan koitoksia varten.";
             henkilo.lisaaRahaa(saastot);
 
-        } else if (saastot == 0) {
+        } else if (saastot == 0 && henkilo.getRaha() < 20) {
             kommentti = "Menit pöyhimään tyynyliinaa rahan toivossa vain todetaksesi, että rahat on loppu.";
-        } else {
+        } else if (henkilo.getRaha() < 20) {
             kommentti = "Meinasit mennä hakemaan lisää rahaa, mutta muistit olevasi pihi. Joten päätät pärjätä lompakossa olevalla summalla.";
         }
 
