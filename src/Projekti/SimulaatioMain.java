@@ -5,32 +5,32 @@
  */
 package Projekti;
 
-import static Projekti.TestMain.boothill;
-import static Projekti.TestMain.paikka;
-import static Projekti.TestMain.prkl;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
 /**
  *
  * @author Asse
  */
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 public class SimulaatioMain extends Application {
 
     public static Henkilo jarno = new Henkilo(100, "Jarno", "Penttilä", 0, 5);
-
-    public static Baari prkl = new Baari(4, 4, 5, 5, "prkl");
-    public static Baari boothill = new Baari(4, 5, 6, 6, "Boothill");
-
+        
+    public static Baari baari1 = new Baari(4,4,5,5, "prkl");
+    public static Baari baari2 = new Baari(4, 5, 6, 6, "Boothill");
+    public static Baari baari3 = new Baari();
+    public static Baari baari4 = new Baari();
+    public static Baari baari5 = new Baari();
+        
     public static Poliisi poliisi = new Poliisi(40);
     public static Koti jarnonKoti = new Koti(jarno);
-    public static Kaverinkamppa makenKoti = new Kaverinkamppa(5, 50);
-    public static Puisto kaivopuisto = new Puisto(poliisi);
-    public static Paikka paikka = new Paikka(jarno, poliisi, jarnonKoti, makenKoti, kaivopuisto);
-
+    public static Kaverinkamppa kaverinKoti = new Kaverinkamppa(5, 50);
+    public static Puisto puisto = new Puisto(poliisi);
+    public static Paikka paikka = new Paikka(jarno, poliisi, jarnonKoti, kaverinKoti, puisto);
+    
     public static void simuloi() {
         int gameOver = 0;
         while (gameOver != 1) {
@@ -61,8 +61,11 @@ public class SimulaatioMain extends Application {
      */
     public static void main(String[] args) {
         //pyhä launch juttu on tossa alla 
-        paikka.addBaari(prkl);
-        paikka.addBaari(boothill);
+        paikka.addBaari(baari1);
+        paikka.addBaari(baari2);
+        paikka.addBaari(baari3);
+        paikka.addBaari(baari4);
+        paikka.addBaari(baari5);
         launch(args);
     }
 

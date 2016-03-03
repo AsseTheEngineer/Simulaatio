@@ -42,15 +42,15 @@ public class Puisto {
             henkilo.juomaMiinus();
             henkilo.humalatilaPlus(0.5);
         } else if (random > 0.2 && random <= 0.4) {
-            kommentti = "juo kommentti 2";
+            kommentti = "Kusihätä on, mutta sinnittelet vielä yhden oluen verran.";
             henkilo.juomaMiinus();
             henkilo.humalatilaPlus(0.5);
         } else if (random > 0.4 && random <= 0.6) {
-            kommentti = "juo kommentti 3";
+            kommentti = "Naapuriseurueessa istuu helvetin ruma nainen. Korkkaat oluen ja toivot hänen kaunistuvan sen jälkeen.";
             henkilo.juomaMiinus();
             henkilo.humalatilaPlus(0.5);
         } else if (random > 0.6 && random <= 0.8) {
-            kommentti = "juo kommentti 4";
+            kommentti = "Tunnet olevasi liian selvinpäin, avaat oluen.";
             henkilo.juomaMiinus();
             henkilo.humalatilaPlus(0.5);
         } else {
@@ -66,12 +66,11 @@ public class Puisto {
         if (random <= 0.2 && henkilo.getJuomat() == 0) {
             kommentti = "Menet pummimaan naapuriseurueelta juoman. Yksi heistä suostuu luopumaan kallisarvoisesta maljastaan. Kumoat juoman siltä seisomalta.";
             henkilo.humalatilaPlus(0.5);
-        } else if (random > 0.2 && random <= 0.4) {
+        } else if (random > 0.2 && random <= 0.25) {
             kommentti = "Menet pummimaan naapuriseurueelta juomaa. Saat käteesi epäilyttävän näköisen pullon ja otat ison kulauksen... Lasoliahan se on.";
             henkilo.humalatilaPlus(11);
-        } else if (random > 0.4 && random <= 0.6) {
-            kommentti = "pummi kommentti 3";
-            henkilo.humalatilaPlus(0.5);
+        } else if (random > 0.25 && random <= 0.6) {
+            kommentti = "Jano on, mutta ei yhtään juomaa. Menet pyytämään naapuriseurueelta juomaa. Tuloksetta.";
         } else if (random > 06 && random <= 0.8) {
             kommentti = "pummi komentti 4";
             henkilo.humalatilaPlus(0.5);

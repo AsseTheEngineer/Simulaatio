@@ -1,13 +1,10 @@
 package Projekti;
 
-import java.util.Date;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Paikka {
     
     String tapahtumat = "";
-    Date date = new Date();
     
     ArrayList<Baari> baarit = new ArrayList<>();
     
@@ -29,6 +26,16 @@ public class Paikka {
         this.kaveri = kaveri;
         this.puisto = puisto;
         this.aikavali = 20;
+    }
+    
+    public void reset() {
+        tapahtumat = "";
+        tunnit = 20;
+        minuutit = 0;
+    }
+    
+    public double getAikavali() {
+        return aikavali;
     }
     
     public void setAikavali(int vali) {
@@ -111,13 +118,10 @@ public class Paikka {
     public void katu() {
         //Muokkaa uusiks
         random = Math.random();
-        
-            if (random <= 0.33) {
+        tapahtumat += henkilo.juoOmaJuoma() + "\n";
+            if (random >= 0 && random <= 0.33) {
                 tapahtumat += poliisi.huomautus(henkilo) + "\n"; //"[" + date + "] " +
-            } else {
-                 tapahtumat += henkilo.juoOmaJuoma() + "\n";
             }
-        
     }
 
     public void kaverinKoti() {

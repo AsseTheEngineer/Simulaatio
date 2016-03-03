@@ -12,8 +12,8 @@ public class Henkilo {
     
     public Henkilo() {
         this.lompakko = 100;
-        this.etunimi = "Etunimi";
-        this.sukunimi = "Sukunimi";
+        this.etunimi = "Jarno";
+        this.sukunimi = "Penttilä";
         this.humalatila = 0;
         this.juomat = 5;
         this.huomautukset = 0;

@@ -11,11 +11,11 @@ package Projekti;
  */
 public class Baari {
 
-    final int kalja;
-    final int siideri;
-    final int jallu;
-    final int jekku;
-    final String nimi;
+    int kalja;
+    int siideri;
+    int jallu;
+    int jekku;
+    String nimi;
     //Henkilo henkilo;
 
     public Baari() {
@@ -32,6 +32,19 @@ public class Baari {
         this.jallu = jallu;
         this.jekku = jekku;
         this.nimi = nimi;
+    }
+    
+    public void setKalja(int hinta) {
+        this.kalja = hinta;
+    }
+    public void setSiideri(int hinta) {
+        this.siideri = hinta;
+    }
+    public void setJallu(int hinta) {
+        this.jallu = hinta;
+    }
+    public void setJekku(int hinta) {
+        this.jekku = hinta;
     }
 
     public String getNimi() {
@@ -90,9 +103,9 @@ public class Baari {
         } else if (random > 0.2 && random <= 0.4) {
             kommentti = "Menet tanssimaan ja hyvin tanssitkin. Omasta mielestäsi.";
         } else if (random > 0.4 && random <= 0.6) {
-            kommentti = "tanssi kommentti 3";
+            kommentti = "Menet hieromaan itseäsi kaunista naista vasten. Saat litsarin.";
         } else if (random > 0.6 && random <= 0.8) {
-            kommentti = "tanssi kommentti 4";
+            kommentti = "Viinan voima on ylivertainen, tanssit kuin Michael Jackson.";
         } else {
             kommentti = "Menet tanssilattialle näyttämään kireimmät liikkeesi. Yleisö ei pidä sinusta ja saat kaljat päällesi.";
         }
@@ -108,11 +121,11 @@ public class Baari {
         } else if (random > 0.2 && random <= 0.4) {
             kommentti = "Puhuit tuntemattomalle naiselle ja sait vihreää valoa.";
         } else if (random > 0.4 && random <= 0.6) {
-            kommentti = "puhu kommentti 3";
+            kommentti = "Menet haastamaan riitaa talon isoimman miehen kanssa. Onneksesi hän antaa asian olla ja tunnet itsesi jumalaksi.";
         } else if (random > 0.6 && random <= 0.8) {
-            kommentti = "puhu komentti 4";
+            kommentti = "Yrität saada baarimikkoa sinun luokse yöksi, kunnes tajuat, että hän on saman sukupuolen edustaja.";
         } else {
-            kommentti = "puhu kommentti 5";
+            kommentti = "Viina saa sinut puheliaaksi. Kerrot tuntemattomalle henkilölle kuinka olet joskus homoillut jonkun kanssa.";
         }
         return kommentti;
 

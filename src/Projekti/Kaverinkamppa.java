@@ -18,7 +18,7 @@ public class Kaverinkamppa {
         this.kaverinJuoma = 5;
         this.kaveriRahat = 50;
     }
-    
+
     public Kaverinkamppa(int kaverinJuoma, double kaveriRahat) {
         this.kaverinJuoma = kaverinJuoma;
         this.kaveriRahat = kaveriRahat;
@@ -52,8 +52,8 @@ public class Kaverinkamppa {
             kommentti = "Olet vielä sen verran selvin päin, että pystyt kertomaan kaverillesi gravitaatioaaltoteoriasta.";
         } else if (henkilo.getHumalatila() >= 5 && henkilo.getHumalatila() < 10) {
             kommentti = "Alat olemaan sen verran humalassa, ettei kaverisi saa oikein selvää mistä puhut.";
-        }else{
-            kommentti = "puhu kommentti 3";
+        } else {
+            kommentti = "Otatte ajan kuluksi erän NHL 97:aa.";
         }
         return kommentti;
 
