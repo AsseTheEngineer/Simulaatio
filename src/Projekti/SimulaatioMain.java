@@ -21,9 +21,9 @@ public class SimulaatioMain extends Application {
         
     public static Baari baari1 = new Baari(4,4,5,5, "prkl");
     public static Baari baari2 = new Baari(4, 5, 6, 6, "Boothill");
-    public static Baari baari3 = new Baari();
-    public static Baari baari4 = new Baari();
-    public static Baari baari5 = new Baari();
+    public static Baari baari3 = new Baari(4,5,4,4,"Molly Malones");
+    public static Baari baari4 = new Baari(5,4,5,5,"EI SAATANA");
+    public static Baari baari5 = new Baari(7,8,6,6, "PORVARI PAIKKA");
         
     public static Poliisi poliisi = new Poliisi(40);
     public static Koti jarnonKoti = new Koti(jarno);

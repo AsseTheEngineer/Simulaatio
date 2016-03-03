@@ -97,6 +97,7 @@ public class Paikka {
             tapahtumat += "[" + kello() + ", puisto]";
             puisto();
         }
+        tapahtumat += "\n" + "Rahat: " + henkilo.getRaha() + "€ Humalatila: " + henkilo.getHumalatila() + " Juomat: " + henkilo.getJuomat() + "\n";
         minuutit += aikavali;
     }
 
@@ -104,11 +105,11 @@ public class Paikka {
         random = Math.random();
         int random1;
         
-        if (random <= 0.33) {
+        if (random <= 0.45) {
             random1 = (int) (Math.random() * 4);
             tapahtumat += baari.ostaJuoma((int) random1, henkilo) + "\n";
             
-        } else if (random > 0.33 && random <= 0.66) {
+        } else if (random > 0.45 && random <= 0.72) {
             tapahtumat += baari.tanssi() + "\n";
         } else {
             tapahtumat += baari.puhuPaskaa() + "\n";
@@ -119,8 +120,8 @@ public class Paikka {
         //Muokkaa uusiks
         random = Math.random();
         tapahtumat += henkilo.juoOmaJuoma() + "\n";
-            if (random <= 0.33) {
-                tapahtumat += poliisi.huomautus(henkilo) + "\n"; //"[" + date + "] " +
+            if (random >= 0 && random <= 0.33) {
+                tapahtumat += poliisi.huomautus(henkilo); //"[" + date + "] " +
             }
     }
 

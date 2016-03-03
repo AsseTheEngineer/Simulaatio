@@ -41,19 +41,19 @@ public class Poliisi {
    }*/
     //Tohon lisäsin henkilön mikä annetaa kun kutsutaan tota metodia
     //(Auttaa siinä että voidaan antaa se huomautus sille henkilölle ei poliisille)
-    String huomautus(Henkilo henkilo) {
-        int huomautukset = henkilo.getHuomautukset();
-        String kommentti = "";
-
-        if (huomautukset <= 1 && henkilo.getJuomat() > 0) {
+    String huomautus(Henkilo henkilo){
+       int huomautukset = henkilo.getHuomautukset();
+       String kommentti = "";
+       
+       if(huomautukset < 1){
             henkilo.lisaaHuomautus();
             henkilo.juoOmaJuoma();
             kommentti = "Korkkaat juoman repustasi huomaamatta, että herra konstaapeli on selkäsi takana. Pääset kuitenkin pälkähästä pelkällä huomautuksella.";
-        } else if (huomautukset == 2) {
-            henkilo.lisaaHuomautus();
-            kommentti = "sakot kommentti 2";
-            maksaSakot(henkilo);
-        } else if (huomautukset > 2 && henkilo.getJuomat() > 0) {
+       }else if(huomautukset > 1 && huomautukset < 2){
+           henkilo.lisaaHuomautus();
+           kommentti ="Samainen konstaapeli kävelee kulman takaa vastaan ja ojentaa " + sakot + "€ sakkolapun";
+           maksaSakot(henkilo);
+       } else if(huomautukset > 2){
             kommentti = "Samainen konstaapeli, joka on sinulle jo aikaisemmin antanut huomautuksen sattuu jälleen kerran paikalle. Tällä kertaa hän ei ole yhtä suvaitsevainen. Pääset maijan kyydillä putkaan.";
         }
 
