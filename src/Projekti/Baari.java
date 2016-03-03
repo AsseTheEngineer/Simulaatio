@@ -11,11 +11,11 @@ package Projekti;
  */
 public class Baari {
 
-    final int kalja;
-    final int siideri;
-    final int jallu;
-    final int jekku;
-    final String nimi;
+    int kalja;
+    int siideri;
+    int jallu;
+    int jekku;
+    String nimi;
     //Henkilo henkilo;
 
     public Baari() {
@@ -32,6 +32,19 @@ public class Baari {
         this.jallu = jallu;
         this.jekku = jekku;
         this.nimi = nimi;
+    }
+    
+    public void setKalja(int hinta) {
+        this.kalja = hinta;
+    }
+    public void setSiideri(int hinta) {
+        this.siideri = hinta;
+    }
+    public void setJallu(int hinta) {
+        this.jallu = hinta;
+    }
+    public void setJekku(int hinta) {
+        this.jekku = hinta;
     }
 
     public String getNimi() {
