@@ -11,7 +11,6 @@ public class Poliisi {
         this.sakot = 50;
     }
     
-    
     public Poliisi(int sakot){
      this.sakot = sakot;
      //this.henkilo = henkilo; <-- mitäköhä toiki tekee
