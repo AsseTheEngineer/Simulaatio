@@ -103,9 +103,9 @@ public class Baari {
         } else if (random > 0.2 && random <= 0.4) {
             kommentti = "Menet tanssimaan ja hyvin tanssitkin. Omasta mielestäsi.";
         } else if (random > 0.4 && random <= 0.6) {
-            kommentti = "tanssi kommentti 3";
+            kommentti = "Menet hieromaan itseäsi kaunista naista vasten. Saat litsarin.";
         } else if (random > 0.6 && random <= 0.8) {
-            kommentti = "tanssi kommentti 4";
+            kommentti = "Viinan voima on ylivertainen, tanssit kuin Michael Jackson.";
         } else {
             kommentti = "Menet tanssilattialle näyttämään kireimmät liikkeesi. Yleisö ei pidä sinusta ja saat kaljat päällesi.";
         }
@@ -121,11 +121,11 @@ public class Baari {
         } else if (random > 0.2 && random <= 0.4) {
             kommentti = "Puhuit tuntemattomalle naiselle ja sait vihreää valoa.";
         } else if (random > 0.4 && random <= 0.6) {
-            kommentti = "puhu kommentti 3";
+            kommentti = "Menet haastamaan riitaa talon isoimman miehen kanssa. Onneksesi hän antaa asian olla ja tunnet itsesi jumalaksi.";
         } else if (random > 0.6 && random <= 0.8) {
-            kommentti = "puhu komentti 4";
+            kommentti = "Yrität saada baarimikkoa sinun luokse yöksi, kunnes tajuat, että hän on saman sukupuolen edustaja.";
         } else {
-            kommentti = "puhu kommentti 5";
+            kommentti = "Viina saa sinut puheliaaksi. Kerrot tuntemattomalle henkilölle kuinka olet joskus homoillut jonkun kanssa.";
         }
         return kommentti;
 
