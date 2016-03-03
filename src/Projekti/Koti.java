@@ -13,14 +13,14 @@ public class Koti {
         this.henkilo = henkilo;
     }
 
-  
     public void setSaastot(double saastot) {
         this.saastot = saastot;
     }
+
     public void setJuomat(int juomat) {
         this.juomat = juomat;
     }
-    
+
     public double getSaastot() {
         return saastot;
     }
@@ -50,7 +50,7 @@ public class Koti {
             henkilo.humalatilaPlus(0.5);
         } else if (juomat == 0) {
             if (henkilo.getJuomat() > 0) {
-                kommentti = " Jääkaappisi ammottaa tyhjyyttään, mutta onneksi sinulla oli repussa vielä " + henkilo.getJuomat() + "juomaa, joista korkkaat yhen.";
+                kommentti = " Jääkaappisi ammottaa tyhjyyttään, mutta onneksi sinulla oli repussa vielä " + henkilo.getJuomat() + " juomaa, joista korkkaat yhen.";
                 henkilo.humalatilaPlus(0.5);
                 henkilo.juomaMiinus();
             } else if (henkilo.getJuomat() == 0) {
@@ -63,15 +63,15 @@ public class Koti {
     }
 
     String otaRahaa(int summa) {
-        String kommentti="";
+        String kommentti;
         if (henkilo.getRaha() < 50) {
             henkilo.lisaaRahaa(saastot);
             kommentti = "Käyt kaivamassa patjojen välistä lisää rahaa illan koitoksia varten.";
 
-        } else if(saastot==0){
+        } else if (saastot == 0) {
             kommentti = "Menit pöyhimään tyynyliinaa rahan toivossa vain todetaksesi, että rahat on loppu.";
-        }else{
-            kommentti= "Meinasit mennä hakemaan lisää rahaa, mutta muistit olevasi pihi. Joten päätät pärjätä lompakossa olevalla summalla.";
+        } else {
+            kommentti = "Meinasit mennä hakemaan lisää rahaa, mutta muistit olevasi pihi. Joten päätät pärjätä lompakossa olevalla summalla.";
         }
 
         return kommentti;
