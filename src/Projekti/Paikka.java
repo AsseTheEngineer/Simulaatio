@@ -110,9 +110,9 @@ public class Paikka {
             tapahtumat += baari.ostaJuoma((int) random1, henkilo) + "\n";
             
         } else if (random > 0.45 && random <= 0.72) {
-            tapahtumat += baari.tanssi() + "\n";
+            tapahtumat += baari.tanssi(henkilo) + "\n";
         } else {
-            tapahtumat += baari.puhuPaskaa() + "\n";
+            tapahtumat += baari.puhuPaskaa(henkilo) + "\n";
         }
     }
 

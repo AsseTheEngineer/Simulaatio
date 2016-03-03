@@ -95,9 +95,10 @@ public class Baari {
         return kommentti;
     }
 
-    public String tanssi() {
+    public String tanssi(Henkilo henkilo) {
         double random = Math.random();
-        String kommentti;
+        String kommentti= "";
+        if(henkilo.getHumalatila() > 2){
         if (random <= 0.2) {
             kommentti = "Tunnet itsesi John Travoltaksi Saturday night feverissä ja menet tanssimaan. Valitettavasti totuus on eri.";
         } else if (random > 0.2 && random <= 0.4) {
@@ -109,13 +110,14 @@ public class Baari {
         } else {
             kommentti = "Menet tanssilattialle näyttämään kireimmät liikkeesi. Yleisö ei pidä sinusta ja saat kaljat päällesi.";
         }
+        }
         return kommentti;
     }
 
-    public String puhuPaskaa() {
+    public String puhuPaskaa(Henkilo henkilo) {
         double random = Math.random();
-        String kommentti;
-        
+        String kommentti = "";
+        if(henkilo.getHumalatila() > 2){
         if (random <= 0.2) {
             kommentti = "Puhuit tuntemattomalle ja sait melkein turpaasi.";
         } else if (random > 0.2 && random <= 0.4) {
@@ -126,6 +128,7 @@ public class Baari {
             kommentti = "Yrität saada baarimikkoa sinun luokse yöksi, kunnes tajuat, että hän on saman sukupuolen edustaja.";
         } else {
             kommentti = "Viina saa sinut puheliaaksi. Kerrot tuntemattomalle henkilölle kuinka olet joskus homoillut jonkun kanssa.";
+        }
         }
         return kommentti;
 
