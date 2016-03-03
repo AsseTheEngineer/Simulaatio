@@ -50,7 +50,7 @@ public class Koti {
             henkilo.humalatilaPlus(0.5);
         } else if (juomat == 0) {
             if (henkilo.getJuomat() > 0) {
-                kommentti = " Jääkaappisi ammottaa tyhjyyttään, mutta onneksi sinulla oli repussa vielä " + henkilo.getJuomat() + "juomaa, joista korkkaat yhen.";
+                kommentti = " Jääkaappisi ammottaa tyhjyyttään, mutta onneksi sinulla oli repussa vielä " + henkilo.getJuomat() + " juomaa, joista korkkaat yhden.";
                 henkilo.humalatilaPlus(0.5);
                 henkilo.juomaMiinus();
             } else if (henkilo.getJuomat() == 0) {

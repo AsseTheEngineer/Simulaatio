@@ -7,14 +7,14 @@ package Projekti;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
 /**
  *
  * @author Asse
  */
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 public class SimulaatioMain extends Application {
     
     public static Henkilo jarno = new Henkilo(100, "Jarno", "Penttilä", 0, 5);
