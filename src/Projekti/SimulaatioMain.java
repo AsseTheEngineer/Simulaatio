@@ -33,26 +33,18 @@ public class SimulaatioMain extends Application {
 
     public static void simuloi() {
         int gameOver = 0;
-        String kommentti = "";
         while (gameOver != 1) {
 
             paikka.simulointi();
             //System.out.println("\n" + jarno.getHumalatila() + "\n");
             if (jarno.getHumalatila() >= 10) {
                 gameOver = 1;
-                System.out.println("Iltasi päättyi sammumiseen!");
-            } else if (paikka.getTunnit() >= 4 && jarno.getHumalatila() < 10) { //#sweg
-                gameOver = 1;
-                System.out.println("Selvisit mestarin elkein illasta!");
-            } else if (paikka.getTunnit() >= 4 && jarno.getHumalatila() >= 10) {
-                gameOver = 1;
-                System.out.println("Iltasi päättyi sammumiseen!");
+            } else if (paikka.getTunnit() == 4) { //#sweg
+                gameOver = 1;            
             } else if (jarno.getHuomautukset() >= 3) {
                 gameOver = 1;
-                System.out.println("Iltasi päättyi visiitillä putkaan!");
 
             }
-
         }
         
 
