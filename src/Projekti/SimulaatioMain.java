@@ -39,13 +39,24 @@ public class SimulaatioMain extends Application {
             if (jarno.getHumalatila() >= 10) {
                 gameOver = 1;
             } else if (paikka.getTunnit() == 4) { //#sweg
-                gameOver = 1;            
+                gameOver = 1;
             } else if (jarno.getHuomautukset() >= 3) {
                 gameOver = 1;
 
             }
+
+            String kommentti = "";
+            if (jarno.getHumalatila() >= 10) {
+                kommentti = "Iltasi päättyi sammumiseen!";
+            } else if (paikka.getTunnit() == 4 && jarno.getHumalatila() >= 10) {
+                kommentti = "Päätät sammua samaan aikaan kun baarin ovet menee kiinni.";
+            } else if (paikka.getTunnit() == 4 && jarno.getHumalatila() < 10) {
+                kommentti = "Selvisit mestarin elkein illasta!";
+            } else if (jarno.getHuomautukset() >= 3) {
+                kommentti = "Iltasi päättyi putkaan!";
+            } paikka.addTapahtuma(kommentti);
+
         }
-        
 
     }
 
