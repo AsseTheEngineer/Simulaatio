@@ -11,7 +11,7 @@ public class Henkilo {
     private int huomautukset;
     
     public Henkilo() {
-        this.lompakko = 100;
+        this.lompakko = 30;
         this.etunimi = "Jarno";
         this.sukunimi = "Penttilä";
         this.humalatila = 0;
