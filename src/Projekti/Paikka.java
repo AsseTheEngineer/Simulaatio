@@ -34,7 +34,7 @@ public class Paikka {
         minuutit = 0;
     }
     
-    public double getAikavali() {
+    public int getAikavali() {
         return aikavali;
     }
     

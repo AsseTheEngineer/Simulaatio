@@ -49,12 +49,11 @@ public class SimulaatioMain extends Application {
                 System.out.println("Iltasi päättyi sammumiseen!");
             } else if (jarno.getHuomautukset() >= 3) {
                 gameOver = 1;
-               System.out.println("Iltasi päättyi visiitillä putkaan!");
+                System.out.println("Iltasi päättyi visiitillä putkaan!");
 
             }
 
         }
-     
 
     }
 
