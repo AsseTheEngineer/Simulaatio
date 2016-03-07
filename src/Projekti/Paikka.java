@@ -70,6 +70,10 @@ public class Paikka {
         }
         return aika;
     }
+
+    public int getTunnit() {
+        return tunnit;
+    }
     
     public void simulointi() {
         

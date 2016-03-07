@@ -18,33 +18,44 @@ import javafx.stage.Stage;
 public class SimulaatioMain extends Application {
 
     public static Henkilo jarno = new Henkilo(30, "Jarno", "Penttilä", 0, 5);
-        
-    public static Baari baari1 = new Baari(4,4,5,5, "prkl");
+
+    public static Baari baari1 = new Baari(4, 4, 5, 5, "prkl");
     public static Baari baari2 = new Baari(4, 5, 6, 6, "Boothill");
-    public static Baari baari3 = new Baari(4,5,4,4,"Molly Malones");
-    public static Baari baari4 = new Baari(5,4,5,5,"Lady Moon");
-    public static Baari baari5 = new Baari(7,8,6,6, "Ravintola Teatteri");
-        
+    public static Baari baari3 = new Baari(4, 5, 4, 4, "Molly Malones");
+    public static Baari baari4 = new Baari(5, 4, 5, 5, "Lady Moon");
+    public static Baari baari5 = new Baari(7, 8, 6, 6, "Ravintola Teatteri");
+
     public static Poliisi poliisi = new Poliisi(40);
     public static Koti jarnonKoti = new Koti(jarno, 20, 5);
     public static Kaverinkamppa kaverinKoti = new Kaverinkamppa(5, 50);
     public static Puisto puisto = new Puisto(poliisi);
     public static Paikka paikka = new Paikka(jarno, poliisi, jarnonKoti, kaverinKoti, puisto);
-    
+
     public static void simuloi() {
         int gameOver = 0;
+        String kommentti = "";
         while (gameOver != 1) {
-        String kommentti ="";    
+
             paikka.simulointi();
             //System.out.println("\n" + jarno.getHumalatila() + "\n");
             if (jarno.getHumalatila() >= 10) {
                 gameOver = 1;
-            } else if (paikka.kello().equals("04:20")) { //#sweg           
+                System.out.println("Iltasi päättyi sammumiseen!");
+            } else if (paikka.getTunnit() >= 4 && jarno.getHumalatila() < 10) { //#sweg
                 gameOver = 1;
+                System.out.println("Selvisit mestarin elkein illasta!");
+            } else if (paikka.getTunnit() >= 4 && jarno.getHumalatila() >= 10) {
+                gameOver = 1;
+                System.out.println("Iltasi päättyi sammumiseen!");
             } else if (jarno.getHuomautukset() >= 3) {
                 gameOver = 1;
+               System.out.println("Iltasi päättyi visiitillä putkaan!");
+
             }
+
         }
+     
+
     }
 
     @Override

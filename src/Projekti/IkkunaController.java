@@ -149,24 +149,24 @@ public class IkkunaController implements Initializable {
     }
     
     public IkkunaController(){
-        nimi.setText(jarno.getEtunimi());
+        nimi = new TextField();
         sukunimi.setText(jarno.getSukunimi());
         juomat.setText("" + jarno.getJuomat());
         humalatila.setText("" + jarno.getHumalatila());
         aikavali.setText("" + paikka.getAikavali());
         rahat.setText("" + jarno.getRaha());
         
-        kalja1.setText("" + baari1.getKalja());
-        kalja2.setText("" + baari2.getKalja());
-        kalja3.setText("" + baari3.getKalja());
-        kalja4.setText("" + baari4.getKalja());
-        kalja5.setText("" + baari5.getKalja());
+        kalja1 = new TextField();
+        kalja2 = new TextField();
+        kalja3 = new TextField();
+        kalja4 = new TextField();
+        kalja5 = new TextField();
         
-        siideri1.setText("" + baari1.getSiideri());
-        siideri2.setText("" + baari2.getSiideri());
-        siideri3.setText("" + baari3.getSiideri());
-        siideri4.setText("" + baari4.getSiideri());
-        siideri5.setText("" + baari5.getSiideri());
+        siideri1 = new TextField();
+        siideri2 = new TextField();
+        siideri3 = new TextField();
+        siideri4 = new TextField();
+        siideri5 = new TextField();
     }
     /*
      * Initializes the controller class.
