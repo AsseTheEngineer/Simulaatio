@@ -39,7 +39,7 @@ public class Koti {
             henkilo.lisaaJuomaa(random);
             kommentti = "Käyt jääkaapilla lataamassa panokset. Otit " + random + " juomaa reppuun.";
             juomat -= random;
-        } else if (juomat == 0) {
+        } else if (juomat == 0 && henkilo.getJuomat() < 2) {
             kommentti = "Ajattelit käydä hakemassa matkajuomaa jääkaapista, mutta valitettavasti siellä ei ole kuin valo.";
         } else {
             kommentti = "Ajattelit käydä hakemassa matkajuomaa jääkaapista, mutta muistitkin, että sinulla on " + henkilo.getJuomat() + " juomaa jo repussa.";
@@ -74,7 +74,7 @@ public class Koti {
             henkilo.lisaaRahaa(saastot);
             kommentti = "Käyt kaivamassa patjojen välistä lisää rahaa illan koitoksia varten.";
 
-        } else if (saastot == 0) {
+        } else if (henkilo.getRaha() < 50 && saastot == 0) {
             kommentti = "Menit pöyhimään tyynyliinaa rahan toivossa vain todetaksesi, että rahat on loppu.";
         } else {
             kommentti = "Meinasit mennä hakemaan lisää rahaa, mutta muistit olevasi pihi. Joten päätät pärjätä lompakossa olevalla summalla.";
