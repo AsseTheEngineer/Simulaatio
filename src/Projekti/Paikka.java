@@ -104,6 +104,10 @@ public class Paikka {
         tapahtumat += "\n" + "Rahat: " + henkilo.getRaha() + "€ Humalatila: " + henkilo.getHumalatila() + " Juomat: " + henkilo.getJuomat() + "\n";
         minuutit += aikavali;
     }
+    
+    public void addTapahtuma(String tapahtuma) {
+        tapahtumat += tapahtuma;
+    }
 
     public void baari(Baari baari) {
         random = Math.random();
