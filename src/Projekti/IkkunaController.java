@@ -27,11 +27,11 @@ public class IkkunaController implements Initializable {
     private Label label;
     
     @FXML
-    private TextField kJuomat;
+    private TextField kJuomat = new TextField("" + kaverinKoti.getJuomat());
     @FXML
-    private TextField kRahat;
+    private TextField kRahat = new TextField("" + kaverinKoti.getRahat());
     @FXML
-    private TextField aikavali;
+    private TextField aikavali = new TextField("" + paikka.getAikavali());
     
     @FXML
     private TextField nimi = new TextField(jarno.getEtunimi());
@@ -40,9 +40,9 @@ public class IkkunaController implements Initializable {
     @FXML
     private TextField juomat = new TextField("" + jarno.getJuomat());
     @FXML
-    private TextField humalatila;
+    private TextField humalatila = new TextField("" + jarno.getHumalatila());
     @FXML
-    private TextField rahat;
+    private TextField rahat = new TextField("" + jarno.getRaha());
     
     @FXML
     private TextField kalja1 = new TextField("" + baari1.getKalja());
@@ -56,37 +56,37 @@ public class IkkunaController implements Initializable {
     private TextField kalja5 = new TextField("" + baari5.getKalja());
     
     @FXML 
-    private TextField siideri1;
+    private TextField siideri1 = new TextField("" + baari1.getSiideri());
     @FXML 
-    private TextField siideri2;
+    private TextField siideri2 = new TextField("" + baari2.getSiideri());
     @FXML 
-    private TextField siideri3;
+    private TextField siideri3 = new TextField("" + baari3.getSiideri());
     @FXML 
-    private TextField siideri4;
+    private TextField siideri4 = new TextField("" + baari4.getSiideri());
     @FXML 
-    private TextField siideri5;
+    private TextField siideri5 = new TextField("" + baari5.getSiideri());
     
     @FXML
-    private TextField jallu1;
+    private TextField jallu1 = new TextField("" + baari1.getJallu());
     @FXML
-    private TextField jallu2;
+    private TextField jallu2 = new TextField("" + baari2.getJallu());
     @FXML
-    private TextField jallu3;
+    private TextField jallu3 = new TextField("" + baari3.getJallu());
     @FXML
-    private TextField jallu4;
+    private TextField jallu4 = new TextField("" + baari4.getJallu());
     @FXML
-    private TextField jallu5;
+    private TextField jallu5 = new TextField("" + baari5.getJallu());
     
     @FXML
-    private TextField jekku1;
+    private TextField jekku1 = new TextField("" + baari1.getJekku());
     @FXML
-    private TextField jekku2;
+    private TextField jekku2 = new TextField("" + baari2.getJekku());
     @FXML
-    private TextField jekku3;
+    private TextField jekku3 = new TextField("" + baari3.getJekku());
     @FXML
-    private TextField jekku4;
+    private TextField jekku4 = new TextField("" + baari4.getJekku());
     @FXML
-    private TextField jekku5;
+    private TextField jekku5 = new TextField("" + baari5.getJekku());
     
     @FXML
     public void simuloiButton(ActionEvent event) {
@@ -143,45 +143,20 @@ public class IkkunaController implements Initializable {
     }
     @FXML
     public void tallennaButtonMuut(ActionEvent event) {
-        kaverinKoti.setJuomat(Integer.valueOf(kJuomat.getText()));
-        kaverinKoti.setRahat(Double.valueOf(kRahat.getText()));
-        paikka.setAikavali(Integer.valueOf(aikavali.getText()));
+        kaverinKoti.setJuomat(Integer.parseInt(kJuomat.getText()));
+        kaverinKoti.setRahat(Double.parseDouble(kRahat.getText()));
+        System.out.println("TextField value: " + aikavali.getText());
+        paikka.setAikavali(Integer.parseInt(aikavali.getText()));
+        System.out.println("Aikaväli: " + paikka.getAikavali());
     }
     
-    /*public IkkunaController(){
-        nimi = new TextField(jarno.getEtunimi());
-        sukunimi = new TextField(jarno.getSukunimi());
-        juomat = new TextField("" + jarno.getJuomat());
-        humalatila = new TextField("" + jarno.getHumalatila());
-        aikavali = new TextField("" + paikka.getAikavali());
-        rahat = new TextField("" + jarno.getRaha());
-        
-        siideri1 = new TextField("" + baari1.getSiideri());
-        siideri2 = new TextField("" + baari2.getSiideri());
-        siideri3 = new TextField("" + baari3.getSiideri());
-        siideri4 = new TextField("" + baari4.getSiideri());
-        siideri5 = new TextField("" + baari5.getSiideri());
-        
-        jallu1 = new TextField("" + baari1.getJallu());
-        jallu2 = new TextField("" + baari2.getJallu());
-        jallu3 = new TextField("" + baari3.getJallu());
-        jallu4 = new TextField("" + baari4.getJallu());
-        jallu5 = new TextField("" + baari5.getJallu());
-        
-        jekku1 = new TextField("" + baari1.getJekku());
-        jekku2 = new TextField("" + baari2.getJekku());
-        jekku3 = new TextField("" + baari3.getJekku());
-        jekku4 = new TextField("" + baari4.getJekku());
-        jekku5 = new TextField("" + baari5.getJekku());
-        
-    }
     /*
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        nimi = new TextField(jarno.getEtunimi());
+        /*nimi = new TextField(jarno.getEtunimi());
         sukunimi = new TextField(jarno.getSukunimi());
         juomat = new TextField("" + jarno.getJuomat());
         humalatila = new TextField("" + jarno.getHumalatila());
@@ -205,6 +180,7 @@ public class IkkunaController implements Initializable {
         jekku3 = new TextField("" + baari3.getJekku());
         jekku4 = new TextField("" + baari4.getJekku());
         jekku5 = new TextField("" + baari5.getJekku());
+        */
     }    
     
 }
