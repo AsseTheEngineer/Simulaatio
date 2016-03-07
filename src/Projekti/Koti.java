@@ -73,7 +73,7 @@ public class Koti {
 
     String otaRahaa(int summa) {
         String kommentti;
-        if (henkilo.getRaha() < 15) {
+        if (henkilo.getRaha() > 0 && henkilo.getRaha() < 15) {
             henkilo.lisaaRahaa(saastot);
             saastot = 0;
             kommentti = "Käyt kaivamassa patjojen välistä lisää rahaa illan koitoksia varten.";
