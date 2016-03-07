@@ -36,7 +36,6 @@ public class SimulaatioMain extends Application {
         while (gameOver != 1) {
 
             paikka.simulointi();
-            //System.out.println("\n" + jarno.getHumalatila() + "\n");
             if (jarno.getHumalatila() >= 10) {
                 gameOver = 1;
             } else if (paikka.getTunnit() == 4) { //#sweg
