@@ -71,11 +71,11 @@
                                                             <Label text="Rahat" GridPane.rowIndex="2" />
                                                             <Label text="Humalatila" GridPane.rowIndex="3" />
                                                             <Label text="Juomat" GridPane.rowIndex="4" />
-                                                            <TextField id="nimi" editable="false" promptText="etunimi" GridPane.columnIndex="1" />
-                                                            <TextField id="sukunimi" editable="false" promptText="sukunimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                            <TextField id="rahat" promptText="rahat €" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                            <TextField id="humalatila" promptText="1-10" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                            <TextField id="juomat" promptText="juomat" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                            <TextField id="nimi" editable="false" GridPane.columnIndex="1" />
+                                                            <TextField id="sukunimi" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <TextField id="rahat" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                            <TextField id="humalatila" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                            <TextField id="juomat" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                          </children>
                                                          <columnConstraints>
                                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -159,11 +159,11 @@
                                                             <Label text="Siideri" GridPane.columnIndex="4" />
                                                             <Label text="Jallu" GridPane.columnIndex="5" />
                                                             <Label text="Jekku" GridPane.columnIndex="6" />
-                                                            <TextField id="baari1" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                            <TextField id="baari2" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                            <TextField id="baari3" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                                            <TextField id="baari4" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                                                            <TextField id="baari5" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                                            <TextField id="baari1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <TextField id="baari2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                            <TextField id="baari3" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                            <TextField id="baari4" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                            <TextField id="baari5" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                                                          </children>
                                                          <columnConstraints>
                                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -214,9 +214,9 @@
                                                                   <Font name="System Bold" size="12.0" />
                                                                </font>
                                                             </Label>
-                                                            <TextField id="kJuomat" promptText="juomat" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                                            <TextField id="kRahat" promptText="rahat €" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                                            <TextField id="aikavali" promptText="min(0-60)" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                            <TextField id="kJuomat" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                            <TextField id="kRahat" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                            <TextField id="aikavali" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                          </children>
                                                          <columnConstraints>
                                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

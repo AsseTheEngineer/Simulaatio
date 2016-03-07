@@ -156,7 +156,7 @@ public class IkkunaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        
+        nimi.setPromptText("TESTI");
         /*nimi = new TextField(jarno.getEtunimi());
         sukunimi = new TextField(jarno.getSukunimi());
         juomat = new TextField("" + jarno.getJuomat());
