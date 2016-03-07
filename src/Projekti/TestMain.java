@@ -54,7 +54,6 @@ public class TestMain {
 
         while (gameOver != 1) {
             paikka.simulointi();
-            System.out.println(jarno.toString());
             //System.out.println("\n" + jarno.getHumalatila() + "\n");
             if (jarno.getHumalatila() >= 10) {
                 gameOver = 1;

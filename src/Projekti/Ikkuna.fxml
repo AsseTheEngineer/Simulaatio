@@ -90,7 +90,7 @@
                                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                          </rowConstraints>
                                                       </GridPane>
-                                                      <Button id="tallennaHenk" layoutX="465.0" layoutY="477.0" mnemonicParsing="false" text="Tallenna" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="45.0">
+                                                      <Button id="tallennaHenk" layoutX="465.0" layoutY="477.0" mnemonicParsing="false" onAction="#tallennaButtonHenk" text="Tallenna" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="45.0">
                                                          <font>
                                                             <Font size="18.0" />
                                                          </font>
@@ -135,35 +135,35 @@
                                                             <Label text="Hinnat" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                                                             <Label text="Hinnat" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                                                             <Label text="Hinnat" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-                                                            <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                                            <TextField GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                                                            <TextField GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                                                            <TextField GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                                                            <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                                                            <TextField GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                                                            <TextField GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                                                            <TextField GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                                                            <TextField GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                                                            <TextField GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                                                            <TextField GridPane.columnIndex="5" GridPane.rowIndex="5" />
-                                                            <TextField GridPane.columnIndex="6" GridPane.rowIndex="5" />
-                                                            <TextField GridPane.columnIndex="3" GridPane.rowIndex="7" />
-                                                            <TextField GridPane.columnIndex="4" GridPane.rowIndex="7" />
-                                                            <TextField GridPane.columnIndex="5" GridPane.rowIndex="7" />
-                                                            <TextField GridPane.columnIndex="6" GridPane.rowIndex="7" />
-                                                            <TextField GridPane.columnIndex="3" GridPane.rowIndex="9" />
-                                                            <TextField GridPane.columnIndex="4" GridPane.rowIndex="9" />
-                                                            <TextField GridPane.columnIndex="5" GridPane.rowIndex="9" />
-                                                            <TextField GridPane.columnIndex="6" GridPane.rowIndex="9" />
+                                                            <TextField id="kalja1" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                            <TextField id="siideri1" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                            <TextField id="jallu1" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                                            <TextField id="jekku1" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                                            <TextField id="kalja2" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                            <TextField id="siideri2" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                                            <TextField id="jallu2" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                                                            <TextField id="jekku2" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                                            <TextField id="kalja3" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                                            <TextField id="siideri3" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                                            <TextField id="jallu3" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                                                            <TextField id="jekku3" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                                                            <TextField id="kalja4" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                                            <TextField id="siideri4" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                                            <TextField id="jallu4" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                                                            <TextField id="jekku4" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                                                            <TextField id="kalja5" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                                                            <TextField id="siideri5" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                                                            <TextField id="jallu5" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+                                                            <TextField id="jekku5" GridPane.columnIndex="6" GridPane.rowIndex="9" />
                                                             <Label text="Kalja" GridPane.columnIndex="3" />
                                                             <Label text="Siideri" GridPane.columnIndex="4" />
                                                             <Label text="Jallu" GridPane.columnIndex="5" />
                                                             <Label text="Jekku" GridPane.columnIndex="6" />
-                                                            <TextField promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                            <TextField promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                            <TextField promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                                            <TextField promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                                                            <TextField promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                                            <TextField id="baari1" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <TextField id="baari2" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                            <TextField id="baari3" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                            <TextField id="baari4" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                            <TextField id="baari5" promptText="nimi" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                                                          </children>
                                                          <columnConstraints>
                                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -187,7 +187,7 @@
                                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                          </rowConstraints>
                                                       </GridPane>
-                                                      <Button id="tallennaBar" layoutX="371.0" layoutY="401.0" mnemonicParsing="false" text="Tallenna" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="45.0">
+                                                      <Button id="tallennaBar" layoutX="371.0" layoutY="401.0" mnemonicParsing="false" onAction="#tallennaButtonBar" text="Tallenna" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="45.0">
                                                          <font>
                                                             <Font size="18.0" />
                                                          </font>
@@ -214,8 +214,8 @@
                                                                   <Font name="System Bold" size="12.0" />
                                                                </font>
                                                             </Label>
-                                                            <TextField promptText="juomat" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                                            <TextField promptText="rahat €" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                            <TextField id="kJuomat" promptText="juomat" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                            <TextField id="kRahat" promptText="rahat €" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                                                             <TextField id="aikavali" promptText="min(0-60)" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                          </children>
                                                          <columnConstraints>
@@ -232,7 +232,7 @@
                                                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                                          </rowConstraints>
                                                       </GridPane>
-                                                      <Button id="tallennaMuut" layoutX="398.0" layoutY="384.0" mnemonicParsing="false" text="Tallenna" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="45.0">
+                                                      <Button id="tallennaMuut" layoutX="398.0" layoutY="384.0" mnemonicParsing="false" onAction="#tallennaButtonMuut" text="Tallenna" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="45.0">
                                                          <font>
                                                             <Font size="18.0" />
                                                          </font>

@@ -51,6 +51,24 @@ public class Baari {
         return nimi;
     }
 
+    public int getKalja() {
+        return kalja;
+    }
+
+    public int getSiideri() {
+        return siideri;
+    }
+
+    public int getJallu() {
+        return jallu;
+    }
+
+    public int getJekku() {
+        return jekku;
+    }
+    
+    
+
     public String ostaJuoma(int juoma, Henkilo henkilo) {
         boolean maksuLapi;
         String kommentti = "";

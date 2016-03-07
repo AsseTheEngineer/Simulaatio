@@ -17,16 +17,16 @@ import javafx.stage.Stage;
 
 public class SimulaatioMain extends Application {
 
-    public static Henkilo jarno = new Henkilo(100, "Jarno", "Penttilä", 0, 5);
+    public static Henkilo jarno = new Henkilo(30, "Jarno", "Penttilä", 0, 5);
         
     public static Baari baari1 = new Baari(4,4,5,5, "prkl");
     public static Baari baari2 = new Baari(4, 5, 6, 6, "Boothill");
     public static Baari baari3 = new Baari(4,5,4,4,"Molly Malones");
-    public static Baari baari4 = new Baari(5,4,5,5,"EI SAATANA");
-    public static Baari baari5 = new Baari(7,8,6,6, "PORVARI PAIKKA");
+    public static Baari baari4 = new Baari(5,4,5,5,"Lady Moon");
+    public static Baari baari5 = new Baari(7,8,6,6, "Ravintola Teatteri");
         
     public static Poliisi poliisi = new Poliisi(40);
-    public static Koti jarnonKoti = new Koti(jarno);
+    public static Koti jarnonKoti = new Koti(jarno, 20, 5);
     public static Kaverinkamppa kaverinKoti = new Kaverinkamppa(5, 50);
     public static Puisto puisto = new Puisto(poliisi);
     public static Paikka paikka = new Paikka(jarno, poliisi, jarnonKoti, kaverinKoti, puisto);
