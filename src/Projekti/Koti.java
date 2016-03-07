@@ -7,9 +7,15 @@ public class Koti {
 
     private Henkilo henkilo;
 
+    public Koti(Henkilo henkilo, double saastot, int juomat) {
+        this.saastot = saastot;
+        this.juomat = juomat;
+        this.henkilo = henkilo;
+    }
+    
     public Koti(Henkilo henkilo) {
-        this.saastot = 0;
-        this.juomat = 0;
+        this.saastot = 20;
+        this.juomat = 5;
         this.henkilo = henkilo;
     }
 

@@ -27,6 +27,13 @@ public class IkkunaController implements Initializable {
     private Label label;
     
     @FXML
+    private TextField kJuomat;
+    @FXML
+    private TextField kRahat;
+    @FXML
+    private TextField aikavali;
+    
+    @FXML
     private TextField nimi;
     @FXML
     private TextField sukunimi;
@@ -34,8 +41,6 @@ public class IkkunaController implements Initializable {
     private TextField juomat;
     @FXML
     private TextField humalatila;
-    @FXML
-    private TextField aikavali;
     @FXML
     private TextField rahat;
     
@@ -138,16 +143,30 @@ public class IkkunaController implements Initializable {
     }
     @FXML
     public void tallennaButtonMuut(ActionEvent event) {
-        //toho kaikki ku painaa tallenna nabbulaa
+        kaverinKoti.setJuomat(Integer.parseInt(kJuomat.getText()));
+        kaverinKoti.setRahat(Double.parseDouble(kRahat.getText()));
+        paikka.setAikavali(Integer.parseInt(aikavali.getText()));
     }
     
-    /*public IkkunaController(){
+    public IkkunaController(){
         nimi.setText(jarno.getEtunimi());
         sukunimi.setText(jarno.getSukunimi());
         juomat.setText("" + jarno.getJuomat());
         humalatila.setText("" + jarno.getHumalatila());
         aikavali.setText("" + paikka.getAikavali());
         rahat.setText("" + jarno.getRaha());
+        
+        kalja1.setText("" + baari1.getKalja());
+        kalja2.setText("" + baari2.getKalja());
+        kalja3.setText("" + baari3.getKalja());
+        kalja4.setText("" + baari4.getKalja());
+        kalja5.setText("" + baari5.getKalja());
+        
+        siideri1.setText("" + baari1.getSiideri());
+        siideri2.setText("" + baari2.getSiideri());
+        siideri3.setText("" + baari3.getSiideri());
+        siideri4.setText("" + baari4.getSiideri());
+        siideri5.setText("" + baari5.getSiideri());
     }
     /*
      * Initializes the controller class.
