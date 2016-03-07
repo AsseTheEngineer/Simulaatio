@@ -54,7 +54,7 @@ public class Kaverinkamppa {
 
     public String juoJuoma(Henkilo henkilo) {
         String kommentti = "";
-        henkilo.humalatilaPlus(0.5);
+        henkilo.humalatilaPlus(0.7);
         kommentti = "Otat yhden juoman kaverisi jääkaapista ja huitaiset sen ykkösellä nieluusi. Kaverisi katsoo sinua pahasti, mutta et anna sen häiritä.";
 
         return kommentti;
