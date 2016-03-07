@@ -35,17 +35,21 @@ public class Puisto {
     }
      */
     public String juoOmajuoma(Henkilo henkilo) {
-        String kommentti;
+        String kommentti = "";
         double random = Math.random();
         if (random <= 0.20) {
 
             kommentti = "Mitäpä puistossa olo olisi ilman pussikaljaa? Ei mitään, joten avaat yhden taskulämpimän.";
             henkilo.juomaMiinus();
             henkilo.humalatilaPlus(0.5);
-        } else if (random > 0.20 && random <= 0.40 && henkilo.getJuomat() > 0) {
-            kommentti = "Kusihätä on, mutta sinnittelet vielä yhden oluen verran.";
-            henkilo.juomaMiinus();
-            henkilo.humalatilaPlus(0.5);
+        } else if (random > 0.20 && random <= 0.40) {
+            if (henkilo.getJuomat() > 0) {
+                kommentti = "Kusihätä on, mutta sinnittelet vielä yhden oluen verran.";
+                henkilo.juomaMiinus();
+                henkilo.humalatilaPlus(0.5);
+            }else {
+                
+            }
         } else if (random > 0.40 && random <= 0.60 && henkilo.getJuomat() > 0) {
             kommentti = "Naapuriseurueessa istuu helvetin ruma nainen. Korkkaat oluen ja toivot hänen kaunistuvan sen jälkeen.";
             henkilo.juomaMiinus();
