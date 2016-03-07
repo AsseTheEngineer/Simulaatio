@@ -63,17 +63,17 @@ public class Puisto {
     }
 
     public String pummiJuoma(Henkilo henkilo) {
-        String kommentti="";
+        String kommentti = "";
         double random = Math.random();
-        if (random <= 0.2 && henkilo.getJuomat() == 0) {
+        if (random<=0.20 && henkilo.getJuomat()==0){                    
             kommentti = "Menet pummimaan naapuriseurueelta juoman. Yksi heistä suostuu luopumaan kallisarvoisesta maljastaan. Kumoat juoman siltä seisomalta.";
             henkilo.humalatilaPlus(0.7);
         } else if (random > 0.2 && random <= 0.25 && henkilo.getJuomat() == 0) {
             kommentti = "Menet pummimaan naapuriseurueelta juomaa. Saat käteesi epäilyttävän näköisen pullon ja otat ison kulauksen... Lasoliahan se on.";
             henkilo.humalatilaPlus(11);
-        } else if (random > 0.25 && random <= 0.6 && henkilo.getJuomat() == 0) {
+        } else if (random > 0.25 && random <= 0.50 && henkilo.getJuomat()==0) {
             kommentti = "Jano on, mutta ei yhtään juomaa. Menet pyytämään naapuriseurueelta juomaa. Tuloksetta.";
-        } else if (random > 0.6 && random <= 0.8 && henkilo.getJuomat() == 0) {
+        } else if (random > 0.50 && random <= 0.75 && henkilo.getJuomat()==0) {
             kommentti = "Epätoivo (janon suhteen) yllättää, etsit rumimman naisen koko puistosta ja käytät osuvimmat iskurepliikkisi juoman saamiseen. Onnistut.";
             henkilo.humalatilaPlus(0.7);
         } else if (random > 0.8 && random <= 1 && henkilo.getJuomat() == 0) {
