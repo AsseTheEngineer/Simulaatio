@@ -69,46 +69,41 @@ public class Baari {
     
     
 
-    public String ostaJuoma(int juoma, Henkilo henkilo) {
+    public String ostaJuoma(double juoma, Henkilo henkilo) {
         boolean maksuLapi;
         String kommentti = "";
-        switch (juoma) {
-            case 1:
-                maksuLapi = henkilo.uusiMaksu((double) kalja);
+        if (juoma >= 0 && juoma <= 0.25) {
+            maksuLapi = henkilo.uusiMaksu((double) kalja);
                 if (maksuLapi == true) {
                     kommentti = "Menet baaritiskille ja kaikkien hämmästykseksi sinua palvellaan hyvinkin nopeasti oluen muodossa.";
                     henkilo.humalatilaPlus(0.7);
                 } else {
                     kommentti = "Menet tiskille ja tilaat oluen. Valitettavasti et saa kuin haukut, koska rahasi ovat loppu.";
                 }
-                break;
-            case 2:
-                maksuLapi = henkilo.uusiMaksu((double) siideri);
+        }else if (juoma > 0.25 && juoma <= 0.5) {
+            maksuLapi = henkilo.uusiMaksu((double) siideri);
                 if (maksuLapi == true) {
                     kommentti = "Tunnet itsesi pissaliisaksi ja menet tiskille tilaamaan siiderin.";
                     henkilo.humalatilaPlus(0.7);
                 } else {
                     kommentti = "Menet tiskille ja tilaat siiderin. Valitettavasti et saa kuin haukut, koska rahasi ovat loppu.";
                 }
-                break;
-            case 3:
-                maksuLapi = henkilo.uusiMaksu((double) jallu);
+        }else if (juoma > 0.5 && juoma <= 0.75) {
+            maksuLapi = henkilo.uusiMaksu((double) jallu);
                 if (maksuLapi == true) {
                     kommentti = "Tunnet itsesi lähestulkoon Ron Jeremyksi, joten tilaat jaloviinashotin.";
                     henkilo.humalatilaPlus(1);
                 } else {
                     kommentti = "Menet tiskille ja tilaat jallushotin. Valitettavasti et saa muuta kuin haukut, koska rahasi ovat loppu.";
                 }
-                break;
-            case 4:
-                maksuLapi = henkilo.uusiMaksu((double) jekku);
+        }else if (juoma > 0.75) {
+            maksuLapi = henkilo.uusiMaksu((double) jekku);
                 if (maksuLapi == true) {
                     kommentti = "Sinulla on vahva tunne, että tänään lykästää. Menet tilaamaan Jägermeisterin, koska olet kuullut sen mieskuntoa kohottavista ominaisuuksista";
                     henkilo.humalatilaPlus(1);
                 } else {
                     kommentti = "Menet tiskille ja tilaat jekkushotin. Valitettavasti et saa muuta kuin haukut, koska rahasi ovat loppu.";
                 }
-                break;
         }
         return kommentti;
     }
