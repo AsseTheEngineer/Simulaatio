@@ -2,7 +2,7 @@ package Projekti;
 
 public class TestMain {
 
-    public static Henkilo jarno = new Henkilo(100, "Jarno", "Penttilä", 3, 5);
+    public static Henkilo jarno = new Henkilo(30, "Jarno", "Penttilä", 3, 5);
         
     public static Baari prkl = new Baari(4,4,5,5, "prkl");
     public static Baari boothill = new Baari(4, 5, 6, 6, "Boothill");

@@ -34,12 +34,12 @@ public class SimulaatioMain extends Application {
     public static void simuloi() {
         int gameOver = 0;
         while (gameOver != 1) {
-            
+        String kommentti ="";    
             paikka.simulointi();
             //System.out.println("\n" + jarno.getHumalatila() + "\n");
             if (jarno.getHumalatila() >= 10) {
                 gameOver = 1;
-            } else if (paikka.kello().equals("04:20")) { //#sweg
+            } else if (paikka.kello().equals("04:20")) { //#sweg           
                 gameOver = 1;
             } else if (jarno.getHuomautukset() >= 3) {
                 gameOver = 1;
