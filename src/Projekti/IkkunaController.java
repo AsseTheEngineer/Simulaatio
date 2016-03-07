@@ -143,12 +143,12 @@ public class IkkunaController implements Initializable {
     }
     @FXML
     public void tallennaButtonMuut(ActionEvent event) {
-        kaverinKoti.setJuomat(Integer.parseInt(kJuomat.getText()));
-        kaverinKoti.setRahat(Double.parseDouble(kRahat.getText()));
-        paikka.setAikavali(Integer.parseInt(aikavali.getText()));
+        kaverinKoti.setJuomat(Integer.valueOf(kJuomat.getText()));
+        kaverinKoti.setRahat(Double.valueOf(kRahat.getText()));
+        paikka.setAikavali(Integer.valueOf(aikavali.getText()));
     }
     
-    public IkkunaController(){
+    /*public IkkunaController(){
         nimi = new TextField(jarno.getEtunimi());
         sukunimi = new TextField(jarno.getSukunimi());
         juomat = new TextField("" + jarno.getJuomat());
@@ -174,8 +174,11 @@ public class IkkunaController implements Initializable {
         jallu4 = new TextField("" + baari4.getJallu());
         jallu5 = new TextField("" + baari5.getJallu());
         
-        
-        
+        jekku1 = new TextField("" + baari1.getJekku());
+        jekku2 = new TextField("" + baari2.getJekku());
+        jekku3 = new TextField("" + baari3.getJekku());
+        jekku4 = new TextField("" + baari4.getJekku());
+        jekku5 = new TextField("" + baari5.getJekku());
         
     }
     /*
@@ -184,6 +187,36 @@ public class IkkunaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        nimi = new TextField(jarno.getEtunimi());
+        sukunimi = new TextField(jarno.getSukunimi());
+        juomat = new TextField("" + jarno.getJuomat());
+        humalatila = new TextField("" + jarno.getHumalatila());
+        aikavali = new TextField("" + paikka.getAikavali());
+        rahat = new TextField("" + jarno.getRaha());
+        
+        kalja1 = new TextField("" + baari1.getKalja());
+        kalja2 = new TextField("" + baari2.getKalja());
+        kalja3 = new TextField("" + baari3.getKalja());
+        kalja4 = new TextField("" + baari4.getKalja());
+        kalja5 = new TextField("" + baari5.getKalja());
+        
+        siideri1 = new TextField("" + baari1.getSiideri());
+        siideri2 = new TextField("" + baari2.getSiideri());
+        siideri3 = new TextField("" + baari3.getSiideri());
+        siideri4 = new TextField("" + baari4.getSiideri());
+        siideri5 = new TextField("" + baari5.getSiideri());
+        
+        jallu1 = new TextField("" + baari1.getJallu());
+        jallu2 = new TextField("" + baari2.getJallu());
+        jallu3 = new TextField("" + baari3.getJallu());
+        jallu4 = new TextField("" + baari4.getJallu());
+        jallu5 = new TextField("" + baari5.getJallu());
+        
+        jekku1 = new TextField("" + baari1.getJekku());
+        jekku2 = new TextField("" + baari2.getJekku());
+        jekku3 = new TextField("" + baari3.getJekku());
+        jekku4 = new TextField("" + baari4.getJekku());
+        jekku5 = new TextField("" + baari5.getJekku());
     }    
     
 }
