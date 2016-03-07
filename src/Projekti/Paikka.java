@@ -79,16 +79,16 @@ public class Paikka {
         
        double random = Math.random();
         //System.out.println(tapahtumat);
-        if (random <= 0.2) { // katu
+        if (random >= 0 && random <= 0.15) { // katu
             tapahtumat += "[" + kello() + ", katu]";
             katu();
 
-        } else if (random > 0.2 && random <= 0.4) { //baari
+        } else if (random > 0.15 && random <= 0.45) { //baari
             random = (int) (Math.random() * baarit.size());
             tapahtumat += "[" + kello() + ", " + baarit.get((int)random).getNimi() + "]";
             baari(baarit.get((int)random));
 
-        } else if (random > 0.4 && random <= 0.6) { //koti
+        } else if (random > 0.45 && random <= 0.6) { //koti
             tapahtumat += "[" + kello() + ", Koti]";
             koti();
             //tohon viel loput paikat   
@@ -97,11 +97,11 @@ public class Paikka {
             tapahtumat += "[" + kello() + ", Kaverin kämppä]";
             kaverinKoti();
 
-        } else { //puisto
+        } else if (random > 0.8 && random <= 1){ //puisto
             tapahtumat += "[" + kello() + ", puisto]";
             puisto();
         }
-        tapahtumat += "\n" + "Rahat: " + henkilo.getRaha() + "€ Humalatila: " + henkilo.getHumalatila() + " Juomat: " + henkilo.getJuomat() + "\n";
+        //tapahtumat += "\n" + "Rahat: " + henkilo.getRaha() + "€ Humalatila: " + henkilo.getHumalatila() + " Juomat: " + henkilo.getJuomat() + "\n";
         minuutit += aikavali;
     }
     
@@ -113,11 +113,11 @@ public class Paikka {
         random = Math.random();
         int random1;
         
-        if (random <= 0.45) {
+        if (random <= 0.5) {
             random1 = (int) (Math.random() * 4);
             tapahtumat += baari.ostaJuoma((int) random1, henkilo) + "\n";
             
-        } else if (random > 0.45 && random <= 0.72) {
+        } else if (random > 0.5 && random <= 0.75) {
             tapahtumat += baari.tanssi() + "\n";
         } else {
             tapahtumat += baari.puhuPaskaa() + "\n";
@@ -128,7 +128,7 @@ public class Paikka {
         //Muokkaa uusiks
         random = Math.random();
         tapahtumat += henkilo.juoOmaJuoma() + "\n";
-            if (random >= 0 && random <= 0.33) {
+            if (random >= 0 && random <= 0.4) {
                 tapahtumat += poliisi.huomautus(henkilo); //"[" + date + "] " +
             }
     }
@@ -163,7 +163,7 @@ public class Paikka {
         random = Math.random();
         if (random <= 0.5) {
             tapahtumat += puisto.juoOmajuoma(henkilo) + "\n";
-        }else {
+        }else if (random > 0.5){
             tapahtumat += puisto.pummiJuoma(henkilo) + "\n";
         }
     }

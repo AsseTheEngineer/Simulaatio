@@ -11,7 +11,7 @@ public class Henkilo {
     private int huomautukset;
     
     public Henkilo() {
-        this.lompakko = 100;
+        this.lompakko = 30;
         this.etunimi = "Jarno";
         this.sukunimi = "Penttilä";
         this.humalatila = 0;
@@ -104,7 +104,7 @@ public class Henkilo {
         if (this.juomat > 0) {
             this.juomat--;
             kommentti = "Janontunne yllättää sinut. Korkkaat repustasi mukavan lämpimän oluen.";
-            humalatilaPlus(0.5);
+            humalatilaPlus(0.7);
             //System.out.println(getHumalatila());
         } else {
             kommentti = "Avaat reppusi. Siellä ei ole yhtään juomaa. Harkitset soittavasi hätänumeroon.";
