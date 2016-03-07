@@ -135,11 +135,11 @@ public class Paikka {
 
     public void kaverinKoti() {
         double random = Math.random();
-        if (random <= 0.25) {
+        if (random <= 0.3) {
             tapahtumat += kaveri.juoJuoma(henkilo) + "\n";
-        }else if (random > 0.25 && random <= 0.5) {
+        }else if (random > 0.3 && random <= 0.6) {
             tapahtumat += kaveri.otaKaverinJuoma(henkilo) + "\n";
-        }else if (random > 0.5 && random <= 0.75) {
+        }else if (random > 0.6 && random <= 0.80) {
             tapahtumat += kaveri.otaRahaa(henkilo) + "\n";
         }else {
             tapahtumat += kaveri.puhuPaskaa(henkilo) + "\n";
@@ -149,9 +149,9 @@ public class Paikka {
     public void koti() {
         random = Math.random();
         int sum = (int)(Math.random() * koti.getSaastot());
-        if (random <= 0.4) {
+        if (random <= 0.3) {
             tapahtumat += koti.otaJuomia() + "\n";
-        }else if (random > 0.4 && random <= 0.7) {
+        }else if (random > 0.3 && random <= 0.7) {
             tapahtumat += koti.omaJuoma() + "\n";
         }else {
             tapahtumat += koti.otaRahaa(sum) + "\n";

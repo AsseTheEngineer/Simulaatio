@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 
 public class SimulaatioMain extends Application {
 
-    public static Henkilo jarno = new Henkilo(30, "Jarno", "Penttilä", 0, 5);
+    public static Henkilo jarno = new Henkilo(30, "Jarno", "Penttilä", 0, 2);
 
     public static Baari baari1 = new Baari(4, 4, 5, 5, "prkl");
     public static Baari baari2 = new Baari(4, 5, 6, 6, "Boothill");
