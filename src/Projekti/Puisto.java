@@ -38,22 +38,21 @@ public class Puisto {
         String kommentti;
         double random = Math.random();
         if (random <= 0.20) {
-
             kommentti = "Mitäpä puistossa olo olisi ilman pussikaljaa? Ei mitään, joten avaat yhden taskulämpimän.";
             henkilo.juomaMiinus();
-            henkilo.humalatilaPlus(0.5);
+            henkilo.humalatilaPlus(0.7);
         } else if (random > 0.20 && random <= 0.40 && henkilo.getJuomat() > 0) {
             kommentti = "Kusihätä on, mutta sinnittelet vielä yhden oluen verran.";
             henkilo.juomaMiinus();
-            henkilo.humalatilaPlus(0.5);
+            henkilo.humalatilaPlus(0.7);
         } else if (random > 0.40 && random <= 0.60 && henkilo.getJuomat() > 0) {
             kommentti = "Naapuriseurueessa istuu helvetin ruma nainen. Korkkaat oluen ja toivot hänen kaunistuvan sen jälkeen.";
             henkilo.juomaMiinus();
-            henkilo.humalatilaPlus(0.5);
+            henkilo.humalatilaPlus(0.7);
         } else if (random > 0.60 && random <= 0.80 && henkilo.getJuomat() > 0) {
             kommentti = "Tunnet olevasi liian selvinpäin, avaat oluen.";
             henkilo.juomaMiinus();
-            henkilo.humalatilaPlus(0.5);
+            henkilo.humalatilaPlus(0.7);
         } else if (random > 0.80 && random <= 1.00 && henkilo.getJuomat() > 0) {
             kommentti = poliisi.huomautus(henkilo);
 
@@ -68,7 +67,7 @@ public class Puisto {
         double random = Math.random();
         if (random <= 0.20 ) {
             kommentti = "Menet pummimaan naapuriseurueelta juoman. Yksi heistä suostuu luopumaan kallisarvoisesta maljastaan. Kumoat juoman siltä seisomalta.";
-            henkilo.humalatilaPlus(0.5);
+            henkilo.humalatilaPlus(0.7);
         } else if (random > 0.20 && random <= 0.25) {
             kommentti = "Menet pummimaan naapuriseurueelta juomaa. Saat käteesi epäilyttävän näköisen pullon ja otat ison kulauksen... Lasoliahan se on.";
             henkilo.humalatilaPlus(11);
@@ -76,7 +75,7 @@ public class Puisto {
             kommentti = "Jano on ja muiden juomat on aina parempia kuin omat. Menet pyytämään naapuriseurueelta juomaa. Tuloksetta.";
         } else if (random > 0.50 && random <= 0.75) {
             kommentti = "Epätoivo (janon suhteen) yllättää, etsit rumimman naisen koko puistosta ja käytät osuvimmat iskurepliikkisi juoman saamiseen. Onnistut.";
-            henkilo.humalatilaPlus(0.5);
+            henkilo.humalatilaPlus(0.7);
         } else if (random > 0.75 && random <= 1.00) {
 
             kommentti = "Menet pummimaan naapuriseurueelta juomaa. Saat palkkioksi haistattelua ja lähdet häntä koipien välissä karkuun.";
