@@ -42,15 +42,16 @@ public class Puisto {
                 kommentti = "Mitäpä puistossa olo olisi ilman pussikaljaa? Ei mitään, joten avaat yhden taskulämpimän.";
                 henkilo.juomaMiinus();
                 henkilo.humalatilaPlus(0.5);
-            } else if (random > 0.20 && random <= 0.40) {
-                if (henkilo.getJuomat() > 0) {
-                    kommentti = "Kusihätä on, mutta sinnittelet vielä yhden oluen verran.";
-                    henkilo.juomaMiinus();
-                    henkilo.humalatilaPlus(0.5);
-                } else {
-                    kommentti = "Jumalauta! Juomat on loppu!";
-                }
-
+            }else {
+                kommentti = "Jumalauta! Juomat on loppu!";
+            }
+        }else if (random > 0.20 && random <= 0.40) {
+            if (henkilo.getJuomat() > 0) {
+                kommentti = "Kusihätä on, mutta sinnittelet vielä yhden oluen verran.";
+                henkilo.juomaMiinus();
+                henkilo.humalatilaPlus(0.5);
+            } else {
+                kommentti = "Jumalauta! Juomat on loppu!";
             }
         } else if (random > 0.40 && random <= 0.60) {
             if (henkilo.getJuomat() > 0) {
