@@ -39,7 +39,7 @@ public class SimulaatioMain extends Application {
             //System.out.println("\n" + jarno.getHumalatila() + "\n");
             if (jarno.getHumalatila() >= 10) {
                 gameOver = 1;
-            } else if (paikka.kello().equals("04:20")) { //#sweg
+            } else if (paikka.getTunnit() >= 4) { //#sweg
                 gameOver = 1;
             } else if (jarno.getHuomautukset() >= 3) {
                 gameOver = 1;
