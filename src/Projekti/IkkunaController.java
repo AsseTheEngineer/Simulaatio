@@ -149,24 +149,34 @@ public class IkkunaController implements Initializable {
     }
     
     public IkkunaController(){
-        nimi = new TextField();
-        sukunimi.setText(jarno.getSukunimi());
-        juomat.setText("" + jarno.getJuomat());
-        humalatila.setText("" + jarno.getHumalatila());
-        aikavali.setText("" + paikka.getAikavali());
-        rahat.setText("" + jarno.getRaha());
+        nimi = new TextField(jarno.getEtunimi());
+        sukunimi = new TextField(jarno.getSukunimi());
+        juomat = new TextField("" + jarno.getJuomat());
+        humalatila = new TextField("" + jarno.getHumalatila());
+        aikavali = new TextField("" + paikka.getAikavali());
+        rahat = new TextField("" + jarno.getRaha());
         
-        kalja1 = new TextField();
-        kalja2 = new TextField();
-        kalja3 = new TextField();
-        kalja4 = new TextField();
-        kalja5 = new TextField();
+        kalja1 = new TextField("" + baari1.getKalja());
+        kalja2 = new TextField("" + baari2.getKalja());
+        kalja3 = new TextField("" + baari3.getKalja());
+        kalja4 = new TextField("" + baari4.getKalja());
+        kalja5 = new TextField("" + baari5.getKalja());
         
-        siideri1 = new TextField();
-        siideri2 = new TextField();
-        siideri3 = new TextField();
-        siideri4 = new TextField();
-        siideri5 = new TextField();
+        siideri1 = new TextField("" + baari1.getSiideri());
+        siideri2 = new TextField("" + baari2.getSiideri());
+        siideri3 = new TextField("" + baari3.getSiideri());
+        siideri4 = new TextField("" + baari4.getSiideri());
+        siideri5 = new TextField("" + baari5.getSiideri());
+        
+        jallu1 = new TextField("" + baari1.getJallu());
+        jallu2 = new TextField("" + baari2.getJallu());
+        jallu3 = new TextField("" + baari3.getJallu());
+        jallu4 = new TextField("" + baari4.getJallu());
+        jallu5 = new TextField("" + baari5.getJallu());
+        
+        
+        
+        
     }
     /*
      * Initializes the controller class.
