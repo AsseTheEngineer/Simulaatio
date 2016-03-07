@@ -34,26 +34,26 @@ public class IkkunaController implements Initializable {
     private TextField aikavali;
     
     @FXML
-    private TextField nimi;
+    private TextField nimi = new TextField(jarno.getEtunimi());
     @FXML
-    private TextField sukunimi;
+    private TextField sukunimi = new TextField(jarno.getSukunimi());
     @FXML
-    private TextField juomat;
+    private TextField juomat = new TextField("" + jarno.getJuomat());
     @FXML
     private TextField humalatila;
     @FXML
     private TextField rahat;
     
     @FXML
-    private TextField kalja1;
+    private TextField kalja1 = new TextField("" + baari1.getKalja());
     @FXML
-    private TextField kalja2;
+    private TextField kalja2 = new TextField("" + baari2.getKalja());
     @FXML
-    private TextField kalja3;
+    private TextField kalja3 = new TextField("" + baari3.getKalja());
     @FXML
-    private TextField kalja4;
+    private TextField kalja4 = new TextField("" + baari4.getKalja());
     @FXML
-    private TextField kalja5;
+    private TextField kalja5 = new TextField("" + baari5.getKalja());
     
     @FXML 
     private TextField siideri1;
@@ -156,12 +156,6 @@ public class IkkunaController implements Initializable {
         aikavali = new TextField("" + paikka.getAikavali());
         rahat = new TextField("" + jarno.getRaha());
         
-        kalja1 = new TextField("" + baari1.getKalja());
-        kalja2 = new TextField("" + baari2.getKalja());
-        kalja3 = new TextField("" + baari3.getKalja());
-        kalja4 = new TextField("" + baari4.getKalja());
-        kalja5 = new TextField("" + baari5.getKalja());
-        
         siideri1 = new TextField("" + baari1.getSiideri());
         siideri2 = new TextField("" + baari2.getSiideri());
         siideri3 = new TextField("" + baari3.getSiideri());
@@ -193,13 +187,7 @@ public class IkkunaController implements Initializable {
         humalatila = new TextField("" + jarno.getHumalatila());
         aikavali = new TextField("" + paikka.getAikavali());
         rahat = new TextField("" + jarno.getRaha());
-        
-        kalja1 = new TextField("" + baari1.getKalja());
-        kalja2 = new TextField("" + baari2.getKalja());
-        kalja3 = new TextField("" + baari3.getKalja());
-        kalja4 = new TextField("" + baari4.getKalja());
-        kalja5 = new TextField("" + baari5.getKalja());
-        
+
         siideri1 = new TextField("" + baari1.getSiideri());
         siideri2 = new TextField("" + baari2.getSiideri());
         siideri3 = new TextField("" + baari3.getSiideri());
