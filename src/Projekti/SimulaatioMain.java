@@ -46,6 +46,7 @@ public class SimulaatioMain extends Application {
 
             }
         }
+        
 
     }
 
