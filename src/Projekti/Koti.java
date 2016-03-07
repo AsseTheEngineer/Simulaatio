@@ -12,7 +12,7 @@ public class Koti {
         this.juomat = juomat;
         this.henkilo = henkilo;
     }
-    
+
     public Koti(Henkilo henkilo) {
         this.saastot = 20;
         this.juomat = 5;
@@ -37,6 +37,9 @@ public class Koti {
 
         if (henkilo.getJuomat() < 5 && juomat > 0) {
             henkilo.lisaaJuomaa(random);
+            if (random == 0) {
+                random = random + 1;
+            }
             kommentti = "Käyt jääkaapilla lataamassa panokset. Otit " + random + " juomaa reppuun.";
             juomat -= random;
         } else if (juomat == 0 && henkilo.getJuomat() < 2) {
