@@ -76,9 +76,8 @@ public class Paikka {
     }
     
     public void simulointi() {
-        
        double random = Math.random();
-        //System.out.println(tapahtumat);
+       
         if (random >= 0 && random <= 0.15) { // katu
             tapahtumat += "[" + kello() + ", katu]";
             katu();
@@ -90,8 +89,7 @@ public class Paikka {
 
         } else if (random > 0.45 && random <= 0.6) { //koti
             tapahtumat += "[" + kello() + ", Koti]";
-            koti();
-            //tohon viel loput paikat   
+            koti(); 
 
         } else if (random > 0.6 && random <= 0.8) { // kaverin kämppä
             tapahtumat += "[" + kello() + ", Kaverin kämppä]";
@@ -101,7 +99,6 @@ public class Paikka {
             tapahtumat += "[" + kello() + ", puisto]";
             puisto();
         }
-        //tapahtumat += "\n" + "Rahat: " + henkilo.getRaha() + "€ Humalatila: " + henkilo.getHumalatila() + " Juomat: " + henkilo.getJuomat() + "\n";
         minuutit += aikavali;
     }
     
@@ -126,10 +123,14 @@ public class Paikka {
     public void katu() {
         //Muokkaa uusiks
         random = Math.random();
-        tapahtumat += henkilo.juoOmaJuoma() + "\n";
+        if (henkilo.getJuomat() > 0) {
+            tapahtumat += henkilo.juoOmaJuoma() + "\n";
             if (random >= 0 && random <= 0.4) {
-                tapahtumat += poliisi.huomautus(henkilo); //"[" + date + "] " +
+                tapahtumat += poliisi.huomautus(henkilo) + "\n"; //"[" + date + "] " +
             }
+        }else {
+            tapahtumat += "Koitit kaivaa repun pohjalta yhtä kaljaa, mutta järkytykseksi huomasit että kaljat on loppu\n";
+        }  
     }
 
     public void kaverinKoti() {

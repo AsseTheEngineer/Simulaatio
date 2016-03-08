@@ -101,9 +101,9 @@ public class IkkunaController implements Initializable {
     
     @FXML
     public void simuloiButton(ActionEvent event) {
-        if (onkoSimuloitu <= 0) {
+        if (onkoSimuloitu < 1) {
             simuloi();
-            label.setText(paikka.getTarina() + "\nHuomautukset: " + jarno.getHuomautukset() + "\nHumalatila: " + jarno.getHumalatila());
+            label.setText(paikka.getTarina() + "\nHuomautukset: " + jarno.getHuomautukset() + "\nHumalatila: " + jarno.getHumalatila() + "\nRahat: " + jarno.getRaha());
             onkoSimuloitu = 1;
         }else {
             label.setText("RESETTAA");
@@ -112,12 +112,14 @@ public class IkkunaController implements Initializable {
     
     @FXML
     public void resetButton(ActionEvent event) {
-        jarno = new Henkilo();
+        System.out.println("HTila: " + jarno.getHumalatila() + " Huom: " + jarno.getHuomautukset() + " Rahat: " + jarno.getRaha() + " Juomat: " + jarno.getJuomat());
+        jarno.resetJarno();
         jarnonKoti = new Koti(jarno);
         kaverinKoti = new Kaverinkamppa();
         paikka.reset();
         label.setText("");
         onkoSimuloitu = 0;
+        System.out.println("HTila: " + jarno.getHumalatila() + " Huom: " + jarno.getHuomautukset() + " Rahat: " + jarno.getRaha() + " Juomat: " + jarno.getJuomat());
     }
     
     @FXML

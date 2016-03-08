@@ -25,7 +25,7 @@ public class SimulaatioMain extends Application {
     public static Baari baari4 = new Baari(5, 4, 5, 5, "Lady Moon");
     public static Baari baari5 = new Baari(7, 8, 6, 6, "Ravintola Teatteri");
 
-    public static Poliisi poliisi = new Poliisi(40);
+    public static Poliisi poliisi = new Poliisi(20);
     public static Koti jarnonKoti = new Koti(jarno, 20, 5);
     public static Kaverinkamppa kaverinKoti = new Kaverinkamppa(5, 50);
     public static Puisto puisto = new Puisto(poliisi);
@@ -33,7 +33,7 @@ public class SimulaatioMain extends Application {
 
     public static void simuloi() {
         int gameOver = 0;
-        while (gameOver != 1) {
+        while (gameOver < 1) {
 
             paikka.simulointi();
             if (jarno.getHumalatila() >= 10) {

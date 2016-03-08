@@ -37,7 +37,7 @@ public class Puisto {
     public String juoOmajuoma(Henkilo henkilo) {
         String kommentti = "";
         double random = Math.random();
-        if (random <= 0.20) {
+        if (random <= 0.2) {
             if (henkilo.getJuomat() > 0) {
                 kommentti = "Mitäpä puistossa olo olisi ilman pussikaljaa? Ei mitään, joten avaat yhden taskulämpimän.";
                 henkilo.juomaMiinus();
@@ -45,7 +45,7 @@ public class Puisto {
             }else {
                 kommentti = "Jumalauta! Juomat on loppu!";
             }
-        }else if (random > 0.20 && random <= 0.40) {
+        }else if (random > 0.2 && random <= 0.4) {
             if (henkilo.getJuomat() > 0) {
                 kommentti = "Kusihätä on, mutta sinnittelet vielä yhden oluen verran.";
                 henkilo.juomaMiinus();
@@ -53,7 +53,7 @@ public class Puisto {
             } else {
                 kommentti = "Jumalauta! Juomat on loppu!";
             }
-        } else if (random > 0.40 && random <= 0.60) {
+        } else if (random > 0.4 && random <= 0.6) {
             if (henkilo.getJuomat() > 0) {
                 kommentti = "Naapuriseurueessa istuu helvetin ruma nainen. Korkkaat oluen ja toivot hänen kaunistuvan sen jälkeen.";
                 henkilo.juomaMiinus();
@@ -61,7 +61,7 @@ public class Puisto {
             } else {
                 kommentti = "Jumalauta! Juomat on loppu!";
             }
-        } else if (random > 0.60 && random <= 0.80) {
+        } else if (random > 0.6 && random <= 0.8) {
             if (henkilo.getJuomat() > 0) {
                 kommentti = "Tunnet olevasi liian selvinpäin, avaat oluen.";
                 henkilo.juomaMiinus();
@@ -69,9 +69,10 @@ public class Puisto {
             } else {
                 kommentti = "Jumalauta! Juomat on loppu!";
             }
-        } else if (random > 0.80 && random <= 1.00) {
+        } else if (random > 0.8 && random <= 1.00) {
             if (henkilo.getJuomat() > 0) {
-
+                henkilo.juomaMiinus();
+                henkilo.humalatilaPlus(0.7);
                 kommentti = poliisi.huomautus(henkilo);
 
             } else {
