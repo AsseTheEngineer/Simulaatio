@@ -27,66 +27,66 @@ public class IkkunaController implements Initializable {
     private Label label;
     
     @FXML
-    private TextField kJuomat = new TextField("" + kaverinKoti.getJuomat());
+    private TextField kJuomat;// = new TextField("" + kaverinKoti.getJuomat());
     @FXML
-    private TextField kRahat = new TextField("" + kaverinKoti.getRahat());
+    private TextField kRahat;// = new TextField("" + kaverinKoti.getRahat());
     @FXML
-    private TextField aikavali = new TextField("" + paikka.getAikavali());
+    private TextField aikavali;// = new TextField("" + paikka.getAikavali());
     
     @FXML
-    private TextField nimi = new TextField(jarno.getEtunimi());
+    private TextField nimi;// = new TextField(jarno.getEtunimi());
     @FXML
-    private TextField sukunimi = new TextField(jarno.getSukunimi());
+    private TextField sukunimi;// = new TextField(jarno.getSukunimi());
     @FXML
-    private TextField juomat = new TextField("" + jarno.getJuomat());
+    private TextField juomat;// = new TextField("" + jarno.getJuomat());
     @FXML
     private TextField humalatila = new TextField("" + jarno.getHumalatila());
     @FXML
-    private TextField rahat = new TextField("" + jarno.getRaha());
+    private TextField rahat;// = new TextField("" + jarno.getRaha());
     
     @FXML
-    private TextField kalja1 = new TextField("" + baari1.getKalja());
+    private TextField kalja1;// = new TextField("" + baari1.getKalja());
     @FXML
-    private TextField kalja2 = new TextField("" + baari2.getKalja());
+    private TextField kalja2;// = new TextField("" + baari2.getKalja());
     @FXML
-    private TextField kalja3 = new TextField("" + baari3.getKalja());
+    private TextField kalja3;// = new TextField("" + baari3.getKalja());
     @FXML
-    private TextField kalja4 = new TextField("" + baari4.getKalja());
+    private TextField kalja4;// = new TextField("" + baari4.getKalja());
     @FXML
-    private TextField kalja5 = new TextField("" + baari5.getKalja());
+    private TextField kalja5;// = new TextField("" + baari5.getKalja());
     
     @FXML 
-    private TextField siideri1 = new TextField("" + baari1.getSiideri());
+    private TextField siideri1;// = new TextField("" + baari1.getSiideri());
     @FXML 
-    private TextField siideri2 = new TextField("" + baari2.getSiideri());
+    private TextField siideri2;// = new TextField("" + baari2.getSiideri());
     @FXML 
-    private TextField siideri3 = new TextField("" + baari3.getSiideri());
+    private TextField siideri3;// = new TextField("" + baari3.getSiideri());
     @FXML 
-    private TextField siideri4 = new TextField("" + baari4.getSiideri());
+    private TextField siideri4;// = new TextField("" + baari4.getSiideri());
     @FXML 
-    private TextField siideri5 = new TextField("" + baari5.getSiideri());
+    private TextField siideri5;// = new TextField("" + baari5.getSiideri());
     
     @FXML
-    private TextField jallu1 = new TextField("" + baari1.getJallu());
+    private TextField jallu1;// = new TextField("" + baari1.getJallu());
     @FXML
-    private TextField jallu2 = new TextField("" + baari2.getJallu());
+    private TextField jallu2;// = new TextField("" + baari2.getJallu());
     @FXML
-    private TextField jallu3 = new TextField("" + baari3.getJallu());
+    private TextField jallu3;// = new TextField("" + baari3.getJallu());
     @FXML
-    private TextField jallu4 = new TextField("" + baari4.getJallu());
+    private TextField jallu4;// = new TextField("" + baari4.getJallu());
     @FXML
-    private TextField jallu5 = new TextField("" + baari5.getJallu());
+    private TextField jallu5;// = new TextField("" + baari5.getJallu());
     
     @FXML
-    private TextField jekku1 = new TextField("" + baari1.getJekku());
+    private TextField jekku1;// = new TextField("" + baari1.getJekku());
     @FXML
-    private TextField jekku2 = new TextField("" + baari2.getJekku());
+    private TextField jekku2;// = new TextField("" + baari2.getJekku());
     @FXML
-    private TextField jekku3 = new TextField("" + baari3.getJekku());
+    private TextField jekku3;// = new TextField("" + baari3.getJekku());
     @FXML
-    private TextField jekku4 = new TextField("" + baari4.getJekku());
+    private TextField jekku4;// = new TextField("" + baari4.getJekku());
     @FXML
-    private TextField jekku5 = new TextField("" + baari5.getJekku());
+    private TextField jekku5;// = new TextField("" + baari5.getJekku());
     
     @FXML
     public void simuloiButton(ActionEvent event) {
@@ -156,32 +156,44 @@ public class IkkunaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        nimi.setPromptText("TESTI");
-        /*nimi = new TextField(jarno.getEtunimi());
-        sukunimi = new TextField(jarno.getSukunimi());
-        juomat = new TextField("" + jarno.getJuomat());
-        humalatila = new TextField("" + jarno.getHumalatila());
-        aikavali = new TextField("" + paikka.getAikavali());
-        rahat = new TextField("" + jarno.getRaha());
-
-        siideri1 = new TextField("" + baari1.getSiideri());
-        siideri2 = new TextField("" + baari2.getSiideri());
-        siideri3 = new TextField("" + baari3.getSiideri());
-        siideri4 = new TextField("" + baari4.getSiideri());
-        siideri5 = new TextField("" + baari5.getSiideri());
-        
-        jallu1 = new TextField("" + baari1.getJallu());
-        jallu2 = new TextField("" + baari2.getJallu());
-        jallu3 = new TextField("" + baari3.getJallu());
-        jallu4 = new TextField("" + baari4.getJallu());
-        jallu5 = new TextField("" + baari5.getJallu());
-        
-        jekku1 = new TextField("" + baari1.getJekku());
-        jekku2 = new TextField("" + baari2.getJekku());
-        jekku3 = new TextField("" + baari3.getJekku());
-        jekku4 = new TextField("" + baari4.getJekku());
-        jekku5 = new TextField("" + baari5.getJekku());
-        */
     }    
     
+    public void setText(){
+        //Henkilö asetukset
+        nimi.setText(jarno.getEtunimi());
+        sukunimi.setText(jarno.getSukunimi());
+        juomat.setText("" + jarno.getJuomat());
+        humalatila.setText("" + jarno.getHumalatila());
+        rahat.setText("" + jarno.getRaha());
+        
+        //Muut asetukset
+        kRahat.setText("" + kaverinKoti.getRahat());
+        kJuomat.setText("" + kaverinKoti.getJuomat());
+        aikavali.setText("" + paikka.getAikavali());
+        
+        //Baari asetukset
+        kalja1.setText("" + baari1.getKalja());
+        kalja2.setText("" + baari2.getKalja());
+        kalja3.setText("" + baari3.getKalja());
+        kalja4.setText("" + baari4.getKalja());
+        kalja5.setText("" + baari5.getKalja());
+        
+        siideri1.setText("" + baari1.getSiideri());
+        siideri2.setText("" + baari2.getSiideri());
+        siideri3.setText("" + baari3.getSiideri());
+        siideri4.setText("" + baari4.getSiideri());
+        siideri5.setText("" + baari5.getSiideri());
+        
+        jallu1.setText("" + baari1.getJallu());
+        jallu2.setText("" + baari2.getJallu());
+        jallu3.setText("" + baari3.getJallu());
+        jallu4.setText("" + baari4.getJallu());
+        jallu5.setText("" + baari5.getJallu());
+        
+        jekku1.setText("" + baari1.getJekku());
+        jekku2.setText("" + baari2.getJekku());
+        jekku3.setText("" + baari3.getJekku());
+        jekku4.setText("" + baari4.getJekku());
+        jekku5.setText("" + baari5.getJekku());
+    }
 }

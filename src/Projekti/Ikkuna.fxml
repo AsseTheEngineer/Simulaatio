@@ -54,7 +54,7 @@
                               </AnchorPane>
                         </content>
                       </Tab>
-                      <Tab closable="false" text="Asetukset">
+                      <Tab closable="false" onSelectionChanged="#setText" text="Asetukset">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -71,11 +71,11 @@
                                                             <Label text="Rahat" GridPane.rowIndex="2" />
                                                             <Label text="Humalatila" GridPane.rowIndex="3" />
                                                             <Label text="Juomat" GridPane.rowIndex="4" />
-                                                            <TextField id="nimi" editable="false" GridPane.columnIndex="1" />
-                                                            <TextField id="sukunimi" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                            <TextField id="rahat" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                            <TextField id="humalatila" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                            <TextField id="juomat" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                            <TextField id="nimi" fx:id="nimi" editable="false" GridPane.columnIndex="1" />
+                                                            <TextField id="sukunimi" fx:id="sukunimi" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <TextField id="rahat" fx:id="rahat" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                            <TextField id="humalatila" fx:id="humalatila" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                            <TextField id="juomat" fx:id="juomat" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                          </children>
                                                          <columnConstraints>
                                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -135,26 +135,26 @@
                                                             <Label text="Hinnat" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                                                             <Label text="Hinnat" GridPane.columnIndex="2" GridPane.rowIndex="7" />
                                                             <Label text="Hinnat" GridPane.columnIndex="2" GridPane.rowIndex="9" />
-                                                            <TextField id="kalja1" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                                            <TextField id="siideri1" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                                                            <TextField id="jallu1" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                                                            <TextField id="jekku1" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-                                                            <TextField id="kalja2" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                                                            <TextField id="siideri2" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                                                            <TextField id="jallu2" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                                                            <TextField id="jekku2" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-                                                            <TextField id="kalja3" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                                                            <TextField id="siideri3" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                                                            <TextField id="jallu3" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-                                                            <TextField id="jekku3" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-                                                            <TextField id="kalja4" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-                                                            <TextField id="siideri4" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-                                                            <TextField id="jallu4" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-                                                            <TextField id="jekku4" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-                                                            <TextField id="kalja5" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-                                                            <TextField id="siideri5" GridPane.columnIndex="4" GridPane.rowIndex="9" />
-                                                            <TextField id="jallu5" GridPane.columnIndex="5" GridPane.rowIndex="9" />
-                                                            <TextField id="jekku5" GridPane.columnIndex="6" GridPane.rowIndex="9" />
+                                                            <TextField id="kalja1" fx:id="kalja1" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                                            <TextField id="siideri1" fx:id="siideri1" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                                            <TextField id="jallu1" fx:id="jallu1" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                                            <TextField id="jekku1" fx:id="jekku1" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                                            <TextField id="kalja2" fx:id="kalja2" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                                            <TextField id="siideri2" fx:id="siideri2" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                                            <TextField id="jallu2" fx:id="jallu2" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                                                            <TextField id="jekku2" fx:id="jekku2" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                                            <TextField id="kalja3" fx:id="kalja3" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                                            <TextField id="siideri3" fx:id="siideri3" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                                            <TextField id="jallu3" fx:id="jallu3" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                                                            <TextField id="jekku3" fx:id="jekku3" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                                                            <TextField id="kalja4" fx:id="kalja4" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                                            <TextField id="siideri4" fx:id="siideri4" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                                                            <TextField id="jallu4" fx:id="jallu4" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                                                            <TextField id="jekku4" fx:id="jekku4" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                                                            <TextField id="kalja5" fx:id="kalja5" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                                                            <TextField id="siideri5" fx:id="siideri5" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                                                            <TextField id="jallu5" fx:id="jallu5" GridPane.columnIndex="5" GridPane.rowIndex="9" />
+                                                            <TextField id="jekku5" fx:id="jekku5" GridPane.columnIndex="6" GridPane.rowIndex="9" />
                                                             <Label text="Kalja" GridPane.columnIndex="3" />
                                                             <Label text="Siideri" GridPane.columnIndex="4" />
                                                             <Label text="Jallu" GridPane.columnIndex="5" />
@@ -214,9 +214,9 @@
                                                                   <Font name="System Bold" size="12.0" />
                                                                </font>
                                                             </Label>
-                                                            <TextField id="kJuomat" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                                            <TextField id="kRahat" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                                            <TextField id="aikavali" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                            <TextField id="kJuomat" fx:id="kJuomat" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                            <TextField id="kRahat" fx:id="kRahat" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                            <TextField id="aikavali" fx:id="aikavali" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                                                          </children>
                                                          <columnConstraints>
                                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
