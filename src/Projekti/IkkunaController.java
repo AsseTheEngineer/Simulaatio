@@ -89,6 +89,17 @@ public class IkkunaController implements Initializable {
     private TextField jekku5;// = new TextField("" + baari5.getJekku());
     
     @FXML
+    private TextField baari1Nimi;
+    @FXML
+    private TextField baari2Nimi;
+    @FXML
+    private TextField baari3Nimi;
+    @FXML
+    private TextField baari4Nimi;
+    @FXML
+    private TextField baari5Nimi;
+    
+    @FXML
     public void simuloiButton(ActionEvent event) {
         if (onkoSimuloitu <= 0) {
             simuloi();
@@ -140,6 +151,12 @@ public class IkkunaController implements Initializable {
         baari3.setJekku(Integer.parseInt(jekku3.getText()));
         baari4.setJekku(Integer.parseInt(jekku4.getText()));
         baari5.setJekku(Integer.parseInt(jekku5.getText()));
+        
+        baari1.setNimi(baari1Nimi.getText());
+        baari2.setNimi(baari2Nimi.getText());
+        baari3.setNimi(baari3Nimi.getText());
+        baari4.setNimi(baari4Nimi.getText());
+        baari5.setNimi(baari5Nimi.getText());
     }
     @FXML
     public void tallennaButtonMuut(ActionEvent event) {
@@ -195,5 +212,11 @@ public class IkkunaController implements Initializable {
         jekku3.setText("" + baari3.getJekku());
         jekku4.setText("" + baari4.getJekku());
         jekku5.setText("" + baari5.getJekku());
+        
+        baari1Nimi.setText(baari1.getNimi());
+        baari2Nimi.setText(baari2.getNimi());
+        baari3Nimi.setText(baari3.getNimi());
+        baari4Nimi.setText(baari4.getNimi());
+        baari5Nimi.setText(baari5.getNimi());
     }
 }

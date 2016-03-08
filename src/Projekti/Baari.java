@@ -67,7 +67,9 @@ public class Baari {
         return jekku;
     }
     
-    
+    public void setNimi(String nimi){
+        this.nimi = nimi;
+    }
 
     public String ostaJuoma(double juoma, Henkilo henkilo) {
         boolean maksuLapi;

@@ -159,11 +159,11 @@
                                                             <Label text="Siideri" GridPane.columnIndex="4" />
                                                             <Label text="Jallu" GridPane.columnIndex="5" />
                                                             <Label text="Jekku" GridPane.columnIndex="6" />
-                                                            <TextField id="baari1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                            <TextField id="baari2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                            <TextField id="baari3" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                                            <TextField id="baari4" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                                                            <TextField id="baari5" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                                            <TextField id="baari1" fx:id="baari1Nimi" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                            <TextField id="baari2" fx:id="baari2Nimi" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                            <TextField id="baari3" fx:id="baari3Nimi" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                            <TextField id="baari4" fx:id="baari4Nimi" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                            <TextField id="baari5" fx:id="baari5Nimi" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                                                          </children>
                                                          <columnConstraints>
                                                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
