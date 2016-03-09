@@ -119,14 +119,12 @@ public class IkkunaController implements Initializable {
     //Resetoi asetukset defaultiksi paitsi jättää aikavälin asetettuun arvoon(default 20)
     @FXML
     public void resetButton(ActionEvent event) {
-        System.out.println("HTila: " + jarno.getHumalatila() + " Huom: " + jarno.getHuomautukset() + " Rahat: " + jarno.getRaha() + " Juomat: " + jarno.getJuomat());
         jarno.resetJarno();
         jarnonKoti = new Koti(jarno);
         kaverinKoti = new Kaverinkamppa();
         paikka.reset();
         label.setText("");
         onkoSimuloitu = 0;
-        System.out.println("HTila: " + jarno.getHumalatila() + " Huom: " + jarno.getHuomautukset() + " Rahat: " + jarno.getRaha() + " Juomat: " + jarno.getJuomat());
     }
     
     //Tallentaa henkilön asetukset 
