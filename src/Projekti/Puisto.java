@@ -9,16 +9,6 @@ public class Puisto {
 
     }
 
-    /*
-    lisätkää tomintoja:
-    
-    löytää rahaa
-    löydät vinaa
-    juttelee naisille
-    koira hyökkäs
-    
-    
-     */
  /* int LoysitRahaa(){
         int random = (int)(Math.random()*20);
         henk.lisaaRahaa(random);
@@ -34,6 +24,7 @@ public class Puisto {
         return "koira hyökkäs kimpuusi omistaja syyttää sua";
     }
      */
+    
     public String juoOmajuoma(Henkilo henkilo) {
         String kommentti = "";
         double random = Math.random();
@@ -74,7 +65,6 @@ public class Puisto {
                 henkilo.juomaMiinus();
                 henkilo.humalatilaPlus(0.7);
                 kommentti = poliisi.huomautus(henkilo);
-
             } else {
                 kommentti = "Jumalauta! Juomat on loppu!";
             }
@@ -98,7 +88,6 @@ public class Puisto {
             kommentti = "Epätoivo (janon suhteen) yllättää, etsit rumimman naisen koko puistosta ja käytät osuvimmat iskurepliikkisi juoman saamiseen. Onnistut.";
             henkilo.humalatilaPlus(0.7);
         } else if (random > 0.75 && random <= 1.00) {
-
             kommentti = "Menet pummimaan naapuriseurueelta juomaa. Saat palkkioksi haistattelua ja lähdet häntä koipien välissä karkuun.";
         }
         return kommentti;

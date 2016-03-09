@@ -23,70 +23,74 @@ public class IkkunaController implements Initializable {
     
     private int onkoSimuloitu = 0;
     
+    //simulointi teksti
     @FXML
     private Label label;
     
+    //Muut asetukset
     @FXML
-    private TextField kJuomat;// = new TextField("" + kaverinKoti.getJuomat());
+    private TextField kJuomat;
     @FXML
-    private TextField kRahat;// = new TextField("" + kaverinKoti.getRahat());
+    private TextField kRahat;
     @FXML
-    private TextField aikavali;// = new TextField("" + paikka.getAikavali());
+    private TextField aikavali;
     
+    //Henkilön asetukset
     @FXML
-    private TextField nimi;// = new TextField(jarno.getEtunimi());
+    private TextField nimi;
     @FXML
-    private TextField sukunimi;// = new TextField(jarno.getSukunimi());
+    private TextField sukunimi;
     @FXML
-    private TextField juomat;// = new TextField("" + jarno.getJuomat());
+    private TextField juomat;
     @FXML
-    private TextField humalatila = new TextField("" + jarno.getHumalatila());
+    private TextField humalatila;
     @FXML
-    private TextField rahat;// = new TextField("" + jarno.getRaha());
+    private TextField rahat;
     
+    //Baari asetukset
     @FXML
-    private TextField kalja1;// = new TextField("" + baari1.getKalja());
+    private TextField kalja1;
     @FXML
-    private TextField kalja2;// = new TextField("" + baari2.getKalja());
+    private TextField kalja2;
     @FXML
-    private TextField kalja3;// = new TextField("" + baari3.getKalja());
+    private TextField kalja3;
     @FXML
-    private TextField kalja4;// = new TextField("" + baari4.getKalja());
+    private TextField kalja4;
     @FXML
-    private TextField kalja5;// = new TextField("" + baari5.getKalja());
+    private TextField kalja5;
     
     @FXML 
-    private TextField siideri1;// = new TextField("" + baari1.getSiideri());
+    private TextField siideri1;
     @FXML 
-    private TextField siideri2;// = new TextField("" + baari2.getSiideri());
+    private TextField siideri2;
     @FXML 
-    private TextField siideri3;// = new TextField("" + baari3.getSiideri());
+    private TextField siideri3;
     @FXML 
-    private TextField siideri4;// = new TextField("" + baari4.getSiideri());
+    private TextField siideri4;
     @FXML 
-    private TextField siideri5;// = new TextField("" + baari5.getSiideri());
+    private TextField siideri5;
     
     @FXML
-    private TextField jallu1;// = new TextField("" + baari1.getJallu());
+    private TextField jallu1;
     @FXML
-    private TextField jallu2;// = new TextField("" + baari2.getJallu());
+    private TextField jallu2;
     @FXML
-    private TextField jallu3;// = new TextField("" + baari3.getJallu());
+    private TextField jallu3;
     @FXML
-    private TextField jallu4;// = new TextField("" + baari4.getJallu());
+    private TextField jallu4;
     @FXML
-    private TextField jallu5;// = new TextField("" + baari5.getJallu());
+    private TextField jallu5;
     
     @FXML
-    private TextField jekku1;// = new TextField("" + baari1.getJekku());
+    private TextField jekku1;
     @FXML
-    private TextField jekku2;// = new TextField("" + baari2.getJekku());
+    private TextField jekku2;
     @FXML
-    private TextField jekku3;// = new TextField("" + baari3.getJekku());
+    private TextField jekku3;
     @FXML
-    private TextField jekku4;// = new TextField("" + baari4.getJekku());
+    private TextField jekku4;
     @FXML
-    private TextField jekku5;// = new TextField("" + baari5.getJekku());
+    private TextField jekku5;
     
     @FXML
     private TextField baari1Nimi;
@@ -99,6 +103,8 @@ public class IkkunaController implements Initializable {
     @FXML
     private TextField baari5Nimi;
     
+    //Simuloi nappula joka lopuksi vaihtaa "labelin" tilalle simuloinnin
+    //ja jos koittaa simuloida uudestaa ilman resettaamista huutaa siitä käyttäjälle
     @FXML
     public void simuloiButton(ActionEvent event) {
         if (onkoSimuloitu < 1) {
@@ -110,6 +116,7 @@ public class IkkunaController implements Initializable {
         }
     }
     
+    //Resetoi asetukset defaultiksi paitsi jättää aikavälin asetettuun arvoon(default 20)
     @FXML
     public void resetButton(ActionEvent event) {
         System.out.println("HTila: " + jarno.getHumalatila() + " Huom: " + jarno.getHuomautukset() + " Rahat: " + jarno.getRaha() + " Juomat: " + jarno.getJuomat());
@@ -122,12 +129,15 @@ public class IkkunaController implements Initializable {
         System.out.println("HTila: " + jarno.getHumalatila() + " Huom: " + jarno.getHuomautukset() + " Rahat: " + jarno.getRaha() + " Juomat: " + jarno.getJuomat());
     }
     
+    //Tallentaa henkilön asetukset 
     @FXML
     public void tallennaButtonHenk(ActionEvent event) {
         jarno.setHumalatila(Double.parseDouble(humalatila.getText()));
         jarno.setLompakko(Double.parseDouble(rahat.getText()));
         jarno.setJuomat(Integer.parseInt(juomat.getText()));
     }
+    
+    //Tallentaa baarien asetukset
     @FXML
     public void tallennaButtonBar(ActionEvent event) {
         baari1.setKalja(Integer.parseInt(kalja1.getText()));
@@ -160,6 +170,8 @@ public class IkkunaController implements Initializable {
         baari4.setNimi(baari4Nimi.getText());
         baari5.setNimi(baari5Nimi.getText());
     }
+    
+    //Tallentaa muut asetukset
     @FXML
     public void tallennaButtonMuut(ActionEvent event) {
         kaverinKoti.setJuomat(Integer.parseInt(kJuomat.getText()));
@@ -177,6 +189,7 @@ public class IkkunaController implements Initializable {
         // TODO
     }    
     
+    //Asettaa asetuksissa kaikkiin textfieldeihin kuuluvat tekstit
     public void setText(){
         //Henkilö asetukset
         nimi.setText(jarno.getEtunimi());

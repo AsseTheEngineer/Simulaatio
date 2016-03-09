@@ -17,6 +17,10 @@ public class Paikka {
     int apu = 0;
     int tunnit, minuutit, aikavali;
 
+    /*
+    "Paikka" on periaatteessa koko ohjelman kontrolleri
+    */
+    
     public Paikka(Henkilo henkilo, Poliisi poliisi, Koti koti, Kaverinkamppa kaveri, Puisto puisto) {
         this.tunnit = 20;
         this.minuutit = 0;
@@ -28,6 +32,7 @@ public class Paikka {
         this.aikavali = 20;
     }
     
+    //Asettaa kellon 20:00 ja pyyhkii vanhan simuloinnin. Aikaväli pysyy samana
     public void reset() {
         tapahtumat = "";
         tunnit = 20;
@@ -46,6 +51,8 @@ public class Paikka {
         baarit.add(baari);
     }
 
+    
+    //Kellon toimiii alla olevalla metodilla. Koitin tehdä aluksi Date ja Time olioilla mutta en saanut toimimaan -samuli
     public String kello(){
         String aika = "";
         if (minuutit > 59) {
@@ -75,13 +82,13 @@ public class Paikka {
         return tunnit;
     }
     
+    //Simuloi yhden vaiheen eteenpäin. Looppi on main:issa
     public void simulointi() {
        double random = Math.random();
-       
         if (random >= 0 && random <= 0.15) { // katu
             tapahtumat += "[" + kello() + ", katu]";
             katu();
-
+        //Baarit on kaikki arraylistissä ja se randomoi että mihin baariin joutuu
         } else if (random > 0.15 && random <= 0.45) { //baari
             random = (int) (Math.random() * baarit.size());
             tapahtumat += "[" + kello() + ", " + baarit.get((int)random).getNimi() + "]";
@@ -106,6 +113,9 @@ public class Paikka {
         tapahtumat += tapahtuma;
     }
 
+    /*
+    *
+    */
     public void baari(Baari baari) {
         random = Math.random();
         
@@ -168,6 +178,8 @@ public class Paikka {
         }
     }
 
+    
+    //Tällä saa palautettua koko simulaation
     public String getTarina() {
         return tapahtumat;
     }

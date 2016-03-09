@@ -31,6 +31,7 @@ public class Koti {
         return saastot;
     }
 
+    //Koti luokassa on 3 toimintoa otaJuomia, omaJuoma ja otaRahaa
     public String otaJuomia() {
         int random = (int) (Math.random() * juomat);
         String kommentti;

@@ -2,7 +2,6 @@ package Projekti;
 
 public class Henkilo {
 
-    //private final int ika;
     private double lompakko;
     private String etunimi;
     private String sukunimi;
@@ -10,6 +9,11 @@ public class Henkilo {
     private int juomat;
     private int huomautukset;
     
+    /*
+    *Kaikki muut luokat vaikuttaa hnekilö olioon
+    *Kontrollerina toimii periaatteessa Paikka.java
+    *Blaa Blaa Blaa
+    */
     public Henkilo(double money, String etuNimi, String sukuNimi, double humalaTila, int juomat) {
         //this.ika = age;
         this.lompakko = money;
@@ -18,7 +22,6 @@ public class Henkilo {
         this.humalatila = humalaTila;
         this.juomat = juomat;
         this.huomautukset = 0;
-
     }
 
     public void resetJarno(){

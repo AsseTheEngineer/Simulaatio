@@ -16,8 +16,8 @@ public class Baari {
     int jallu;
     int jekku;
     String nimi;
-    //Henkilo henkilo;
-
+    
+    //Alla olevaa "default" konstruktoria ei oikeestaan käytetä ollenkan.(kai)
     public Baari() {
         this.kalja = 5;
         this.siideri = 6;
@@ -71,6 +71,8 @@ public class Baari {
         this.nimi = nimi;
     }
 
+    //Baari luokassa on 3 toimintoa ostaJuoma, tanssi ja puhuPaskaa 
+    
     public String ostaJuoma(double juoma, Henkilo henkilo) {
         boolean maksuLapi;
         String kommentti = "";
