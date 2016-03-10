@@ -23,9 +23,19 @@ public class IkkunaController implements Initializable {
     
     private int onkoSimuloitu = 0;
     
+    //simulointi teksti
     @FXML
     private Label label;
     
+    //Muut asetukset
+    @FXML
+    private TextField kJuomat;
+    @FXML
+    private TextField kRahat;
+    @FXML
+    private TextField aikavali;
+    
+    //Henkilön asetukset
     @FXML
     private TextField nimi;
     @FXML
@@ -35,10 +45,9 @@ public class IkkunaController implements Initializable {
     @FXML
     private TextField humalatila;
     @FXML
-    private TextField aikavali;
-    @FXML
     private TextField rahat;
     
+    //Baari asetukset
     @FXML
     private TextField kalja1;
     @FXML
@@ -84,19 +93,33 @@ public class IkkunaController implements Initializable {
     private TextField jekku5;
     
     @FXML
+    private TextField baari1Nimi;
+    @FXML
+    private TextField baari2Nimi;
+    @FXML
+    private TextField baari3Nimi;
+    @FXML
+    private TextField baari4Nimi;
+    @FXML
+    private TextField baari5Nimi;
+    
+    //Simuloi nappula joka lopuksi vaihtaa "labelin" tilalle simuloinnin
+    //ja jos koittaa simuloida uudestaa ilman resettaamista huutaa siitä käyttäjälle
+    @FXML
     public void simuloiButton(ActionEvent event) {
-        if (onkoSimuloitu <= 0) {
+        if (onkoSimuloitu < 1) {
             simuloi();
-            label.setText(paikka.getTarina() + "\nHuomautukset: " + jarno.getHuomautukset() + "\nHumalatila: " + jarno.getHumalatila());
+            label.setText(paikka.getTarina() + "\nHuomautukset: " + jarno.getHuomautukset() + "\nHumalatila: " + jarno.getHumalatila() + "\nRahat: " + jarno.getRaha());
             onkoSimuloitu = 1;
         }else {
             label.setText("RESETTAA");
         }
     }
     
+    //Resetoi asetukset defaultiksi paitsi jättää aikavälin asetettuun arvoon(default 20)
     @FXML
     public void resetButton(ActionEvent event) {
-        jarno = new Henkilo();
+        jarno.resetJarno();
         jarnonKoti = new Koti(jarno);
         kaverinKoti = new Kaverinkamppa();
         paikka.reset();
@@ -104,12 +127,15 @@ public class IkkunaController implements Initializable {
         onkoSimuloitu = 0;
     }
     
+    //Tallentaa henkilön asetukset 
     @FXML
     public void tallennaButtonHenk(ActionEvent event) {
         jarno.setHumalatila(Double.parseDouble(humalatila.getText()));
         jarno.setLompakko(Double.parseDouble(rahat.getText()));
         jarno.setJuomat(Integer.parseInt(juomat.getText()));
     }
+    
+    //Tallentaa baarien asetukset
     @FXML
     public void tallennaButtonBar(ActionEvent event) {
         baari1.setKalja(Integer.parseInt(kalja1.getText()));
@@ -135,20 +161,24 @@ public class IkkunaController implements Initializable {
         baari3.setJekku(Integer.parseInt(jekku3.getText()));
         baari4.setJekku(Integer.parseInt(jekku4.getText()));
         baari5.setJekku(Integer.parseInt(jekku5.getText()));
-    }
-    @FXML
-    public void tallennaButtonMuut(ActionEvent event) {
-        //toho kaikki ku painaa tallenna nabbulaa
+        
+        baari1.setNimi(baari1Nimi.getText());
+        baari2.setNimi(baari2Nimi.getText());
+        baari3.setNimi(baari3Nimi.getText());
+        baari4.setNimi(baari4Nimi.getText());
+        baari5.setNimi(baari5Nimi.getText());
     }
     
-    /*public IkkunaController(){
-        nimi.setText(jarno.getEtunimi());
-        sukunimi.setText(jarno.getSukunimi());
-        juomat.setText("" + jarno.getJuomat());
-        humalatila.setText("" + jarno.getHumalatila());
-        aikavali.setText("" + paikka.getAikavali());
-        rahat.setText("" + jarno.getRaha());
+    //Tallentaa muut asetukset
+    @FXML
+    public void tallennaButtonMuut(ActionEvent event) {
+        kaverinKoti.setJuomat(Integer.parseInt(kJuomat.getText()));
+        kaverinKoti.setRahat(Double.parseDouble(kRahat.getText()));
+        System.out.println("TextField value: " + aikavali.getText());
+        paikka.setAikavali(Integer.parseInt(aikavali.getText()));
+        System.out.println("Aikaväli: " + paikka.getAikavali());
     }
+    
     /*
      * Initializes the controller class.
      */
@@ -157,4 +187,49 @@ public class IkkunaController implements Initializable {
         // TODO
     }    
     
+    //Asettaa asetuksissa kaikkiin textfieldeihin kuuluvat tekstit
+    public void setText(){
+        //Henkilö asetukset
+        nimi.setText(jarno.getEtunimi());
+        sukunimi.setText(jarno.getSukunimi());
+        juomat.setText("" + jarno.getJuomat());
+        humalatila.setText("" + jarno.getHumalatila());
+        rahat.setText("" + jarno.getRaha());
+        
+        //Muut asetukset
+        kRahat.setText("" + kaverinKoti.getRahat());
+        kJuomat.setText("" + kaverinKoti.getJuomat());
+        aikavali.setText("" + paikka.getAikavali());
+        
+        //Baari asetukset
+        kalja1.setText("" + baari1.getKalja());
+        kalja2.setText("" + baari2.getKalja());
+        kalja3.setText("" + baari3.getKalja());
+        kalja4.setText("" + baari4.getKalja());
+        kalja5.setText("" + baari5.getKalja());
+        
+        siideri1.setText("" + baari1.getSiideri());
+        siideri2.setText("" + baari2.getSiideri());
+        siideri3.setText("" + baari3.getSiideri());
+        siideri4.setText("" + baari4.getSiideri());
+        siideri5.setText("" + baari5.getSiideri());
+        
+        jallu1.setText("" + baari1.getJallu());
+        jallu2.setText("" + baari2.getJallu());
+        jallu3.setText("" + baari3.getJallu());
+        jallu4.setText("" + baari4.getJallu());
+        jallu5.setText("" + baari5.getJallu());
+        
+        jekku1.setText("" + baari1.getJekku());
+        jekku2.setText("" + baari2.getJekku());
+        jekku3.setText("" + baari3.getJekku());
+        jekku4.setText("" + baari4.getJekku());
+        jekku5.setText("" + baari5.getJekku());
+        
+        baari1Nimi.setText(baari1.getNimi());
+        baari2Nimi.setText(baari2.getNimi());
+        baari3Nimi.setText(baari3.getNimi());
+        baari4Nimi.setText(baari4.getNimi());
+        baari5Nimi.setText(baari5.getNimi());
+    }
 }

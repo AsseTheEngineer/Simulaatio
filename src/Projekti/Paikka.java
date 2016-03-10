@@ -17,6 +17,10 @@ public class Paikka {
     int apu = 0;
     int tunnit, minuutit, aikavali;
 
+    /*
+    "Paikka" on periaatteessa koko ohjelman kontrolleri
+    */
+    
     public Paikka(Henkilo henkilo, Poliisi poliisi, Koti koti, Kaverinkamppa kaveri, Puisto puisto) {
         this.tunnit = 20;
         this.minuutit = 0;
@@ -28,13 +32,14 @@ public class Paikka {
         this.aikavali = 20;
     }
     
+    //Asettaa kellon 20:00 ja pyyhkii vanhan simuloinnin. Aikaväli pysyy samana
     public void reset() {
         tapahtumat = "";
         tunnit = 20;
         minuutit = 0;
     }
     
-    public double getAikavali() {
+    public int getAikavali() {
         return aikavali;
     }
     
@@ -46,6 +51,8 @@ public class Paikka {
         baarit.add(baari);
     }
 
+    
+    //Kellon toimiii alla olevalla metodilla. Koitin tehdä aluksi Date ja Time olioilla mutta en saanut toimimaan -samuli
     public String kello(){
         String aika = "";
         if (minuutit > 59) {
@@ -70,47 +77,54 @@ public class Paikka {
         }
         return aika;
     }
+
+    public int getTunnit() {
+        return tunnit;
+    }
     
+    //Simuloi yhden vaiheen eteenpäin. Looppi on main:issa
     public void simulointi() {
-        
        double random = Math.random();
-        //System.out.println(tapahtumat);
-        if (random <= 0.2) { // katu
+        if (random >= 0 && random <= 0.15) { // katu
             tapahtumat += "[" + kello() + ", katu]";
             katu();
-
-        } else if (random > 0.2 && random <= 0.4) { //baari
+        //Baarit on kaikki arraylistissä ja se randomoi että mihin baariin joutuu
+        } else if (random > 0.15 && random <= 0.45) { //baari
             random = (int) (Math.random() * baarit.size());
             tapahtumat += "[" + kello() + ", " + baarit.get((int)random).getNimi() + "]";
             baari(baarit.get((int)random));
 
-        } else if (random > 0.4 && random <= 0.6) { //koti
+        } else if (random > 0.45 && random <= 0.6) { //koti
             tapahtumat += "[" + kello() + ", Koti]";
-            koti();
-            //tohon viel loput paikat   
+            koti(); 
 
         } else if (random > 0.6 && random <= 0.8) { // kaverin kämppä
             tapahtumat += "[" + kello() + ", Kaverin kämppä]";
             kaverinKoti();
 
-        } else { //puisto
+        } else if (random > 0.8 && random <= 1){ //puisto
             tapahtumat += "[" + kello() + ", puisto]";
             puisto();
         }
-        tapahtumat += "\n" + "Rahat: " + henkilo.getRaha() + "€ Humalatila: " + henkilo.getHumalatila() + " Juomat: " + henkilo.getJuomat() + "\n";
         minuutit += aikavali;
     }
+    
+    public void addTapahtuma(String tapahtuma) {
+        tapahtumat += tapahtuma;
+    }
 
+    /*
+    *
+    */
     public void baari(Baari baari) {
         random = Math.random();
-        int random1;
         
-        if (random <= 0.45) {
-            random1 = (int) (Math.random() * 4);
-            tapahtumat += baari.ostaJuoma((int) random1, henkilo) + "\n";
+        if (random <= 0.5) {
+            random = Math.random();
+            tapahtumat += baari.ostaJuoma(random, henkilo) + "\n";
             
-        } else if (random > 0.45 && random <= 0.72) {
-            tapahtumat += baari.tanssi(henkilo) + "\n";
+        } else if (random > 0.5 && random <= 0.75) {
+            tapahtumat += baari.tanssi() + "\n";
         } else {
             tapahtumat += baari.puhuPaskaa(henkilo) + "\n";
         }
@@ -119,19 +133,23 @@ public class Paikka {
     public void katu() {
         //Muokkaa uusiks
         random = Math.random();
-        tapahtumat += henkilo.juoOmaJuoma() + "\n";
-            if (random >= 0 && random <= 0.33) {
-                tapahtumat += poliisi.huomautus(henkilo); //"[" + date + "] " +
+        if (henkilo.getJuomat() > 0) {
+            tapahtumat += henkilo.juoOmaJuoma() + "\n";
+            if (random >= 0 && random <= 0.4) {
+                tapahtumat += poliisi.huomautus(henkilo) + "\n"; //"[" + date + "] " +
             }
+        }else {
+            tapahtumat += "Koitit kaivaa repun pohjalta yhtä kaljaa, mutta järkytykseksi huomasit että kaljat on loppu\n";
+        }  
     }
 
     public void kaverinKoti() {
         double random = Math.random();
-        if (random <= 0.25) {
+        if (random <= 0.3) {
             tapahtumat += kaveri.juoJuoma(henkilo) + "\n";
-        }else if (random > 0.25 && random <= 0.5) {
+        }else if (random > 0.3 && random <= 0.6) {
             tapahtumat += kaveri.otaKaverinJuoma(henkilo) + "\n";
-        }else if (random > 0.5 && random <= 0.75) {
+        }else if (random > 0.6 && random <= 0.80) {
             tapahtumat += kaveri.otaRahaa(henkilo) + "\n";
         }else {
             tapahtumat += kaveri.puhuPaskaa(henkilo) + "\n";
@@ -141,9 +159,9 @@ public class Paikka {
     public void koti() {
         random = Math.random();
         int sum = (int)(Math.random() * koti.getSaastot());
-        if (random <= 0.4) {
+        if (random <= 0.3) {
             tapahtumat += koti.otaJuomia() + "\n";
-        }else if (random > 0.4 && random <= 0.7) {
+        }else if (random > 0.3 && random <= 0.7) {
             tapahtumat += koti.omaJuoma() + "\n";
         }else {
             tapahtumat += koti.otaRahaa(sum) + "\n";
@@ -155,11 +173,13 @@ public class Paikka {
         random = Math.random();
         if (random <= 0.5) {
             tapahtumat += puisto.juoOmajuoma(henkilo) + "\n";
-        }else {
+        }else if (random > 0.5){
             tapahtumat += puisto.pummiJuoma(henkilo) + "\n";
         }
     }
 
+    
+    //Tällä saa palautettua koko simulaation
     public String getTarina() {
         return tapahtumat;
     }

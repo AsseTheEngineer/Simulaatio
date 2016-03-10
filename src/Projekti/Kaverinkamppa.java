@@ -11,8 +11,8 @@ package Projekti;
  */
 public class Kaverinkamppa {
 
-    final int kaverinJuoma;
-    final double kaveriRahat;
+    int kaverinJuoma;
+    double kaveriRahat;
 
     public Kaverinkamppa() {
         this.kaverinJuoma = 5;
@@ -22,6 +22,22 @@ public class Kaverinkamppa {
     public Kaverinkamppa(int kaverinJuoma, double kaveriRahat) {
         this.kaverinJuoma = kaverinJuoma;
         this.kaveriRahat = kaveriRahat;
+    }
+    
+    public void setJuomat(int juomat) {
+        this.kaverinJuoma = juomat;
+    }
+    
+    public void setRahat(double rahat) {
+        this.kaveriRahat = rahat;
+    }
+    
+    public Double getRahat() {
+        return kaveriRahat;
+    }
+    
+    public int getJuomat() {
+        return kaverinJuoma;
     }
 
     public String otaRahaa(Henkilo henkilo) {
@@ -38,7 +54,7 @@ public class Kaverinkamppa {
 
     public String juoJuoma(Henkilo henkilo) {
         String kommentti = "";
-        henkilo.humalatilaPlus(0.5);
+        henkilo.humalatilaPlus(0.7);
         kommentti = "Otat yhden juoman kaverisi jääkaapista ja huitaiset sen ykkösellä nieluusi. Kaverisi katsoo sinua pahasti, mutta et anna sen häiritä.";
 
         return kommentti;

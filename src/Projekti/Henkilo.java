@@ -2,23 +2,18 @@ package Projekti;
 
 public class Henkilo {
 
-    //private final int ika;
     private double lompakko;
-    private final String etunimi;
-    private final String sukunimi;
+    private String etunimi;
+    private String sukunimi;
     private double humalatila;
     private int juomat;
     private int huomautukset;
     
-    public Henkilo() {
-        this.lompakko = 100;
-        this.etunimi = "Jarno";
-        this.sukunimi = "Penttilä";
-        this.humalatila = 0;
-        this.juomat = 5;
-        this.huomautukset = 0;
-    }
-    
+    /*
+    *Kaikki muut luokat vaikuttaa hnekilö olioon
+    *Kontrollerina toimii periaatteessa Paikka.java
+    *Blaa Blaa Blaa
+    */
     public Henkilo(double money, String etuNimi, String sukuNimi, double humalaTila, int juomat) {
         //this.ika = age;
         this.lompakko = money;
@@ -27,9 +22,16 @@ public class Henkilo {
         this.humalatila = humalaTila;
         this.juomat = juomat;
         this.huomautukset = 0;
-
     }
 
+    public void resetJarno(){
+        this.etunimi = "Jarno";
+        this.sukunimi = "Penttilä";
+        this.humalatila = 0;
+        this.huomautukset = 0;
+        this.lompakko = 30;
+        this.juomat = 5;
+    }
 
     int getHuomautukset() {
         return huomautukset;
@@ -104,8 +106,7 @@ public class Henkilo {
         if (this.juomat > 0) {
             this.juomat--;
             kommentti = "Janontunne yllättää sinut. Korkkaat repustasi mukavan lämpimän oluen.";
-            humalatilaPlus(0.5);
-            //System.out.println(getHumalatila());
+            humalatilaPlus(0.7);
         } else {
             kommentti = "Avaat reppusi. Siellä ei ole yhtään juomaa. Harkitset soittavasi hätänumeroon.";
         }

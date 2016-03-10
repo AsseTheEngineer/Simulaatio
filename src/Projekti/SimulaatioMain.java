@@ -17,40 +17,53 @@ import javafx.stage.Stage;
 
 public class SimulaatioMain extends Application {
 
-    public static Henkilo jarno = new Henkilo(100, "Jarno", "Penttilä", 0, 5);
-        
-    public static Baari baari1 = new Baari(4,4,5,5, "prkl");
+    public static Henkilo jarno = new Henkilo(30, "Jarno", "Penttilä", 0, 4);
+
+    public static Baari baari1 = new Baari(4, 4, 5, 5, "prkl");
     public static Baari baari2 = new Baari(4, 5, 6, 6, "Boothill");
-    public static Baari baari3 = new Baari(4,5,4,4,"Molly Malones");
-    public static Baari baari4 = new Baari(5,4,5,5,"EI SAATANA");
-    public static Baari baari5 = new Baari(7,8,6,6, "PORVARI PAIKKA");
-        
-    public static Poliisi poliisi = new Poliisi(40);
-    public static Koti jarnonKoti = new Koti(jarno);
+    public static Baari baari3 = new Baari(4, 5, 4, 4, "Molly Malones");
+    public static Baari baari4 = new Baari(5, 4, 5, 5, "Lady Moon");
+    public static Baari baari5 = new Baari(7, 8, 6, 6, "Ravintola Teatteri");
+
+    public static Poliisi poliisi = new Poliisi(20);
+    public static Koti jarnonKoti = new Koti(jarno, 20, 5);
     public static Kaverinkamppa kaverinKoti = new Kaverinkamppa(5, 50);
     public static Puisto puisto = new Puisto(poliisi);
     public static Paikka paikka = new Paikka(jarno, poliisi, jarnonKoti, kaverinKoti, puisto);
-    
+
     public static void simuloi() {
         int gameOver = 0;
-        while (gameOver != 1) {
-            
+        while (gameOver < 1) {
+
             paikka.simulointi();
-            //System.out.println("\n" + jarno.getHumalatila() + "\n");
             if (jarno.getHumalatila() >= 10) {
                 gameOver = 1;
-            } else if (paikka.kello().equals("04:20")) { //#sweg
+            } else if (paikka.getTunnit() == 4) { //#sweg
                 gameOver = 1;
             } else if (jarno.getHuomautukset() >= 3) {
                 gameOver = 1;
+
             }
+
+            String kommentti = "";
+            if (jarno.getHumalatila() >= 10) {
+                kommentti = "Iltasi päättyi sammumiseen!";
+            } else if (paikka.getTunnit() == 4 && jarno.getHumalatila() >= 10) {
+                kommentti = "Päätät sammua samaan aikaan kun baarin ovet menee kiinni.";
+            } else if (paikka.getTunnit() == 4 && jarno.getHumalatila() < 10) {
+                kommentti = "Selvisit mestarin elkein illasta!";
+            } else if (jarno.getHuomautukset() >= 3) {
+                kommentti = "Iltasi päättyi putkaan!";
+            } paikka.addTapahtuma(kommentti);
+
         }
+
     }
 
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Ikkuna.fxml"));
-
+        
         Scene scene = new Scene(root);
 
         stage.setScene(scene);
